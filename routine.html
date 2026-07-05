@@ -1,0 +1,1132 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0" />
+  
+  <!-- SEO Metadata -->
+  <title>Class Routine · Dept. of Computer Science · PDUAM Amjonga</title>
+  <meta name="description" content="Science Stream Class Routine for the session 2025-2026 (Even Semester) of Pandit Deendayal Upadhyaya Adarsha Mahavidyalaya (PDUAM), Amjonga." />
+  
+  <!-- Favicon -->
+  <link rel="icon" type="image/png" href="assets/favicon/cs_department_logo.png" />
+
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Noto+Serif+Bengali:wght@400;600;700&display=swap" rel="stylesheet"/>
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" rel="stylesheet"/>
+
+  <style>
+  /* ════════════════════════════════════════
+     THEME TOKENS (Imported from index.html)
+  ════════════════════════════════════════ */
+  :root {
+    --gold:      #d4a843;
+    --gold-lt:   #f0c96a;
+    --gold-dim:  rgba(212,168,67,0.15);
+    --teal:      #2dd4bf;
+    --teal-dim:  rgba(45,212,191,0.12);
+    --red:       #ef4444;
+    --r:         14px;
+    --r-lg:      22px;
+    --r-xl:      28px;
+    --shadow:    0 4px 32px rgba(0,0,0,0.18);
+    --shadow-lg: 0 8px 48px rgba(0,0,0,0.24);
+    --font:      'Inter', sans-serif;
+    --font-bn:   'Noto Serif Bengali', serif;
+    --tr:        0.22s cubic-bezier(.4,0,.2,1);
+  }
+
+  [data-theme="dark"] {
+    --bg:       #080c15;
+    --surface:  #111827;
+    --s2:       #1a2236;
+    --s3:       #222d42;
+    --border:   rgba(255,255,255,0.07);
+    --border2:  rgba(255,255,255,0.13);
+    --text:     #e2e8f0;
+    --muted:    #7a8ba8;
+    --heading:  #f8fafc;
+    --nav-bg:   rgba(8,12,21,0.88);
+    --hdr:      linear-gradient(135deg,#0d1321 0%,#111827 100%);
+    --glass-bg: rgba(11,15,26,0.75);
+    --glass-border: rgba(255,255,255,0.10);
+  }
+
+  [data-theme="light"] {
+    --bg:       #f0f4fa;
+    --surface:  #ffffff;
+    --s2:       #f4f7fc;
+    --s3:       #eaeff8;
+    --border:   rgba(0,0,0,0.08);
+    --border2:  rgba(0,0,0,0.15);
+    --text:     #1e293b;
+    --muted:    #64748b;
+    --heading:  #0f172a;
+    --nav-bg:   rgba(240,244,250,0.88);
+    --hdr:      linear-gradient(135deg,#1e3a5f 0%,#2c4a7c 100%);
+    --glass-bg: rgba(240,244,250,0.8);
+    --glass-border: rgba(0,0,0,0.10);
+  }
+
+  /* ════════ RESET & COMMON ════════ */
+  *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+  html{scroll-behavior:smooth}
+  body{
+    font-family:var(--font); background:var(--bg); color:var(--text);
+    line-height:1.65; min-height:100vh; transition:background var(--tr),color var(--tr);
+    -webkit-text-size-adjust: 100%; /* Prevents iOS auto-zoom on wide tables */
+  }
+  ::-webkit-scrollbar{width:5px; height: 5px;}
+  ::-webkit-scrollbar-track{background:var(--bg)}
+  ::-webkit-scrollbar-thumb{background:var(--gold);border-radius:99px}
+  .wrap{max-width:1280px;margin:0 auto;padding:2.5rem 2rem}
+
+  /* ════════ HEADER & NAV (Exact from index) ════════ */
+  header{background:var(--hdr);position:relative;overflow:hidden}
+  header::before{
+    content:'';position:absolute;inset:0;pointer-events:none;
+    background:
+      radial-gradient(ellipse 70% 80% at 15% 60%,rgba(212,168,67,.18) 0%,transparent 55%),
+      radial-gradient(ellipse 50% 60% at 85% 20%,rgba(45,212,191,.10) 0%,transparent 55%);
+  }
+  header::after{
+    content:'';position:absolute;inset:0;pointer-events:none;
+    background-image:radial-gradient(rgba(255,255,255,.055) 1px,transparent 1px);
+    background-size:28px 28px;
+  }
+
+  .hdr-inner{
+    position:relative;z-index:3;
+    max-width:1280px;margin:0 auto;
+    padding:2.8rem 2rem 2.2rem;
+    display:grid;
+    grid-template-columns:88px 1fr 88px;
+    align-items:center;gap:2rem;
+  }
+  .hdr-logo{display:flex;justify-content:center}
+  .hdr-logo img{
+    height:76px;width:76px;border-radius:50%;
+    object-fit:contain;
+    border:2.5px solid rgba(212,168,67,.6);
+    padding:4px;background:rgba(255,255,255,.08);
+    box-shadow:0 0 24px rgba(212,168,67,.35),0 0 0 6px rgba(212,168,67,.08);
+    transition:transform var(--tr),box-shadow var(--tr);
+  }
+  .hdr-logo img:hover{
+    transform:scale(1.07);
+    box-shadow:0 0 36px rgba(212,168,67,.5),0 0 0 9px rgba(212,168,67,.12);
+  }
+
+  .hdr-center{text-align:center}
+  .hdr-uni{
+    font-size:clamp(.58rem,1.1vw,.75rem);font-weight:500;
+    color:rgba(255,255,255,.5);letter-spacing:.12em;text-transform:uppercase;margin-bottom:.5rem;
+  }
+  .hdr-assamese{
+    font-family:var(--font-bn);
+    font-size:clamp(1.5rem,4vw,2.8rem);
+    font-weight:700;color:#fff;line-height:1.25;
+    text-shadow:0 2px 20px rgba(0,0,0,.4);
+  }
+  .hdr-assamese span{
+    background:linear-gradient(90deg,var(--gold-lt),var(--gold));
+    -webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;
+  }
+  .hdr-sub{
+    margin-top:.45rem;
+    font-size:clamp(.65rem,1.3vw,.85rem);
+    color:rgba(255,255,255,.45);letter-spacing:.05em;
+  }
+  .hdr-tagline{
+    display:inline-flex;align-items:center;gap:.5rem;margin-top:1rem;
+    font-family:var(--font-bn);font-size:clamp(.7rem,1.4vw,.92rem);
+    color:var(--teal);background:rgba(45,212,191,.1);
+    border:1px solid rgba(45,212,191,.25);
+    padding:.35rem 1rem;border-radius:99px;backdrop-filter:blur(8px);
+  }
+  .live-dot{
+    width:7px;height:7px;background:var(--teal);
+    border-radius:50%;flex-shrink:0;animation:livePulse 2s infinite;
+  }
+  @keyframes livePulse{
+    0%,100%{opacity:1;box-shadow:0 0 0 0 rgba(45,212,191,.6)}
+    50%{opacity:.7;box-shadow:0 0 0 5px rgba(45,212,191,0)}
+  }
+
+  /* ════════ NAV ════════ */
+  nav{
+    background:var(--nav-bg);
+    backdrop-filter:blur(20px);-webkit-backdrop-filter:blur(20px);
+    border-bottom:1px solid var(--border);
+    position:sticky;top:0;z-index:200;
+    transition:background var(--tr);
+  }
+  .nav-inner{
+    max-width:1280px;margin:0 auto;
+    display:flex;align-items:center;justify-content:space-between;
+    padding:0 2rem;gap:1rem;
+  }
+  .nav-brand{
+    display:flex;align-items:center;gap:.5rem;
+    font-size:.82rem;font-weight:700;color:var(--gold);
+    letter-spacing:.05em;white-space:nowrap;flex-shrink:0;padding:.85rem 0;
+    text-decoration:none;
+  }
+  .nav-brand i{font-size:.9rem}
+  .nav-links{display:flex;list-style:none;gap:0;flex:1;justify-content:center}
+  .nav-links a{
+    display:flex;align-items:center;gap:.3rem;
+    padding:.85rem .65rem;color:var(--muted);text-decoration:none;
+    font-size:.77rem;font-weight:500;letter-spacing:.01em;
+    transition:color var(--tr);position:relative;white-space:nowrap;
+  }
+  .nav-links a i{font-size:.7rem;opacity:.7}
+  .nav-links a::after{
+    content:'';position:absolute;bottom:0;left:.65rem;right:.65rem;
+    height:2px;background:linear-gradient(90deg,var(--gold),var(--teal));
+    border-radius:99px;transform:scaleX(0);transform-origin:left;transition:transform .25s;
+  }
+  .nav-links a:hover{color:var(--heading)}
+  .nav-links a:hover::after{transform:scaleX(1)}
+
+  .nav-actions{display:flex;align-items:center;gap:.6rem;flex-shrink:0}
+
+  .theme-btn{
+    position:relative;width:52px;height:28px;
+    background:var(--s3);border:1px solid var(--border2);
+    border-radius:99px;cursor:pointer;padding:0;overflow:hidden;
+    transition:background var(--tr);
+  }
+  .theme-btn:focus-visible{outline:2px solid var(--gold);outline-offset:2px}
+  .toggle-track{
+    position:absolute;inset:0;
+    display:flex;align-items:center;justify-content:space-between;
+    padding:0 6px;pointer-events:none;
+  }
+  .toggle-track i{font-size:.62rem}
+  .track-sun{color:#f59e0b}
+  .track-moon{color:#818cf8}
+  .toggle-knob{
+    position:absolute;top:3px;left:3px;
+    width:20px;height:20px;
+    background:linear-gradient(135deg,var(--gold),#b8860b);
+    border-radius:50%;pointer-events:none;
+    transition:transform var(--tr),background var(--tr);
+    box-shadow:0 2px 8px rgba(0,0,0,.3);
+  }
+  [data-theme="light"] .toggle-knob{
+    transform:translateX(24px);
+    background:linear-gradient(135deg,#818cf8,#6366f1);
+  }
+
+  .nav-toggle{
+    display:none;
+    background:var(--s2);border:1px solid var(--border);
+    border-radius:10px;cursor:pointer;
+    width:40px;height:40px;
+    align-items:center;justify-content:center;
+    position:relative;
+    transition:background var(--tr),border-color var(--tr);
+    flex-shrink:0;
+    color:var(--text);font-size:1rem;
+  }
+  .nav-toggle:hover{background:var(--s3);border-color:var(--border2)}
+
+  /* ════════ MOBILE OVERLAY — GLASSMORPHISM ════════ */
+  .mob-overlay{
+    display:none;
+    position:fixed;inset:0;z-index:400;
+    background:var(--glass-bg);
+    backdrop-filter:blur(24px) saturate(180%);
+    -webkit-backdrop-filter:blur(24px) saturate(180%);
+    border-right:1px solid var(--glass-border);
+    flex-direction:column;
+    padding:0;
+    overflow-y:auto;
+    transform:translateX(-100%);
+    transition:transform .38s cubic-bezier(.4,0,.2,1), opacity .3s;
+    opacity:0;
+    max-width:320px;
+  }
+  .mob-overlay.open{
+    display:flex;
+    transform:translateX(0);
+    opacity:1;
+  }
+
+  .mob-scrim{
+    display:none;position:fixed;inset:0;z-index:399;
+    background:rgba(0,0,0,.45);
+    backdrop-filter:blur(2px);
+    opacity:0;transition:opacity .3s;
+  }
+  .mob-scrim.open{display:block;opacity:1}
+
+  .mob-head{
+    display:flex;align-items:center;justify-content:space-between;
+    padding:1.4rem 1.5rem 1rem;
+    border-bottom:1px solid var(--glass-border);
+  }
+  .mob-brand{font-size:.9rem;font-weight:700;color:var(--gold);letter-spacing:.05em; text-decoration:none;}
+  .mob-brand i{margin-right:.4rem}
+
+  .mob-close-btn{
+    background:rgba(255,255,255,.06);
+    border:1px solid var(--glass-border);
+    color:var(--text);padding:.45rem .65rem;
+    border-radius:8px;cursor:pointer;font-size:.95rem;
+    transition:background var(--tr);
+  }
+  .mob-close-btn:hover{background:rgba(255,255,255,.12)}
+
+  .mob-links{
+    display:flex;flex-direction:column;
+    padding:1rem 1rem 0.5rem;gap:.15rem;flex:1;
+  }
+  .mob-links a{
+    display:flex;align-items:center;gap:.8rem;
+    padding:.8rem 1rem;
+    color:var(--text);text-decoration:none;
+    font-size:.95rem;font-weight:500;
+    border-radius:var(--r);
+    transition:background var(--tr),color var(--tr);
+    border:1px solid transparent;
+  }
+  .mob-links a i{
+    width:20px;text-align:center;
+    color:var(--gold);font-size:.85rem;flex-shrink:0;
+  }
+  .mob-links a:hover{
+    background:rgba(212,168,67,.08);
+    border-color:rgba(212,168,67,.15);
+    color:var(--gold);
+  }
+
+  .mob-theme{
+    margin:1rem;
+    display:flex;align-items:center;justify-content:space-between;
+    padding:.85rem 1rem;
+    background:rgba(255,255,255,.04);
+    border:1px solid var(--glass-border);
+    border-radius:var(--r);
+  }
+  .mob-theme span{font-size:.82rem;font-weight:500;color:var(--muted)}
+  
+  /* ════════ ROUTINE SPECIFIC CSS ════════ */
+  .sec-head{display:flex;align-items:center;gap:.8rem;margin:2rem 0 1.5rem}
+  main.wrap > .sec-head:first-child { margin-top: 0; }
+  .sec-line{width:4px;height:26px;background:linear-gradient(to bottom,var(--gold),var(--teal));border-radius:99px;}
+  .sec-head h2{font-size:1.1rem;font-weight:700;color:var(--heading);}
+  .sec-head p{font-size:.77rem;color:var(--muted);margin-top:.1rem}
+
+  /* Table Container */
+  .table-wrap {
+    overflow-x: auto;
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: var(--r-xl);
+    box-shadow: var(--shadow);
+    margin-bottom: 3rem;
+    position: relative;
+    /* Custom thin scrollbar */
+    scrollbar-width: thin;
+    scrollbar-color: var(--gold) var(--s2);
+  }
+
+  /* Structural Table using border-collapse: separate to allow sticky columns */
+  .routine-table {
+    width: 100%;
+    border-collapse: separate; 
+    border-spacing: 0;
+    min-width: 900px; /* Forces scroll but lets sticky handle the view */
+  }
+  .routine-table th, .routine-table td {
+    padding: 0.85rem;
+    border-right: 1px solid var(--border);
+    border-bottom: 1px solid var(--border);
+    font-size: 0.82rem; /* Exact size matching index.html standard text */
+    color: var(--text);
+    text-align: center;
+    line-height: 1.4;
+    transition: background var(--tr);
+    background: var(--surface); /* Opaque backgrounds vital for scroll overlay */
+  }
+  
+  /* Adding Top & Left borders for outer edges */
+  .routine-table tr:first-child th {
+    border-top: 1px solid var(--border);
+  }
+  .routine-table th:first-child, .routine-table td:first-child {
+    border-left: 1px solid var(--border);
+  }
+
+  /* Table Head */
+  .routine-table th {
+    background: var(--s3) !important;
+    color: var(--heading);
+    font-weight: 700;
+    border-bottom: 2px solid var(--border2);
+  }
+  .routine-table tbody tr:hover td {
+    background: var(--s2);
+  }
+  [data-theme="light"] .routine-table tbody tr:hover td {
+    background: #f8fafc; /* Very light hover state */
+  }
+  
+  /* STICKY COLUMNS: Day & Classes */
+  /* Col 1: Day */
+  .day-col {
+    background: var(--s2) !important; /* Solid color */
+    color: var(--gold) !important;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    vertical-align: middle;
+    width: 44px;
+    min-width: 44px;
+    max-width: 44px;
+    border-right: 2px solid rgba(212, 168, 67, 0.3) !important;
+    
+    /* Sticky magic */
+    position: sticky;
+    left: 0;
+    z-index: 10;
+  }
+  .routine-table th:nth-child(1) {
+    width: 44px; min-width: 44px; max-width: 44px;
+    position: sticky; left: 0; z-index: 12;
+    border-right: 2px solid rgba(212, 168, 67, 0.3) !important;
+  }
+  .day-text {
+    writing-mode: vertical-rl; /* Always vertical to save massive space */
+    transform: rotate(180deg);
+    margin: auto;
+    padding: 1rem 0;
+    white-space: nowrap;
+  }
+
+  /* Col 2: Classes */
+  .class-col {
+    background: var(--surface) !important; /* Solid color */
+    color: var(--teal) !important;
+    font-weight: 600;
+    text-align: left !important;
+    border-right: 2px solid rgba(45, 212, 191, 0.2) !important;
+    width: 130px; 
+    min-width: 130px; 
+    max-width: 130px;
+    white-space: normal; /* Allow class names to break nicely */
+    
+    /* Sticky magic */
+    position: sticky;
+    left: 44px; /* Matches Col 1 width */
+    z-index: 10;
+  }
+  .routine-table th:nth-child(2) {
+    width: 130px; min-width: 130px; max-width: 130px;
+    position: sticky; left: 44px; z-index: 12;
+    border-right: 2px solid rgba(45, 212, 191, 0.2) !important;
+  }
+  
+  /* Sticky shadow indicator (Creates visual depth so text doesn't look broken when scrolling under) */
+  .class-col::after, .routine-table th:nth-child(2)::after {
+    content: '';
+    position: absolute;
+    top: 0; right: -6px; bottom: -1px; width: 6px;
+    background: linear-gradient(to right, rgba(0,0,0,0.12), transparent);
+    pointer-events: none;
+  }
+  [data-theme="light"] .class-col::after, [data-theme="light"] .routine-table th:nth-child(2)::after {
+    background: linear-gradient(to right, rgba(0,0,0,0.06), transparent);
+  }
+
+  /* Structural Dividers */
+  .day-group-end td {
+    border-bottom: 2px solid var(--border2) !important;
+  }
+  /* Ensure the day cell itself doesn't get the bottom border prematurely since it rowspans */
+  .day-group-end td.day-col {
+    border-bottom: 1px solid var(--border) !important;
+  }
+
+  /* Empty/Null Cells */
+  .empty-cell {
+    color: var(--muted);
+    opacity: 0.4;
+    background: var(--surface) !important;
+  }
+
+  /* Room Grid */
+  .room-grids {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1.5rem;
+    margin-bottom: 2rem;
+  }
+  .room-card {
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: var(--r-lg);
+    padding: 1.5rem;
+    box-shadow: var(--shadow);
+  }
+  .room-card h3 {
+    font-size: 0.95rem;
+    color: var(--gold);
+    margin-bottom: 1.25rem;
+    display: flex;
+    align-items: center;
+    gap: 0.6rem;
+  }
+  .room-card ul { list-style: none; }
+  .room-card li {
+    font-size: 0.85rem;
+    padding: 0.6rem 0;
+    border-bottom: 1px dashed var(--border2);
+    color: var(--muted);
+    display: flex;
+    justify-content: space-between;
+  }
+  .room-card li:last-child { border: none; }
+  .room-card li strong { color: var(--text); }
+  
+  .major-table {
+    width: 100%;
+    border-collapse: collapse;
+  }
+  .major-table th, .major-table td {
+    border: 1px solid var(--border2);
+    padding: 0.6rem;
+    font-size: 0.8rem;
+    text-align: center;
+  }
+  .major-table th {
+    background: var(--s2);
+    color: var(--heading);
+  }
+
+  /* Skeleton Loading */
+  .skeleton {
+    background: linear-gradient(90deg, var(--s3) 25%, var(--border) 50%, var(--s3) 75%);
+    background-size: 200% 100%;
+    animation: shimmer 1.5s infinite linear;
+    border-radius: var(--r);
+  }
+  @keyframes shimmer { 0% { background-position: -200% 0; } 100% { background-position: 200% 0; } }
+  .skeleton-card {
+    padding: 1.5rem; background: var(--surface); border: 1px solid var(--border);
+    border-radius: var(--r-xl); display: flex; flex-direction: column; gap: 1rem;
+  }
+
+  /* Controls */
+  .controls-bar {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    gap: 1rem;
+    margin-bottom: 1.5rem;
+    background: var(--surface);
+    padding: 1rem;
+    border-radius: var(--r-lg);
+    border: 1px solid var(--border);
+    box-shadow: var(--shadow);
+  }
+  .routine-tabs {
+    display: flex;
+    background: var(--bg);
+    border-radius: 99px;
+    padding: 4px;
+    border: 1px solid var(--border);
+  }
+  .tab-btn {
+    padding: 0.6rem 1.25rem;
+    border-radius: 99px;
+    font-size: 0.82rem;
+    font-family: var(--font);
+    color: var(--text);
+    border: none;
+    background: transparent;
+    cursor: pointer;
+    transition: all var(--tr);
+  }
+  .tab-btn:hover { color: var(--heading); }
+  .tab-btn.active {
+    background: var(--gold);
+    color: #000;
+    font-weight: 600;
+    box-shadow: 0 2px 12px rgba(212,168,67,0.3);
+  }
+  .class-filter {
+    background: var(--bg);
+    color: var(--heading);
+    border: 1px solid var(--border);
+    padding: 0.6rem 1.25rem;
+    border-radius: 99px;
+    font-size: 0.82rem;
+    font-family: var(--font);
+    outline: none;
+    cursor: pointer;
+    min-width: 250px;
+  }
+  .class-filter:focus { border-color: var(--gold); }
+
+  .dept-cell-data {
+    display: flex;
+    flex-direction: column;
+    gap: 0.3rem;
+  }
+  .dept-cell-data .sem { font-weight: 700; color: var(--teal); font-size: 0.75rem; letter-spacing: 0.05em; }
+  .dept-cell-data .paper { color: var(--gold-lt); font-size: 0.75rem; }
+  .dept-cell-data .room { font-size: 0.7rem; color: var(--muted); }
+
+  /* Drive Link Button */
+  .drive-link-wrap {
+    display: flex;
+    justify-content: center;
+    margin-top: 2.5rem;
+    padding-top: 2rem;
+    border-top: 1px dashed var(--border2);
+  }
+  .btn-primary {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.6rem;
+    background: linear-gradient(135deg, var(--gold), #b8860b);
+    color: #000;
+    padding: 0.8rem 1.8rem;
+    border-radius: 99px;
+    font-weight: 700;
+    font-size: 0.85rem;
+    text-decoration: none;
+    transition: all var(--tr);
+    box-shadow: 0 4px 16px rgba(212, 168, 67, 0.25);
+  }
+  .btn-primary:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 8px 24px rgba(212, 168, 67, 0.4);
+    color: #000;
+  }
+  .btn-primary i {
+    font-size: 1rem;
+  }
+
+  /* ════════ FOOTER ════════ */
+  footer{background:var(--surface);border-top:1px solid var(--border);margin-top:5rem;transition:background var(--tr)}
+  .ftr-grid{
+    max-width:1280px;margin:0 auto;padding:3rem 2rem 2rem;
+    display:grid;grid-template-columns:2fr 1fr 1fr 1fr;gap:2rem;
+  }
+  .ftr-brand{display:flex;align-items:flex-start;gap:.75rem}
+  .ftr-brand-ico{
+    width:40px;height:40px;flex-shrink:0;
+    background:linear-gradient(135deg,var(--gold-dim),var(--teal-dim));
+    border:1px solid var(--border2);border-radius:10px;
+    display:flex;align-items:center;justify-content:center;
+    color:var(--gold);font-size:1rem;
+  }
+  .ftr-brand-text strong{display:block;font-size:.88rem;font-weight:700;color:var(--heading);margin-bottom:.2rem}
+  .ftr-brand-text p{font-size:.77rem;color:var(--muted);line-height:1.6}
+  .ftr-col h4{font-size:.73rem;font-weight:700;color:var(--gold);text-transform:uppercase;letter-spacing:.1em;margin-bottom:1rem}
+  .ftr-col a,.ftr-col p{
+    display:flex;align-items:center;gap:.5rem;
+    font-size:.8rem;color:var(--muted);text-decoration:none;
+    margin-bottom:.6rem;transition:color var(--tr);
+  }
+  .ftr-col a:hover{color:var(--gold)}
+  .ftr-col i{font-size:.73rem;width:14px;flex-shrink:0}
+  .ftr-bottom{border-top:1px solid var(--border);text-align:center;padding:1.2rem;font-size:.72rem;color:var(--muted);line-height:1.7}
+
+  /* ════════ RESPONSIVE ════════ */
+  @media(max-width:1024px){
+    .nav-links a{padding:.85rem .5rem;font-size:.72rem}
+  }
+  @media(max-width:900px){
+    .room-grids{grid-template-columns:1fr;}
+  }
+  @media(max-width:768px){
+    /* header: NO logos on mobile — text only, centered */
+    .hdr-inner{
+      grid-template-columns:1fr;
+      padding:2rem 1.25rem 1.75rem;
+      gap:0;
+    }
+    .hdr-logo{display:none}
+    .hdr-uni{font-size:.58rem}
+
+    /* nav */
+    .nav-links{display:none}
+    .nav-toggle{display:flex}
+
+    .ftr-grid{grid-template-columns:1fr;gap:2rem}
+    .wrap{padding:1.75rem 1.25rem}
+
+    /* Strict Mobile Table Font Control & Adjustments */
+    .routine-table th, .routine-table td {
+      font-size: 0.82rem; /* Explicitly lock the font size */
+      padding: 0.65rem 0.45rem; /* Better padding for tight screens */
+    }
+    /* Note: Intentionally keeping `.day-text` vertical. 
+       Making it horizontal on mobile balloons the width of the table and breaks the sticky UI */
+  }
+  @media(max-width:540px){
+    .hdr-assamese{font-size:1.25rem}
+    .hdr-tagline{font-size:.7rem;padding:.3rem .75rem}
+  }
+  </style>
+
+  <!-- Vercel Analytics & Speed Insights -->
+  <script>
+    window.va = window.va || function () { (window.vaq = window.vaq || []).push(arguments); };
+  </script>
+  <script defer src="/_vercel/insights/script.js"></script>
+  <script defer src="/_vercel/speed-insights/script.js"></script>
+</head>
+<body>
+
+<!-- ════ HEADER ════ -->
+<header>
+  <div class="hdr-inner">
+    <div class="hdr-logo">
+      <img src="assets/logo/gov_logo.jpg" alt="PDUAM Logo" fetchpriority="high"/>
+    </div>
+    <div class="hdr-center">
+      <div class="hdr-uni">Pandit Deendayal Upadhyaya Adarsha Mahavidyalaya, Amjonga</div>
+      <div class="hdr-assamese">কম্পিউটাৰ বিজ্ঞান <span>বিভাগলৈ স্বাগতম</span></div>
+      <div class="hdr-sub">e-Portal · Department of Computer Science · PDUAM, Amjonga, Assam</div>
+      <div>
+        <span class="hdr-tagline">
+          <span class="live-dot"></span>প্রযুক্তিৰ পোহৰেৰে উদ্ভাসিত পৃথিৱী
+        </span>
+      </div>
+    </div>
+    <div class="hdr-logo hdr-logo-right">
+      <img src="assets/logo/pduam-logo.jpg" alt="CS Dept Logo" fetchpriority="high"/>
+    </div>
+  </div>
+</header>
+
+<!-- ════ NAV ════ -->
+<nav>
+  <div class="nav-inner">
+    <a href="index" class="nav-brand"><i class="fa-solid fa-microchip"></i> CS · PDUAM</a>
+
+    <ul class="nav-links">
+      <li><a href="index"><i class="fa-solid fa-house"></i> Home</a></li>
+      <li><a href="mission"><i class="fa-solid fa-bullseye"></i> Mission</a></li>
+      <li><a href="faculty"><i class="fa-solid fa-chalkboard-user"></i> Faculty</a></li>
+      <li><a href="students"><i class="fa-solid fa-graduation-cap"></i> Students</a></li>
+      <li><a href="gallery"><i class="fa-solid fa-images"></i> Gallery</a></li>
+      <li><a href="events"><i class="fa-solid fa-calendar-days"></i> Events</a></li>
+      <li><a href="alumni"><i class="fa-solid fa-people-group"></i> Alumni</a></li>
+      <li><a href="archives"><i class="fa-solid fa-box-archive"></i> Archives</a></li>
+      <li><a href="tribute"><i class="fa-solid fa-hand-holding-heart"></i> Tribute</a></li>
+      <li><a href="contact"><i class="fa-solid fa-paper-plane"></i> Contact</a></li>
+    </ul>
+
+    <div class="nav-actions">
+      <!-- Desktop theme btn -->
+      <button class="theme-btn" id="themeBtn" aria-label="Toggle theme">
+        <div class="toggle-track">
+          <i class="fa-solid fa-sun track-sun"></i>
+          <i class="fa-solid fa-moon track-moon"></i>
+        </div>
+        <div class="toggle-knob"></div>
+      </button>
+      <!-- Hamburger (morphs to ×) -->
+      <button class="nav-toggle" id="menuBtn" aria-label="Toggle menu" aria-expanded="false">
+        <i class="fa-solid fa-bars" id="menuIcon"></i>
+      </button>
+    </div>
+  </div>
+</nav>
+
+<!-- ════ MOBILE SCRIM (backdrop) ════ -->
+<div class="mob-scrim" id="mobScrim"></div>
+
+<!-- ════ MOBILE OVERLAY — GLASSMORPHISM ════ -->
+<div class="mob-overlay" id="mobOverlay" role="dialog" aria-modal="true" aria-label="Navigation menu">
+  <div class="mob-head">
+    <a href="index" class="mob-brand"><i class="fa-solid fa-microchip"></i> CS · PDUAM</a>
+    <button class="mob-close-btn" id="mobClose" aria-label="Close menu">
+      <i class="fa-solid fa-xmark"></i>
+    </button>
+  </div>
+
+  <nav class="mob-links">
+    <a href="index"><i class="fa-solid fa-house"></i>Home</a>
+    <a href="mission"><i class="fa-solid fa-bullseye"></i>Mission</a>
+    <a href="faculty"><i class="fa-solid fa-chalkboard-user"></i>Faculty</a>
+    <a href="students"><i class="fa-solid fa-graduation-cap"></i>Student Corner</a>
+    <a href="gallery"><i class="fa-solid fa-images"></i>Gallery</a>
+    <a href="events"><i class="fa-solid fa-calendar-days"></i>Events</a>
+    <a href="alumni"><i class="fa-solid fa-people-group"></i>Alumni</a>
+    <a href="archives"><i class="fa-solid fa-box-archive"></i>Archives</a>
+    <a href="tribute"><i class="fa-solid fa-hand-holding-heart"></i>Tribute</a>
+    <a href="contact"><i class="fa-solid fa-paper-plane"></i>Contact</a>
+  </nav>
+
+  <div class="mob-theme">
+    <span id="mobThemeLabel">Switch to Light Mode</span>
+    <button class="theme-btn" id="themeBtnMob" aria-label="Toggle theme">
+      <div class="toggle-track">
+        <i class="fa-solid fa-sun track-sun"></i>
+        <i class="fa-solid fa-moon track-moon"></i>
+      </div>
+      <div class="toggle-knob"></div>
+    </button>
+  </div>
+</div>
+
+<!-- ════ MAIN ════ -->
+<main class="wrap">
+  <div class="sec-head">
+    <div class="sec-line"></div>
+    <div>
+      <h2 id="routineTitle">Science Stream Class Routine</h2>
+      <p>Session 2025-2026 (Even Semester)</p>
+    </div>
+  </div>
+
+  <!-- Controls -->
+  <div class="controls-bar">
+    <div class="routine-tabs">
+      <button class="tab-btn active" onclick="switchRoutine('class')" id="btnClassRoutine">Class Routine</button>
+      <button class="tab-btn" onclick="switchRoutine('dept')" id="btnDeptRoutine">Department Routine</button>
+    </div>
+    <select class="class-filter" id="classFilter" onchange="filterClass()">
+      <option value="all">View Full Routine (All Classes)</option>
+      <option value="H.S 1st Year (Sc.)">H.S 1st Year (Sc.)</option>
+      <option value="H.S 2nd Year (Sc)">H.S 2nd Year (Sc)</option>
+      <option value="B.Sc 2nd Sem">B.Sc 2nd Sem</option>
+      <option value="B.Sc 4th Sem">B.Sc 4th Sem</option>
+      <option value="B.Sc 6th Sem">B.Sc 6th Sem</option>
+    </select>
+  </div>
+
+  <!-- Loading Skeleton -->
+  <div id="routineLoading" class="skeleton-card" style="height: 400px; margin-bottom: 2rem;">
+    <div class="skeleton" style="height: 40px; width: 100%; margin-bottom: 1rem;"></div>
+    <div class="skeleton" style="height: 300px; width: 100%;"></div>
+  </div>
+
+  <!-- Content Container -->
+  <div id="routineContent" style="display: none;">
+    
+    <div class="table-wrap">
+      <table class="routine-table" id="routineTable">
+        <thead id="routineHead"></thead>
+        <tbody id="routineBody"></tbody>
+      </table>
+    </div>
+
+    <div id="roomDistributionSection">
+      <div class="sec-head">
+        <div class="sec-line"></div>
+        <div><h2>Room Distribution</h2><p>H.S. and B.Sc Major Classes</p></div>
+      </div>
+      
+      <div class="room-grids">
+        <!-- General Rooms Card -->
+        <div class="room-card">
+        <ul id="generalRoomsList"></ul>
+      </div>
+
+      <!-- Major Rooms Card -->
+      <div class="room-card">
+        <h3><i class="fa-solid fa-flask"></i> B.Sc Major Practicals/Classes</h3>
+        <table class="major-table">
+          <thead>
+            <tr>
+              <th>Subject</th>
+              <th>4th Sem (Major)</th>
+              <th>6th Semester (Major)</th>
+            </tr>
+          </thead>
+          <tbody id="majorRoomsBody"></tbody>
+        </table>
+      </div>
+    </div>
+    
+    <!-- Drive Link Button -->
+    <div class="drive-link-wrap">
+      <a href="https://drive.google.com/drive/folders/110jYEk1eGfrxcF3EcMJh9-QuYQDJeMJG?usp=sharing" target="_blank" rel="noopener noreferrer" class="btn-primary">
+        <i class="fa-brands fa-google-drive"></i> View Routine on Google Drive
+      </a>
+    </div>
+
+  </div>
+</main>
+
+<!-- ════ FOOTER ════ -->
+<footer>
+  <div class="ftr-grid">
+    <div class="ftr-col">
+      <div class="ftr-brand">
+        <div class="ftr-brand-ico"><i class="fa-solid fa-microchip"></i></div>
+        <div class="ftr-brand-text">
+          <strong>Department of Computer Science</strong>
+          <p>Pandit Deendayal Upadhyaya Adarsha Mahavidyalaya, Amjonga, Assam, India</p>
+        </div>
+      </div>
+    </div>
+    <div class="ftr-col">
+      <h4>Connect</h4>
+      <a href="https://www.pduamamjonga.ac.in/department-details/83" target="_blank"><i class="fa-solid fa-globe"></i>College Website</a>
+      <a href="mailto:pduamcsc2017@gmail.com"><i class="fa-solid fa-envelope"></i>pduamcsc2017@gmail.com</a>
+      <a href="https://maps.app.goo.gl/WDbDdr6dqUqA9LVGA?g_st=aw" target="_blank"><i class="fa-solid fa-location-dot"></i>Locate Us on Maps</a>
+    </div>
+    <div class="ftr-col">
+      <h4>Resources</h4>
+      <a href="https://drive.google.com/drive/folders/110jYEk1eGfrxcF3EcMJh9-QuYQDJeMJG?usp=sharing" target="_blank"><i class="fa-solid fa-table-cells-large"></i>Class Routine</a>
+      <a href="https://drive.google.com/drive/folders/14CjyuJb6DAtywFV9AIpFjaCYRcA6Yapg?usp=sharing" target="_blank"><i class="fa-solid fa-book-open-reader"></i>Syllabus</a>
+      <a href="https://gauhati.ac.in/media/notification/1734503844.pdf" target="_blank"><i class="fa-solid fa-umbrella-beach"></i>Holiday List (GU)</a>
+    </div>
+    <div class="ftr-col">
+      <h4>Useful Links</h4>
+      <a href="https://gauhati.ac.in/" target="_blank"><i class="fa-solid fa-link"></i>Gauhati University</a>
+      <a href="https://ahsec.assam.gov.in/" target="_blank"><i class="fa-solid fa-link"></i>AHSEC</a>
+      <a href="https://darpan.ahseconline.in/" target="_blank"><i class="fa-solid fa-link"></i>Darpan</a>
+    </div>
+  </div>
+  <div class="ftr-bottom">
+    &copy; 2026 Department of Computer Science, PDUAM Amjonga. All Rights Reserved.
+    <p style="margin-top: 0.8rem; margin-bottom: 0.4rem;">
+      Developed by the <a href="faculty" style="color: var(--teal); text-decoration: none;">Faculty</a> of the Department of Computer Science,
+      Pandit Deendayal Upadhyaya Adarsha Mahavidyalaya (PDUAM), Amjonga
+    </p>
+    <p>
+      Redesigned and improved by 
+      <a href="https://sonajit.in" target="_blank" rel="noopener noreferrer" style="color: var(--teal); text-decoration: none;">
+        sOn4jit
+      </a>
+    </p>
+  </div>
+</footer>
+
+<script>
+/* ════════ THEME TOGGLE ════════ */
+const html = document.documentElement;
+const SKEY = 'pduam-cs-theme';
+
+const getSys  = () => window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
+const applyTheme = t => {
+  html.setAttribute('data-theme', t);
+  localStorage.setItem(SKEY, t);
+  const lbl = document.getElementById('mobThemeLabel');
+  if (lbl) lbl.textContent = t === 'dark' ? 'Switch to Light Mode' : 'Switch to Dark Mode';
+};
+const toggleTheme = () => applyTheme(html.getAttribute('data-theme') === 'dark' ? 'light' : 'dark');
+
+applyTheme(localStorage.getItem(SKEY) || getSys());
+
+window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', e => {
+  if (!localStorage.getItem(SKEY)) applyTheme(e.matches ? 'dark' : 'light');
+});
+
+document.getElementById('themeBtn').addEventListener('click', toggleTheme);
+document.getElementById('themeBtnMob').addEventListener('click', toggleTheme);
+
+/* ════════ MOBILE NAV ════════ */
+const menuBtn  = document.getElementById('menuBtn');
+const overlay  = document.getElementById('mobOverlay');
+const scrim    = document.getElementById('mobScrim');
+
+function openMenu() {
+  menuBtn.setAttribute('aria-expanded', 'true');
+  overlay.classList.add('open');
+  scrim.classList.add('open');
+  document.body.style.overflow = 'hidden';
+  document.getElementById('menuIcon').className = 'fa-solid fa-xmark';
+}
+function closeMenu() {
+  menuBtn.setAttribute('aria-expanded', 'false');
+  overlay.classList.remove('open');
+  scrim.classList.remove('open');
+  document.body.style.overflow = '';
+  document.getElementById('menuIcon').className = 'fa-solid fa-bars';
+}
+
+menuBtn.addEventListener('click', () =>
+  overlay.classList.contains('open') ? closeMenu() : openMenu()
+);
+document.getElementById('mobClose').addEventListener('click', closeMenu);
+scrim.addEventListener('click', closeMenu);
+overlay.querySelectorAll('a').forEach(a => a.addEventListener('click', closeMenu));
+document.addEventListener('keydown', e => { if (e.key === 'Escape') closeMenu(); });
+
+
+/* ════════ FETCH AND RENDER ROUTINE ════════ */
+let globalClassData = null;
+let globalDeptData = null;
+let currentType = 'class'; // 'class' or 'dept'
+let currentFilter = 'all';
+
+async function loadRoutine() {
+  try {
+    // Fetch both JSON files in parallel
+    const [classRes, deptRes] = await Promise.all([
+      fetch('data/routine.json'),
+      fetch('data/dept_routine.json').catch(() => null) // catch gracefully if missing
+    ]);
+    
+    if (classRes.ok) globalClassData = await classRes.json();
+    if (deptRes && deptRes.ok) globalDeptData = await deptRes.json();
+    
+    renderRoutine();
+
+    // Swap UI state
+    document.getElementById('routineLoading').style.display = 'none';
+    document.getElementById('routineContent').style.display = 'block';
+
+  } catch (error) {
+    console.error("Error loading routine:", error);
+    document.getElementById('routineLoading').innerHTML = `
+      <div style="color:var(--red); padding: 2rem; text-align: center;">
+        <i class="fa-solid fa-triangle-exclamation" style="font-size: 2rem; margin-bottom: 1rem;"></i>
+        <p>Failed to load the routine data. Please try again later.</p>
+      </div>
+    `;
+  }
+}
+
+function switchRoutine(type) {
+  currentType = type;
+  document.getElementById('btnClassRoutine').classList.toggle('active', type === 'class');
+  document.getElementById('btnDeptRoutine').classList.toggle('active', type === 'dept');
+  
+  const filterEl = document.getElementById('classFilter');
+  const roomSection = document.getElementById('roomDistributionSection');
+  const title = document.getElementById('routineTitle');
+
+  if (type === 'class') {
+    filterEl.style.display = 'block';
+    roomSection.style.display = 'block';
+    title.textContent = 'Science Stream Class Routine';
+  } else {
+    filterEl.style.display = 'none';
+    roomSection.style.display = 'none';
+    title.textContent = 'Department Routine';
+  }
+  renderRoutine();
+}
+
+function filterClass() {
+  currentFilter = document.getElementById('classFilter').value;
+  renderRoutine();
+}
+
+function renderRoutine() {
+  if (currentType === 'class') {
+    if (!globalClassData) return;
+    renderTable(globalClassData, true);
+    renderRooms(globalClassData);
+  } else {
+    if (!globalDeptData) {
+      document.getElementById('routineBody').innerHTML = '<tr><td colspan="9" class="empty-cell">Department Routine Data not found.</td></tr>';
+      return;
+    }
+    renderTable(globalDeptData, false);
+  }
+}
+
+function renderTable(data, isClassRoutine) {
+  const thead = document.getElementById('routineHead');
+  let headRow = `<tr><th>Day</th><th>${isClassRoutine ? 'Classes' : 'Faculty Name'}</th>`;
+  data.times.forEach(time => {
+    headRow += `<th>${time}</th>`;
+  });
+  headRow += `</tr>`;
+  thead.innerHTML = headRow;
+
+  const tbody = document.getElementById('routineBody');
+  let bodyRows = '';
+
+  data.schedule.forEach(daySchedule => {
+    // Determine the rows for this day block
+    let rowsToRender = [];
+    
+    if (isClassRoutine) {
+      rowsToRender = daySchedule.classes;
+      if (currentFilter !== 'all') {
+        rowsToRender = rowsToRender.filter(c => c.name === currentFilter);
+      }
+    } else {
+      rowsToRender = daySchedule.faculty;
+    }
+
+    if (rowsToRender.length === 0) return; // Skip if filtered out completely
+
+    const rowCount = rowsToRender.length;
+    
+    rowsToRender.forEach((rowObj, index) => {
+      const rowClass = (index === rowCount - 1) ? 'class="day-group-end"' : '';
+      bodyRows += `<tr ${rowClass}>`;
+      
+      if (index === 0) {
+        bodyRows += `<td class="day-col" rowspan="${rowCount}"><div class="day-text">${daySchedule.day}</div></td>`;
+      }
+      
+      bodyRows += `<td class="class-col">${rowObj.name}</td>`;
+      
+      rowObj.periods.forEach(period => {
+        if (!period || period === "-") {
+          bodyRows += `<td class="empty-cell">-</td>`;
+        } else if (typeof period === 'object') {
+          // Dept routine formatting
+          bodyRows += `<td>
+            <div class="dept-cell-data">
+              <span class="sem">SEM: ${period.sem}</span>
+              <span class="paper">Paper: ${period.paper}</span>
+              ${period.room ? `<span class="room">Room: ${period.room}</span>` : ''}
+            </div>
+          </td>`;
+        } else {
+          // Class routine formatting (string)
+          bodyRows += `<td>${period}</td>`;
+        }
+      });
+      
+      bodyRows += `</tr>`;
+    });
+  });
+  
+  if(bodyRows === '') {
+      bodyRows = `<tr><td colspan="${data.times.length + 2}" class="empty-cell">No schedule found for the selected filter.</td></tr>`;
+  }
+  
+  tbody.innerHTML = bodyRows;
+}
+
+function renderRooms(data) {
+  const genRoomsList = document.getElementById('generalRoomsList');
+  genRoomsList.innerHTML = '';
+  if(data.roomDistribution && data.roomDistribution.general) {
+    data.roomDistribution.general.forEach(gr => {
+      const li = document.createElement('li');
+      li.innerHTML = `<strong>${gr.class}</strong> <span>${gr.room}</span>`;
+      genRoomsList.appendChild(li);
+    });
+  }
+
+  const majorTbody = document.getElementById('majorRoomsBody');
+  majorTbody.innerHTML = '';
+  if(data.roomDistribution && data.roomDistribution.major) {
+    data.roomDistribution.major.forEach(mr => {
+      const tr = document.createElement('tr');
+      tr.innerHTML = `
+        <td><strong>${mr.subject}</strong></td>
+        <td>${mr.sem4}</td>
+        <td>${mr.sem6}</td>
+      `;
+      majorTbody.appendChild(tr);
+    });
+  }
+}
+
+// Load routine on DOM Content Loaded
+document.addEventListener('DOMContentLoaded', loadRoutine);
+
+</script>
+</body>
+</html>

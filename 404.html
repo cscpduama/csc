@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <script>
+    (function() {
+      if (window.location.hostname === 'cscpduam-alt.github.io') {
+        document.documentElement.style.display = 'none';
+        var path = window.location.pathname;
+        if (path.startsWith('/csc')) {
+          path = path.slice(4);
+        }
+        if (!path.startsWith('/')) {
+          path = '/' + path;
+        }
+        var newUrl = 'https://csc.pduam.dpdns.org' + path + window.location.search + window.location.hash;
+        window.location.replace(newUrl);
+      }
+    })();
+  </script>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>404 — Page Not Found</title>
+  
+  <!-- Favicon -->
+  <link rel="icon" type="image/png" href="assets/favicon/cs_department_logo.png" />
+  
+  <link href="https://fonts.googleapis.com/css2?family=VT323&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --bg: #fdfdfd;
+      --fg: #000000;
+      --accent: #ff4d4d;
+    }
+
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+
+    body {
+      background: var(--bg);
+      color: var(--fg);
+      font-family: 'VT323', monospace;
+      min-height: 100dvh; /* Dynamic viewport height for mobile */
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: space-between; /* Spreads header, content, and footer */
+      padding: 40px 20px;
+      overflow: hidden;
+      cursor: crosshair;
+    }
+
+    /* Branding Header */
+    .branding {
+      text-align: center;
+      font-size: clamp(1rem, 4vw, 1.4rem);
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      font-weight: bold;
+    }
+
+    /* Main Content Wrapper - Perfect Centering */
+    .content-wrapper {
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      width: 100%;
+    }
+
+    .row-404 {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: clamp(15px, 5vw, 30px);
+      font-size: clamp(120px, 35vw, 220px); /* Significantly larger on mobile */
+      font-weight: 900;
+      line-height: 0.8;
+    }
+
+    /* Pixel Face */
+    .pixel-face {
+      width: clamp(110px, 30vw, 180px); /* Larger on mobile */
+      height: clamp(110px, 30vw, 180px);
+      border: 6px solid var(--fg);
+      border-radius: 50%;
+      position: relative;
+      background: white;
+      transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    }
+
+    .eye {
+      width: 12%;
+      height: 20%;
+      background: var(--fg);
+      position: absolute;
+      top: 30%;
+      animation: blink 4s infinite;
+    }
+    .eye-left { left: 28%; }
+    .eye-right { right: 28%; }
+
+    @keyframes blink {
+      0%, 90%, 100% { transform: scaleY(1); }
+      95% { transform: scaleY(0.1); }
+    }
+
+    .mouth {
+      width: 50%;
+      height: 5px;
+      background: var(--fg);
+      position: absolute;
+      bottom: 30%;
+      left: 50%;
+      transform: translateX(-50%);
+      transition: all 0.3s ease;
+      border-radius: 2px;
+    }
+
+    /* Hover States - The Frown */
+    .pixel-face:hover {
+      border-color: var(--accent);
+      transform: scale(1.1);
+    }
+
+    .pixel-face:hover .mouth {
+      height: clamp(20px, 5vw, 35px);
+      background: transparent;
+      border: 5px solid var(--accent);
+      border-bottom: none;
+      border-left: none;
+      border-right: none;
+      border-radius: 50% 50% 0 0;
+      bottom: 15%;
+      width: 60%;
+    }
+
+    .pixel-face:hover .eye {
+      background: var(--accent);
+    }
+
+    /* Labels */
+    .invalid-text {
+      font-size: clamp(40px, 12vw, 80px); /* Larger */
+      letter-spacing: 4px;
+      margin-top: 20px;
+      font-weight: bold;
+    }
+
+    .url-row {
+      display: flex;
+      align-items: center;
+      gap: clamp(30px, 8vw, 50px);
+      font-size: clamp(50px, 15vw, 100px); /* Larger */
+      font-weight: 900;
+    }
+
+    .hourglass {
+      animation: rotate 2s infinite steps(2);
+      display: inline-block;
+    }
+
+    @keyframes rotate {
+      0% { transform: rotate(0deg); }
+      100% { transform: rotate(180deg); }
+    }
+
+    /* Footer Navigation */
+    .footer {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 20px;
+      width: 100%;
+    }
+
+    .home-btn {
+      color: var(--fg);
+      text-decoration: none;
+      font-size: clamp(20px, 6vw, 28px);
+      font-weight: bold;
+      border: 3px solid var(--fg);
+      padding: 12px 40px;
+      transition: 0.2s;
+    }
+
+    .home-btn:hover {
+      background: var(--fg);
+      color: var(--bg);
+    }
+
+    .copyright {
+      font-size: 14px;
+      opacity: 0.4;
+      letter-spacing: 1px;
+    }
+
+    @media (max-width: 600px) {
+      body { padding: 30px 15px; }
+      .row-404 { gap: 10px; }
+      .invalid-text { margin-top: 10px; }
+    }
+  </style>
+
+  <!-- Vercel Analytics & Speed Insights -->
+  <script>
+    window.va = window.va || function () { (window.vaq = window.vaq || []).push(arguments); };
+  </script>
+  <script defer src="/_vercel/insights/script.js"></script>
+  <script defer src="/_vercel/speed-insights/script.js"></script>
+</head>
+<body>
+
+  <div class="branding">Dept. of CS PDUAM, Amjonga</div>
+
+  <div class="content-wrapper">
+    <div class="row-404">
+      <span>4</span>
+      <div class="pixel-face">
+        <div class="eye eye-left"></div>
+        <div class="eye eye-right"></div>
+        <div class="mouth"></div>
+      </div>
+      <span>4</span>
+    </div>
+
+    <div class="invalid-text">INVALID</div>
+    
+    <div class="url-row">
+      <div class="hourglass">
+        <svg width="40" height="60" viewBox="0 0 40 60" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path fill-rule="evenodd" clip-rule="evenodd" d="M0 0H40V10H35V15H30V20H25V25H15V20H10V15H5V10H0V0ZM15 35H25V40H30V45H35V50H40V60H0V50H5V45H10V40H15V35Z" fill="black"/>
+          <rect x="15" y="10" width="10" height="5" fill="black" opacity="0.2"/>
+          <rect x="15" y="45" width="10" height="5" fill="black"/>
+        </svg>
+      </div>
+      <span>URL</span>
+    </div>
+  </div>
+
+  <div class="footer">
+    <a href="index.html" class="home-btn">¬ Homepage</a>
+    <div class="copyright">
+      &copy; 2026 PDUAM CS DEPARTMENT
+    </div>
+  </div>
+
+</body>
+</html>

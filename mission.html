@@ -1,0 +1,775 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  
+  <!-- SEO Metadata -->
+  <title>Mission & Vision · Dept. of Computer Science · PDUAM Amjonga</title>
+  <meta name="description" content="Official e-Portal of the Department of Computer Science, Pandit Deendayal Upadhyaya Adarsha Mahavidyalaya (PDUAM), Amjonga." />
+  <meta name="keywords" content="pduam amjonga computer science department website, Computer Science, PDUAM, Amjonga, Assam College, Department Website, BSc Computer Science, Higher Education, CS Department" />
+  <meta name="author" content="Department of Computer Science, PDUAM Amjonga" />
+  <meta name="robots" content="index, follow" />
+  
+  <!-- Canonical URL -->
+  <link rel="canonical" href="https://csc.pduam.dpdns.org/mission" />
+  
+  <!-- Favicon -->
+  <link rel="icon" type="image/png" href="assets/favicon/cs_department_logo.png" />
+  
+  <!-- Open Graph / Facebook -->
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://csc.pduam.dpdns.org/mission.html" />
+  <meta property="og:title" content="Mission & Vision · Dept. of Computer Science · PDUAM Amjonga" />
+  <meta property="og:description" content="Official e-Portal of the Department of Computer Science, Pandit Deendayal Upadhyaya Adarsha Mahavidyalaya (PDUAM), Amjonga." />
+  <meta property="og:image" content="https://csc.pduam.dpdns.org/assets/favicon/cs_department_logo.png" />
+  <meta property="og:site_name" content="CS Department, PDUAM Amjonga" />
+  
+  <!-- Twitter -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:url" content="https://csc.pduam.dpdns.org/mission.html" />
+  <meta name="twitter:title" content="Mission & Vision · Dept. of Computer Science · PDUAM Amjonga" />
+  <meta name="twitter:description" content="Official e-Portal of the Department of Computer Science, Pandit Deendayal Upadhyaya Adarsha Mahavidyalaya (PDUAM), Amjonga." />
+  <meta name="twitter:image" content="https://csc.pduam.dpdns.org/assets/favicon/cs_department_logo.png" />
+
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Noto+Serif+Bengali:wght@400;600;700&display=swap" rel="stylesheet"/>
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" rel="stylesheet"/>
+
+  <style>
+  /* ════════════════════════════════════════
+     THEME TOKENS
+  ════════════════════════════════════════ */
+  :root {
+    --gold:      #d4a843;
+    --gold-lt:   #f0c96a;
+    --gold-dim:  rgba(212,168,67,0.15);
+    --teal:      #2dd4bf;
+    --teal-dim:  rgba(45,212,191,0.12);
+    --red:       #ef4444;
+    --r:         14px;
+    --r-lg:      22px;
+    --r-xl:      28px;
+    --shadow:    0 4px 32px rgba(0,0,0,0.18);
+    --shadow-lg: 0 8px 48px rgba(0,0,0,0.24);
+    --font:      'Inter', sans-serif;
+    --font-bn:   'Noto Serif Bengali', serif;
+    --tr:        0.22s cubic-bezier(.4,0,.2,1);
+  }
+
+  [data-theme="dark"] {
+    --bg:       #080c15;
+    --surface:  #111827;
+    --s2:       #1a2236;
+    --s3:       #222d42;
+    --border:   rgba(255,255,255,0.07);
+    --border2:  rgba(255,255,255,0.13);
+    --text:     #e2e8f0;
+    --muted:    #7a8ba8;
+    --heading:  #f8fafc;
+    --nav-bg:   rgba(8,12,21,0.88);
+    --hdr:      linear-gradient(135deg,#0d1321 0%,#111827 100%);
+    --glass-bg: rgba(11,15,26,0.75);
+    --glass-border: rgba(255,255,255,0.10);
+  }
+
+  [data-theme="light"] {
+    --bg:       #f0f4fa;
+    --surface:  #ffffff;
+    --s2:       #f4f7fc;
+    --s3:       #eaeff8;
+    --border:   rgba(0,0,0,0.08);
+    --border2:  rgba(0,0,0,0.15);
+    --text:     #1e293b;
+    --muted:    #64748b;
+    --heading:  #0f172a;
+    --nav-bg:   rgba(240,244,250,0.88);
+    --hdr:      linear-gradient(135deg,#1e3a5f 0%,#2c4a7c 100%);
+    --glass-bg: rgba(240,244,250,0.8);
+    --glass-border: rgba(0,0,0,0.10);
+  }
+
+  /* ════════ RESET ════════ */
+  *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+  html{scroll-behavior:smooth}
+  body{
+    font-family:var(--font);
+    background:var(--bg);
+    color:var(--text);
+    line-height:1.65;
+    min-height:100vh;
+    transition:background var(--tr),color var(--tr);
+    display:flex;flex-direction:column;
+  }
+  ::-webkit-scrollbar{width:5px}
+  ::-webkit-scrollbar-track{background:var(--bg)}
+  ::-webkit-scrollbar-thumb{background:var(--gold);border-radius:99px}
+
+  /* ════════ HEADER ════════ */
+  header{background:var(--hdr);position:relative;overflow:hidden}
+  header::before{
+    content:'';position:absolute;inset:0;pointer-events:none;
+    background:
+      radial-gradient(ellipse 70% 80% at 15% 60%,rgba(212,168,67,.18) 0%,transparent 55%),
+      radial-gradient(ellipse 50% 60% at 85% 20%,rgba(45,212,191,.10) 0%,transparent 55%);
+  }
+  header::after{
+    content:'';position:absolute;inset:0;pointer-events:none;
+    background-image:radial-gradient(rgba(255,255,255,.055) 1px,transparent 1px);
+    background-size:28px 28px;
+  }
+
+  .hdr-inner{
+    position:relative;z-index:3;
+    max-width:1280px;margin:0 auto;
+    padding:2.8rem 2rem 2.2rem;
+    display:grid;
+    grid-template-columns:88px 1fr 88px;
+    align-items:center;gap:2rem;
+  }
+  .hdr-logo{display:flex;justify-content:center}
+  .hdr-logo img{
+    height:76px;width:76px;border-radius:50%;
+    object-fit:contain;
+    border:2.5px solid rgba(212,168,67,.6);
+    padding:4px;background:rgba(255,255,255,.08);
+    box-shadow:0 0 24px rgba(212,168,67,.35),0 0 0 6px rgba(212,168,67,.08);
+    transition:transform var(--tr),box-shadow var(--tr);
+  }
+  .hdr-logo img:hover{
+    transform:scale(1.07);
+    box-shadow:0 0 36px rgba(212,168,67,.5),0 0 0 9px rgba(212,168,67,.12);
+  }
+
+  .hdr-center{text-align:center}
+  .hdr-uni{
+    font-size:clamp(.58rem,1.1vw,.75rem);font-weight:500;
+    color:rgba(255,255,255,.5);letter-spacing:.12em;text-transform:uppercase;margin-bottom:.5rem;
+  }
+  .hdr-assamese{
+    font-family:var(--font-bn);
+    font-size:clamp(1.5rem,4vw,2.8rem);
+    font-weight:700;color:#fff;line-height:1.25;
+    text-shadow:0 2px 20px rgba(0,0,0,.4);
+  }
+  .hdr-assamese span{
+    background:linear-gradient(90deg,var(--gold-lt),var(--gold));
+    -webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;
+  }
+  .hdr-sub{
+    margin-top:.45rem;
+    font-size:clamp(.65rem,1.3vw,.85rem);
+    color:rgba(255,255,255,.45);letter-spacing:.05em;
+  }
+  .hdr-tagline{
+    display:inline-flex;align-items:center;gap:.5rem;margin-top:1rem;
+    font-family:var(--font-bn);font-size:clamp(.7rem,1.4vw,.92rem);
+    color:var(--teal);background:rgba(45,212,191,.1);
+    border:1px solid rgba(45,212,191,.25);
+    padding:.35rem 1rem;border-radius:99px;backdrop-filter:blur(8px);
+  }
+  .live-dot{
+    width:7px;height:7px;background:var(--teal);
+    border-radius:50%;flex-shrink:0;animation:livePulse 2s infinite;
+  }
+  @keyframes livePulse{
+    0%,100%{opacity:1;box-shadow:0 0 0 0 rgba(45,212,191,.6)}
+    50%{opacity:.7;box-shadow:0 0 0 5px rgba(45,212,191,0)}
+  }
+
+  /* ════════ NAV ════════ */
+  nav{
+    background:var(--nav-bg);
+    backdrop-filter:blur(20px);-webkit-backdrop-filter:blur(20px);
+    border-bottom:1px solid var(--border);
+    position:sticky;top:0;z-index:200;
+    transition:background var(--tr);
+  }
+  .nav-inner{
+    max-width:1280px;margin:0 auto;
+    display:flex;align-items:center;justify-content:space-between;
+    padding:0 2rem;gap:1rem;
+  }
+  .nav-brand{
+    display:flex;align-items:center;gap:.5rem;
+    font-size:.82rem;font-weight:700;color:var(--gold);
+    letter-spacing:.05em;white-space:nowrap;flex-shrink:0;padding:.85rem 0;
+  }
+  .nav-brand i{font-size:.9rem}
+  .nav-links{display:flex;list-style:none;gap:0;flex:1;justify-content:center}
+  .nav-links a{
+    display:flex;align-items:center;gap:.3rem;
+    padding:.85rem .65rem;color:var(--muted);text-decoration:none;
+    font-size:.77rem;font-weight:500;letter-spacing:.01em;
+    transition:color var(--tr);position:relative;white-space:nowrap;
+  }
+  .nav-links a i{font-size:.7rem;opacity:.7}
+  .nav-links a::after{
+    content:'';position:absolute;bottom:0;left:.65rem;right:.65rem;
+    height:2px;background:linear-gradient(90deg,var(--gold),var(--teal));
+    border-radius:99px;transform:scaleX(0);transform-origin:left;transition:transform .25s;
+  }
+  .nav-links a:hover, .nav-links a.active{color:var(--heading)}
+  .nav-links a:hover::after, .nav-links a.active::after{transform:scaleX(1)}
+
+  .nav-actions{display:flex;align-items:center;gap:.6rem;flex-shrink:0}
+
+  /* theme toggle */
+  .theme-btn{
+    position:relative;width:52px;height:28px;
+    background:var(--s3);border:1px solid var(--border2);
+    border-radius:99px;cursor:pointer;padding:0;overflow:hidden;
+    transition:background var(--tr);
+  }
+  .theme-btn:focus-visible{outline:2px solid var(--gold);outline-offset:2px}
+  .toggle-track{
+    position:absolute;inset:0;
+    display:flex;align-items:center;justify-content:space-between;
+    padding:0 6px;pointer-events:none;
+  }
+  .toggle-track i{font-size:.62rem}
+  .track-sun{color:#f59e0b}
+  .track-moon{color:#818cf8}
+  .toggle-knob{
+    position:absolute;top:3px;left:3px;
+    width:20px;height:20px;
+    background:linear-gradient(135deg,var(--gold),#b8860b);
+    border-radius:50%;pointer-events:none;
+    transition:transform var(--tr),background var(--tr);
+    box-shadow:0 2px 8px rgba(0,0,0,.3);
+  }
+  [data-theme="light"] .toggle-knob{
+    transform:translateX(24px);
+    background:linear-gradient(135deg,#818cf8,#6366f1);
+  }
+
+  /* Hamburger button */
+  .nav-toggle{
+    display:none;
+    background:var(--s2);border:1px solid var(--border);
+    border-radius:10px;cursor:pointer;
+    width:40px;height:40px;
+    align-items:center;justify-content:center;
+    position:relative;
+    transition:background var(--tr),border-color var(--tr);
+    flex-shrink:0;
+    color:var(--text);font-size:1rem;
+  }
+  .nav-toggle:hover{background:var(--s3);border-color:var(--border2)}
+
+  /* ════════ MOBILE OVERLAY — GLASSMORPHISM ════════ */
+  .mob-overlay{
+    display:none;
+    position:fixed;inset:0;z-index:400;
+    background:var(--glass-bg);
+    backdrop-filter:blur(24px) saturate(180%);
+    -webkit-backdrop-filter:blur(24px) saturate(180%);
+    border-right:1px solid var(--glass-border);
+    flex-direction:column;
+    padding:0;
+    overflow-y:auto;
+    transform:translateX(-100%);
+    transition:transform .38s cubic-bezier(.4,0,.2,1), opacity .3s;
+    opacity:0;
+    max-width:320px;
+  }
+  .mob-overlay.open{
+    display:flex;
+    transform:translateX(0);
+    opacity:1;
+  }
+
+  /* backdrop scrim */
+  .mob-scrim{
+    display:none;position:fixed;inset:0;z-index:399;
+    background:rgba(0,0,0,.45);
+    backdrop-filter:blur(2px);
+    opacity:0;transition:opacity .3s;
+  }
+  .mob-scrim.open{display:block;opacity:1}
+
+  .mob-head{
+    display:flex;align-items:center;justify-content:space-between;
+    padding:1.4rem 1.5rem 1rem;
+    border-bottom:1px solid var(--glass-border);
+  }
+  .mob-brand{font-size:.9rem;font-weight:700;color:var(--gold);letter-spacing:.05em}
+  .mob-brand i{margin-right:.4rem}
+
+  .mob-close-btn{
+    background:rgba(255,255,255,.06);
+    border:1px solid var(--glass-border);
+    color:var(--text);padding:.45rem .65rem;
+    border-radius:8px;cursor:pointer;font-size:.95rem;
+    transition:background var(--tr);
+  }
+  .mob-close-btn:hover{background:rgba(255,255,255,.12)}
+
+  .mob-links{
+    display:flex;flex-direction:column;
+    padding:1rem 1rem 0.5rem;gap:.15rem;flex:1;
+  }
+  .mob-links a{
+    display:flex;align-items:center;gap:.8rem;
+    padding:.8rem 1rem;
+    color:var(--text);text-decoration:none;
+    font-size:.95rem;font-weight:500;
+    border-radius:var(--r);
+    transition:background var(--tr),color var(--tr);
+    border:1px solid transparent;
+  }
+  .mob-links a i{
+    width:20px;text-align:center;
+    color:var(--gold);font-size:.85rem;flex-shrink:0;
+  }
+  .mob-links a:hover, .mob-links a.active{
+    background:rgba(212,168,67,.08);
+    border-color:rgba(212,168,67,.15);
+    color:var(--gold);
+  }
+
+  .mob-theme{
+    margin:1rem;
+    display:flex;align-items:center;justify-content:space-between;
+    padding:.85rem 1rem;
+    background:rgba(255,255,255,.04);
+    border:1px solid var(--glass-border);
+    border-radius:var(--r);
+  }
+  .mob-theme span{font-size:.82rem;font-weight:500;color:var(--muted)}
+
+  /* ════════ MAIN CONTENT ════════ */
+  .wrap{max-width:1280px;margin:0 auto;padding:3.5rem 2rem 5rem;flex:1}
+  
+  .minimal-heading {
+    display: flex; align-items: center; gap: 0.6rem; margin-bottom: 2rem;
+  }
+  .heading-bar {
+    width: 4px; height: 22px; background: var(--gold); border-radius: 4px;
+  }
+  .minimal-heading h2 {
+    font-size: 1.35rem; font-weight: 700; color: var(--heading);
+    display: flex; align-items: center; gap: 0.5rem; margin: 0;
+  }
+
+  /* Mission & Vision Card */
+  .single-mv-card {
+    background: var(--surface); border: 1px solid var(--border);
+    border-radius: var(--r-xl); padding: 3.5rem 4rem;
+    position: relative; overflow: hidden;
+    box-shadow: var(--shadow);
+    max-width: 900px; margin: 0 auto;
+    transition: all var(--tr);
+  }
+  
+  .single-mv-card::before {
+    content: ''; position: absolute; top: 0; left: 0; right: 0; height: 5px;
+    background: linear-gradient(90deg, var(--gold), var(--teal));
+    opacity: 0.8; transition: opacity var(--tr);
+  }
+  
+  .single-mv-card:hover { 
+    box-shadow: var(--shadow-lg); 
+    border-color: rgba(212,168,67,0.3); 
+  }
+  
+  .mv-block {
+    display: flex; gap: 2.5rem; align-items: flex-start;
+  }
+  
+  .mv-ico {
+    width: 80px; height: 80px; flex-shrink: 0;
+    background: linear-gradient(135deg, var(--gold-dim), var(--teal-dim));
+    border-radius: 22px; display: flex; align-items: center; justify-content: center;
+    font-size: 2.2rem; color: var(--gold);
+    box-shadow: 0 8px 32px rgba(212,168,67,0.15);
+    transition: transform var(--tr), color var(--tr);
+    border: 1px solid var(--border2);
+  }
+
+  .mv-block:hover .mv-ico {
+    transform: scale(1.08) translateY(-3px); 
+    color: var(--teal); 
+  }
+
+  .mv-text h3 {
+    font-size: 1.6rem; color: var(--heading); 
+    margin-bottom: 0.75rem; font-weight: 700; 
+  }
+
+  .mv-text p {
+    font-size: 1.05rem; color: var(--text); 
+    line-height: 1.8; margin: 0; 
+  }
+  
+  .mv-divider {
+    height: 1px; background: var(--border2);
+    margin: 3rem 0; width: 100%;
+  }
+
+  /* ════════ FOOTER ════════ */
+  footer{background:var(--surface);border-top:1px solid var(--border);margin-top:auto;transition:background var(--tr)}
+  .ftr-grid{
+    max-width:1280px;margin:0 auto;padding:3rem 2rem 2rem;
+    display:grid;grid-template-columns:2fr 1fr 1fr 1fr;gap:2rem;
+  }
+  .ftr-brand{display:flex;align-items:flex-start;gap:.75rem}
+  .ftr-brand-ico{
+    width:40px;height:40px;flex-shrink:0;
+    background:linear-gradient(135deg,var(--gold-dim),var(--teal-dim));
+    border:1px solid var(--border2);border-radius:10px;
+    display:flex;align-items:center;justify-content:center;
+    color:var(--gold);font-size:1rem;
+  }
+  .ftr-brand-text strong{display:block;font-size:.88rem;font-weight:700;color:var(--heading);margin-bottom:.2rem}
+  .ftr-brand-text p{font-size:.77rem;color:var(--muted);line-height:1.6}
+  .ftr-col h4{font-size:.73rem;font-weight:700;color:var(--gold);text-transform:uppercase;letter-spacing:.1em;margin-bottom:1rem}
+  .ftr-col a,.ftr-col p{
+    display:flex;align-items:center;gap:.5rem;
+    font-size:.8rem;color:var(--muted);text-decoration:none;
+    margin-bottom:.6rem;transition:color var(--tr);
+  }
+  .ftr-col a:hover{color:var(--gold)}
+  .ftr-col i{font-size:.73rem;width:14px;flex-shrink:0}
+  .ftr-bottom{border-top:1px solid var(--border);text-align:center;padding:1.2rem;font-size:.72rem;color:var(--muted);line-height:1.7}
+
+  /* ════════ RESPONSIVE ════════ */
+  @media(max-width:1024px){
+    .nav-links a{padding:.85rem .5rem;font-size:.72rem}
+  }
+  @media(max-width:768px){
+    .hdr-inner{grid-template-columns:1fr;padding:2rem 1.25rem 1.75rem;gap:0;}
+    .hdr-logo{display:none}
+    .hdr-uni{font-size:.58rem}
+
+    .nav-links{display:none}
+    .nav-toggle{display:flex}
+
+    .ftr-grid{grid-template-columns:1fr;gap:2rem}
+    .wrap{padding:2.5rem 1.25rem 3.5rem}
+    .single-mv-card{padding:2.5rem 1.5rem}
+    .mv-block{flex-direction:column;align-items:center;text-align:center;gap:1.25rem}
+    .mv-divider{margin:2rem 0}
+  }
+  @media(max-width:540px){
+    .hdr-assamese{font-size:1.25rem}
+    .hdr-tagline{font-size:.7rem;padding:.3rem .75rem}
+  }
+  
+  /* ════════ SKELETON UI ════════ */
+  .skeleton {
+    background: linear-gradient(90deg, var(--s3) 25%, var(--border) 50%, var(--s3) 75%);
+    background-size: 200% 100%;
+    animation: shimmer 1.5s infinite linear;
+    border-radius: var(--r);
+  }
+  @keyframes shimmer {
+    0% { background-position: -200% 0; }
+    100% { background-position: 200% 0; }
+  }
+  .skeleton-text { height: 1rem; margin-bottom: 0.5rem; border-radius: 4px; }
+  .skeleton-text.w-80 { width: 80%; }
+  .skeleton-text.w-60 { width: 60%; }
+  .skeleton-text.w-40 { width: 40%; }
+  .skeleton-avatar { width: 40px; height: 40px; border-radius: 50%; }
+  .skeleton-card {
+    padding: 1.5rem; background: var(--surface); border: 1px solid var(--border);
+    border-radius: var(--r-xl); display: flex; flex-direction: column; gap: 1rem;
+  }
+  /* Progressive Image Loading */
+  .img-blur-wrap {
+    position: relative; overflow: hidden; display: inline-block; vertical-align: top;
+  }
+  .img-blur-wrap::before {
+    content: ''; position: absolute; inset: 0;
+    background: linear-gradient(90deg, var(--s3) 25%, var(--border) 50%, var(--s3) 75%);
+    background-size: 200% 100%; animation: shimmer 1.5s infinite linear;
+    z-index: 1; pointer-events: none; transition: opacity 0.4s ease;
+  }
+  .img-blur-wrap.loaded::before { opacity: 0; }
+  .img-blur-wrap img {
+    filter: blur(10px); transition: filter 0.4s ease; width: 100%; height: 100%; object-fit: cover;
+  }
+  .img-blur-wrap.loaded img { filter: blur(0); }
+</style>
+
+  <!-- Vercel Analytics & Speed Insights -->
+  <script>
+    window.va = window.va || function () { (window.vaq = window.vaq || []).push(arguments); };
+  </script>
+  <script defer src="/_vercel/insights/script.js"></script>
+  <script defer src="/_vercel/speed-insights/script.js"></script>
+</head>
+<body>
+
+<!-- ════ HEADER ════ -->
+<header>
+  <div class="hdr-inner">
+    <div class="hdr-logo">
+      <img src="assets/logo/gov_logo.jpg" alt="PDUAM Logo" fetchpriority="high"/>
+    </div>
+    <div class="hdr-center">
+      <div class="hdr-uni">Pandit Deendayal Upadhyaya Adarsha Mahavidyalaya, Amjonga</div>
+      <div class="hdr-assamese">কম্পিউটাৰ বিজ্ঞান <span>বিভাগলৈ স্বাগতম</span></div>
+      <div class="hdr-sub">e-Portal · Department of Computer Science · PDUAM, Amjonga, Assam</div>
+      <div>
+        <span class="hdr-tagline">
+          <span class="live-dot"></span>প্রযুক্তিৰ পোহৰেৰে উদ্ভাসিত পৃথিৱী
+        </span>
+      </div>
+    </div>
+    <!-- right logo: hidden on mobile -->
+    <div class="hdr-logo hdr-logo-right">
+      <img src="assets/logo/pduam-logo.jpg" alt="CS Dept Logo" fetchpriority="high"/>
+    </div>
+  </div>
+</header>
+
+<!-- ════ NAV ════ -->
+<nav>
+  <div class="nav-inner">
+    <a href="index" class="nav-brand" style="text-decoration: none;"><i class="fa-solid fa-microchip"></i> CS · PDUAM</a>
+
+    <ul class="nav-links">
+      <li><a href="index"><i class="fa-solid fa-house"></i> Home</a></li>
+      <li><a href="mission" class="active"><i class="fa-solid fa-bullseye"></i> Mission</a></li>
+      <li><a href="faculty"><i class="fa-solid fa-chalkboard-user"></i> Faculty</a></li>
+      <li><a href="students"><i class="fa-solid fa-graduation-cap"></i> Students</a></li>
+      <li><a href="gallery"><i class="fa-solid fa-images"></i> Gallery</a></li>
+      <li><a href="events"><i class="fa-solid fa-calendar-days"></i> Events</a></li>
+      <li><a href="alumni"><i class="fa-solid fa-people-group"></i> Alumni</a></li>
+      <li><a href="archives"><i class="fa-solid fa-box-archive"></i> Archives</a></li>
+      <li><a href="tribute"><i class="fa-solid fa-hand-holding-heart"></i> Tribute</a></li>
+      <li><a href="contact"><i class="fa-solid fa-paper-plane"></i> Contact</a></li>
+    </ul>
+
+    <div class="nav-actions">
+      <!-- Desktop theme btn -->
+      <button class="theme-btn" id="themeBtn" aria-label="Toggle theme">
+        <div class="toggle-track">
+          <i class="fa-solid fa-sun track-sun"></i>
+          <i class="fa-solid fa-moon track-moon"></i>
+        </div>
+        <div class="toggle-knob"></div>
+      </button>
+      <!-- Hamburger (morphs to ×) -->
+      <button class="nav-toggle" id="menuBtn" aria-label="Toggle menu" aria-expanded="false">
+        <i class="fa-solid fa-bars" id="menuIcon"></i>
+      </button>
+    </div>
+  </div>
+</nav>
+
+<!-- ════ MOBILE SCRIM (backdrop) ════ -->
+<div class="mob-scrim" id="mobScrim"></div>
+
+<!-- ════ MOBILE OVERLAY — GLASSMORPHISM ════ -->
+<div class="mob-overlay" id="mobOverlay" role="dialog" aria-modal="true" aria-label="Navigation menu">
+  <div class="mob-head">
+    <a href="index" class="mob-brand" style="text-decoration: none;"><i class="fa-solid fa-microchip"></i> CS · PDUAM</a>
+    <button class="mob-close-btn" id="mobClose" aria-label="Close menu">
+      <i class="fa-solid fa-xmark"></i>
+    </button>
+  </div>
+
+  <nav class="mob-links">
+    <a href="index"><i class="fa-solid fa-house"></i>Home</a>
+    <a href="mission" class="active"><i class="fa-solid fa-bullseye"></i>Mission</a>
+    <a href="faculty"><i class="fa-solid fa-chalkboard-user"></i>Faculty</a>
+    <a href="students"><i class="fa-solid fa-graduation-cap"></i>Student Corner</a>
+    <a href="gallery"><i class="fa-solid fa-images"></i>Gallery</a>
+    <a href="events"><i class="fa-solid fa-calendar-days"></i>Events</a>
+    <a href="alumni"><i class="fa-solid fa-people-group"></i>Alumni</a>
+    <a href="archives"><i class="fa-solid fa-box-archive"></i>Archives</a>
+    <a href="tribute"><i class="fa-solid fa-hand-holding-heart"></i>Tribute</a>
+    <a href="contact"><i class="fa-solid fa-paper-plane"></i>Contact</a>
+  </nav>
+
+  <div class="mob-theme">
+    <span id="mobThemeLabel">Switch to Light Mode</span>
+    <button class="theme-btn" id="themeBtnMob" aria-label="Toggle theme">
+      <div class="toggle-track">
+        <i class="fa-solid fa-sun track-sun"></i>
+        <i class="fa-solid fa-moon track-moon"></i>
+      </div>
+      <div class="toggle-knob"></div>
+    </button>
+  </div>
+</div>
+
+<!-- ════ MAIN CONTENT ════ -->
+<main class="wrap">
+  
+  <div class="minimal-heading">
+    <div class="heading-bar"></div>
+    <h2><i class="fa-solid fa-bullseye"></i> Our Mission &amp; Vision</h2>
+  </div>
+
+  <div class="single-mv-card">
+    <!-- Mission -->
+    <div class="mv-block">
+      <div class="mv-ico"><i class="fa-solid fa-bullseye"></i></div>
+      <div class="mv-text">
+        <h3>Mission</h3>
+        <p>To provide quality education in Computer Science that empowers students with technical skills, ethical values, and innovative thinking to meet global challenges while preserving local cultural identity.</p>
+      </div>
+    </div>
+    
+    <div class="mv-divider"></div>
+
+    <!-- Vision -->
+    <div class="mv-block">
+      <div class="mv-ico"><i class="fa-solid fa-eye"></i></div>
+      <div class="mv-text">
+        <h3>Vision</h3>
+        <p>To become a center of excellence in computer education and research in Northeast India, producing socially responsible professionals who contribute to technological advancement in Assam and beyond.</p>
+      </div>
+    </div>
+  </div>
+
+</main>
+
+<!-- ════ FOOTER ════ -->
+<footer>
+  <div class="ftr-grid">
+    <div class="ftr-col">
+      <div class="ftr-brand">
+        <div class="ftr-brand-ico"><i class="fa-solid fa-microchip"></i></div>
+        <div class="ftr-brand-text">
+          <strong>Department of Computer Science</strong>
+          <p>Pandit Deendayal Upadhyaya Adarsha Mahavidyalaya, Amjonga, Assam, India</p>
+        </div>
+      </div>
+    </div>
+    <div class="ftr-col">
+      <h4>Connect</h4>
+      <a href="https://www.pduamamjonga.ac.in/department-details/83" target="_blank"><i class="fa-solid fa-globe"></i>College Website</a>
+      <a href="mailto:pduamcsc2017@gmail.com"><i class="fa-solid fa-envelope"></i>pduamcsc2017@gmail.com</a>
+      <a href="https://maps.app.goo.gl/WDbDdr6dqUqA9LVGA?g_st=aw" target="_blank"><i class="fa-solid fa-location-dot"></i>Locate Us on Maps</a>
+    </div>
+    <div class="ftr-col">
+      <h4>Resources</h4>
+      <a href="routine"><i class="fa-solid fa-table-cells-large"></i>Class Routine</a>
+      <a href="https://drive.google.com/drive/folders/14CjyuJb6DAtywFV9AIpFjaCYRcA6Yapg?usp=sharing" target="_blank"><i class="fa-solid fa-book-open-reader"></i>Syllabus</a>
+      <a href="https://gauhati.ac.in/media/notification/1734503844.pdf" target="_blank"><i class="fa-solid fa-umbrella-beach"></i>Holiday List (GU)</a>
+    </div>
+    <div class="ftr-col">
+      <h4>Useful Links</h4>
+      <a href="https://gauhati.ac.in/" target="_blank"><i class="fa-solid fa-link"></i>Gauhati University</a>
+      <a href="https://ahsec.assam.gov.in/" target="_blank"><i class="fa-solid fa-link"></i>AHSEC</a>
+      <a href="https://darpan.ahseconline.in/" target="_blank"><i class="fa-solid fa-link"></i>Darpan</a>
+    </div>
+  </div>
+  <div class="ftr-bottom">
+    &copy; 2026 Department of Computer Science, PDUAM Amjonga. All Rights Reserved.
+    <p style="margin-top: 0.8rem; margin-bottom: 0.4rem;">
+      Developed by the <a href="faculty" style="color: var(--teal); text-decoration: none;">Faculty</a> of the Department of Computer Science,
+      Pandit Deendayal Upadhyaya Adarsha Mahavidyalaya (PDUAM), Amjonga
+    </p>
+    <p>
+      Redesigned and improved by 
+      <a href="https://sonajit.in" target="_blank" rel="noopener noreferrer" style="color: var(--teal); text-decoration: none;">
+        sOn4jit
+      </a>
+    </p>
+  </div>
+</footer>
+
+<script>
+/* ═══════════════════════════════════════
+   1. THEME — system-aware + toggle
+═══════════════════════════════════════ */
+const html = document.documentElement;
+const SKEY = 'pduam-cs-theme';
+
+const getSys  = () => window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
+const applyTheme = t => {
+  html.setAttribute('data-theme', t);
+  localStorage.setItem(SKEY, t);
+  const lbl = document.getElementById('mobThemeLabel');
+  if (lbl) lbl.textContent = t === 'dark' ? 'Switch to Light Mode' : 'Switch to Dark Mode';
+};
+const toggleTheme = () => applyTheme(html.getAttribute('data-theme') === 'dark' ? 'light' : 'dark');
+
+applyTheme(localStorage.getItem(SKEY) || getSys());
+
+window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', e => {
+  if (!localStorage.getItem(SKEY)) applyTheme(e.matches ? 'dark' : 'light');
+});
+
+document.getElementById('themeBtn').addEventListener('click', toggleTheme);
+document.getElementById('themeBtnMob').addEventListener('click', toggleTheme);
+
+/* ═══════════════════════════════════════
+   2. MOBILE NAV — hamburger morph + glass overlay
+═══════════════════════════════════════ */
+const menuBtn  = document.getElementById('menuBtn');
+const overlay  = document.getElementById('mobOverlay');
+const scrim    = document.getElementById('mobScrim');
+
+function openMenu() {
+  menuBtn.setAttribute('aria-expanded', 'true');
+  overlay.classList.add('open');
+  scrim.classList.add('open');
+  document.body.style.overflow = 'hidden';
+  document.getElementById('menuIcon').className = 'fa-solid fa-xmark';
+}
+function closeMenu() {
+  menuBtn.setAttribute('aria-expanded', 'false');
+  overlay.classList.remove('open');
+  scrim.classList.remove('open');
+  document.body.style.overflow = '';
+  document.getElementById('menuIcon').className = 'fa-solid fa-bars';
+}
+
+menuBtn.addEventListener('click', () =>
+  overlay.classList.contains('open') ? closeMenu() : openMenu()
+);
+document.getElementById('mobClose').addEventListener('click', closeMenu);
+scrim.addEventListener('click', closeMenu);
+overlay.querySelectorAll('a').forEach(a => a.addEventListener('click', closeMenu));
+document.addEventListener('keydown', e => { if (e.key === 'Escape') closeMenu(); });
+
+</script>
+
+<script>
+/* ════════ PROGRESSIVE IMAGE LOADING ════════ */
+document.addEventListener("DOMContentLoaded", () => {
+  const images = document.querySelectorAll("img");
+  images.forEach(img => {
+    // Add lazy loading
+    if (!img.hasAttribute("loading")) {
+      img.setAttribute("loading", "lazy");
+    }
+    // Only wrap images that are not tiny logos or already wrapped
+    if (img.classList.contains('hdr-logo-img') || img.closest('.img-blur-wrap') || img.closest('.hdr-logo') || img.closest('.slideshow')) return;
+    
+    // Wrap img
+    const wrap = document.createElement("div");
+    wrap.className = "img-blur-wrap";
+    
+    // Copy computed border-radius and exact layout properties
+    const style = window.getComputedStyle(img);
+    wrap.style.borderRadius = style.borderRadius;
+    
+    // Attempt to maintain dimensions to prevent layout shifts
+    const w = img.getAttribute('width') || style.width;
+    const h = img.getAttribute('height') || style.height;
+    if (w !== 'auto' && w) wrap.style.width = w;
+    if (h !== 'auto' && h) wrap.style.height = h;
+    if (style.aspectRatio !== 'auto') wrap.style.aspectRatio = style.aspectRatio;
+    
+    img.parentNode.insertBefore(wrap, img);
+    wrap.appendChild(img);
+
+    // Load handling
+    if (img.complete) {
+      wrap.classList.add("loaded");
+    } else {
+      img.addEventListener("load", () => wrap.classList.add("loaded"));
+      img.addEventListener("error", () => wrap.classList.add("loaded")); // fallback
+    }
+  });
+});
+</script>
+</body>
+</html>

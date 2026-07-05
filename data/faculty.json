@@ -1,0 +1,54 @@
+[
+  {
+    "name": "Dr. Sisir Kr. Rajbongshi",
+    "title": "Assistant Professor",
+    "qualification": "M.Sc., Ph.D., GATE",
+    "specialization": "Fuzzy Algebra, Data Science, Computer Vision, Data Mining",
+    "email": "sisirrajbongshi@gmail.com",
+    "phone": "+91 70022 34501",
+    "image": "https://cdn.jsdelivr.net/gh/cscpduam-alt/csc.pduam.cdn@main/uploads/faculty/2026-05-19T14-13-47-057Z-9eshuc3uo.webp",
+    "link": "https://sisirrajbongshi.github.io/SISIR/",
+    "category": "teaching"
+  },
+  {
+    "name": "Dr. Kshirod Sarmah",
+    "title": "Assistant Professor",
+    "qualification": "M.Sc., Ph.D., B.Ed.",
+    "specialization": "Computer Networks, Speech-Signal Processing, Machine Learning, AI",
+    "email": "khirodsarmah@gmail.com",
+    "phone": "+91 94018 00625",
+    "image": "https://cdn.jsdelivr.net/gh/cscpduam-alt/csc.pduam.cdn@main/uploads/faculty/2026-05-19T14-13-41-792Z-o6xfexhph.webp",
+    "link": "https://kshirod178.github.io/Dr-Kshirod-Sarmah/",
+    "category": "teaching"
+  },
+  {
+    "name": "Mr. Dharmeswar Tarang (HoD)",
+    "title": "Assistant Professor",
+    "qualification": "M.Sc., NET",
+    "specialization": "Data Mining, Computer Network, AI",
+    "email": "dharmeswartarang@gmail.com",
+    "phone": "+91 78964 82942",
+    "image": "https://cdn.jsdelivr.net/gh/cscpduam-alt/csc.pduam.cdn@main/uploads/faculty/2026-05-19T14-13-36-883Z-nxsxmg97g.webp",
+    "link": "",
+    "category": "teaching"
+  },
+  {
+    "name": "Dr. Rajdeep Ghosh",
+    "title": "Assistant Professor",
+    "qualification": "Ph.D, M.Tech, NET, GATE",
+    "specialization": "Machine Learning, AI, Cloud Computing",
+    "email": "grajdeep.2014@gmail.com",
+    "phone": "+91 90855 77988",
+    "image": "https://cdn.jsdelivr.net/gh/cscpduam-alt/csc.pduam.cdn@main/uploads/faculty/2026-05-19T14-13-44-344Z-38a0x85fs.webp",
+    "link": "",
+    "category": "teaching"
+  },
+  {
+    "name": "Niranjan Keleng",
+    "title": "Laboratory Bearer",
+    "specialization": "Departmental Support Staff",
+    "image": "https://cdn.jsdelivr.net/gh/cscpduam-alt/csc.pduam.cdn@main/uploads/faculty/2026-05-19T14-13-39-865Z-gfuote0o7.webp",
+    "link": "",
+    "category": "non-teaching"
+  }
+]

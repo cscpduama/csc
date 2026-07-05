@@ -1,0 +1,289 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Unsubscribe - PDUAM Computer Science</title>
+  
+  <!-- Favicon -->
+  <link rel="icon" type="image/png" href="../assets/favicon/cs_department_logo.png" />
+  
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --bg: #080c15;
+      --surface: #111827;
+      --border: rgba(255, 255, 255, 0.08);
+      --text: #94a3b8;
+      --heading: #f8fafc;
+      --gold: #d4a843;
+      --teal: #2dd4bf;
+      --r: 20px;
+      --font: 'Inter', sans-serif;
+    }
+
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body {
+      font-family: var(--font);
+      background: var(--bg);
+      color: var(--text);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      min-height: 100vh;
+      padding: 1.5rem;
+    }
+
+    .card {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: var(--r);
+      width: 100%;
+      max-width: 440px;
+      padding: 3rem 2.5rem;
+      text-align: center;
+      box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.5);
+      position: relative;
+      overflow: hidden;
+    }
+    
+    .card::before {
+      content: '';
+      position: absolute;
+      top: 0; left: 0; right: 0; height: 4px;
+      background: linear-gradient(90deg, var(--gold), var(--teal));
+    }
+
+    .icon-box {
+      width: 80px;
+      height: 80px;
+      background: rgba(212, 168, 67, 0.1);
+      border: 1px solid rgba(212, 168, 67, 0.2);
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin: 0 auto 1.5rem;
+      font-size: 2rem;
+      color: var(--gold);
+    }
+
+    h1 { color: var(--heading); font-size: 1.5rem; margin-bottom: 0.75rem; font-weight: 700; }
+    p { margin-bottom: 1.5rem; line-height: 1.6; font-size: 0.95rem; }
+
+    .email-display {
+      background: rgba(255, 255, 255, 0.03);
+      padding: 0.85rem;
+      border-radius: 12px;
+      margin-bottom: 2rem;
+      color: var(--heading);
+      font-weight: 500;
+      border: 1px dashed var(--border);
+      font-size: 0.9rem;
+    }
+
+    .btn {
+      width: 100%;
+      padding: 1rem;
+      border: none;
+      border-radius: 12px;
+      font-weight: 700;
+      cursor: pointer;
+      transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+      font-size: 0.95rem;
+      font-family: var(--font);
+    }
+
+    .btn-unsub {
+      background: #ef4444;
+      color: white;
+      box-shadow: 0 4px 12px rgba(239, 68, 68, 0.2);
+    }
+
+    .btn-unsub:hover:not(:disabled) {
+      background: #dc2626;
+      transform: translateY(-2px);
+      box-shadow: 0 6px 15px rgba(239, 68, 68, 0.3);
+    }
+
+    .btn-unsub:disabled {
+      opacity: 0.5;
+      cursor: not-allowed;
+    }
+
+    .status {
+      margin-top: 1.5rem;
+      font-size: 0.9rem;
+      padding: 1rem;
+      border-radius: 10px;
+      display: none;
+    }
+    .status.success { 
+      background: rgba(45, 212, 191, 0.1);
+      border: 1px solid rgba(45, 212, 191, 0.2);
+      color: var(--teal); 
+      display: block; 
+    }
+    .status.error { 
+      background: rgba(239, 68, 68, 0.1);
+      border: 1px solid rgba(239, 68, 68, 0.2);
+      color: #f87171; 
+      display: block; 
+    }
+
+    .back-link {
+      margin-top: 2rem;
+      display: inline-block;
+      color: var(--gold);
+      text-decoration: none;
+      font-size: 0.85rem;
+      font-weight: 600;
+      transition: color 0.2s;
+    }
+    .back-link:hover { color: var(--teal); }
+
+    /* Error View */
+    .error-view { display: none; }
+    .error-view h1 { color: #ef4444; }
+    .error-view .icon-box { color: #ef4444; background: rgba(239, 68, 68, 0.1); border-color: rgba(239, 68, 68, 0.2); }
+
+    /* Loading Overlay */
+    #loader {
+      position: absolute;
+      inset: 0;
+      background: var(--surface);
+      z-index: 10;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+    }
+    .spinner {
+      width: 40px; height: 40px;
+      border: 3px solid rgba(212, 168, 67, 0.1);
+      border-top-color: var(--gold);
+      border-radius: 50%;
+      animation: spin 1s linear infinite;
+      margin-bottom: 1rem;
+    }
+    @keyframes spin { to { transform: rotate(360deg); } }
+  </style>
+</head>
+<body>
+
+  <div class="card">
+    <div id="loader">
+      <div class="spinner"></div>
+      <p>Verifying link...</p>
+    </div>
+
+    <!-- Main Unsubscribe View -->
+    <div id="mainView">
+      <div class="icon-box"><i class="fa-solid fa-envelope-circle-check"></i></div>
+      <h1>Unsubscribe</h1>
+      <p>Are you sure you want to stop receiving notification alerts for:</p>
+      
+      <div id="emailBox" class="email-display"></div>
+      
+      <button id="unsubBtn" class="btn btn-unsub">Confirm Unsubscribe</button>
+      
+      <div id="statusMsg" class="status"></div>
+      
+      <a href="../notifications" class="back-link"><i class="fa-solid fa-arrow-left"></i> Return to e-Portal</a>
+    </div>
+
+    <!-- Error/404 View -->
+    <div id="errorView" class="error-view">
+      <div class="icon-box"><i class="fa-solid fa-triangle-exclamation"></i></div>
+      <h1>Invalid Link</h1>
+      <p id="errorMsg">This unsubscribe link is invalid or has expired. Please use the link provided in your latest email.</p>
+      <a href="../index" class="back-link"><i class="fa-solid fa-house"></i> Go to Home</a>
+    </div>
+  </div>
+
+  <script>
+    const SCRIPT_URL = 'https://script.google.com/macros/s/AKfycbxG60CIliozpIfHA3bkslX64A8wn2k7EO-JFYnFgrNigTXKCsqwQ0K86S8o9xAlPkNO/exec';
+    
+    const urlParams = new URLSearchParams(window.location.search);
+    const token = urlParams.get('token');
+    
+    const loader = document.getElementById('loader');
+    const mainView = document.getElementById('mainView');
+    const errorView = document.getElementById('errorView');
+    const emailBox = document.getElementById('emailBox');
+    const unsubBtn = document.getElementById('unsubBtn');
+    const statusMsg = document.getElementById('statusMsg');
+
+    async function verifyToken() {
+      if (!token) {
+        showError("No security token provided. Please use the link from your email.");
+        return;
+      }
+
+      try {
+        const resp = await fetch(`${SCRIPT_URL}?action=check&token=${token}`);
+        const result = await resp.json();
+
+        if (result.status === 'exists') {
+          emailBox.textContent = maskEmail(result.email);
+          loader.style.display = 'none';
+          mainView.style.display = 'block';
+        } else {
+          showError("Invalid or expired security token.");
+        }
+      } catch (err) {
+        showError("Could not verify link. Please check your connection.");
+      }
+    }
+
+    function showError(msg) {
+      loader.style.display = 'none';
+      mainView.style.display = 'none';
+      errorView.style.display = 'block';
+      document.getElementById('errorMsg').textContent = msg;
+    }
+
+    function maskEmail(email) {
+      const [user, domain] = email.split('@');
+      if (user.length <= 2) return email;
+      return user.substring(0, 2) + "****@" + domain;
+    }
+
+    unsubBtn.addEventListener('click', async () => {
+      unsubBtn.disabled = true;
+      unsubBtn.textContent = "Processing...";
+      statusMsg.className = 'status';
+      
+      try {
+        // Use no-cors for the actual deletion request
+        await fetch(SCRIPT_URL, {
+          method: 'POST',
+          mode: 'no-cors',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify({ action: 'unsubscribe_token', token: token })
+        });
+        
+        statusMsg.textContent = "You have been successfully unsubscribed.";
+        statusMsg.className = "status success";
+        document.querySelector('.icon-box').innerHTML = '<i class="fa-solid fa-circle-check"></i>';
+        document.querySelector('.icon-box').style.color = 'var(--teal)';
+        document.querySelector('.icon-box').style.background = 'rgba(45, 212, 191, 0.1)';
+        document.querySelector('.icon-box').style.borderColor = 'rgba(45, 212, 191, 0.2)';
+        
+        mainView.querySelector('p').style.display = 'none';
+        emailBox.style.display = 'none';
+        unsubBtn.style.display = 'none';
+      } catch (err) {
+        statusMsg.textContent = "Something went wrong. Please try again.";
+        statusMsg.className = "status error";
+        unsubBtn.disabled = false;
+        unsubBtn.textContent = "Confirm Unsubscribe";
+      }
+    });
+
+    // Start verification
+    verifyToken();
+  </script>
+</body>
+</html>

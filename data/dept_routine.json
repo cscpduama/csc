@@ -1,0 +1,217 @@
+{
+  "times": ["9AM-10AM", "10AM-11AM", "11AM-12PM", "12PM-1PM", "1PM-2PM", "2PM-3PM", "3PM-4PM"],
+  "schedule": [
+    {
+      "day": "MonDay",
+      "faculty": [
+        {
+          "name": "Kshirod Sarmah",
+          "periods": [
+            null,
+            {"sem": "VI", "paper": "CC", "room": ""},
+            null,
+            null,
+            null,
+            {"sem": "IV", "paper": "OS", "room": ""},
+            null
+          ]
+        },
+        {
+          "name": "Sisir K Rajbongshi",
+          "periods": [
+            null,
+            {"sem": "IV", "paper": "DBMS", "room": ""},
+            null,
+            {"sem": "VI", "paper": "ATAL", "room": ""},
+            null,
+            null,
+            null
+          ]
+        },
+        {
+          "name": "Dharmeswar Tarang",
+          "periods": [
+            null,
+            null,
+            {"sem": "IV", "paper": "MFCS", "room": ""},
+            null,
+            null,
+            {"sem": "II", "paper": "CO", "room": ""},
+            null
+          ]
+        },
+        {
+          "name": "Rajdeep Ghosh",
+          "periods": [
+            {"sem": "IV", "paper": "PY", "room": ""},
+            null,
+            null,
+            null,
+            {"sem": "VI", "paper": "CD", "room": ""},
+            null,
+            null
+          ]
+        }
+      ]
+    },
+    {
+      "day": "TuesDay",
+      "faculty": [
+        {
+          "name": "Kshirod Sarmah",
+          "periods": [
+            null,
+            null,
+            null,
+            {"sem": "VI", "paper": "CC", "room": ""},
+            {"sem": "IV", "paper": "OS", "room": ""},
+            null,
+            null
+          ]
+        },
+        {
+          "name": "Sisir K Rajbongshi",
+          "periods": [
+            null,
+            null,
+            {"sem": "VI", "paper": "ATAL", "room": ""},
+            {"sem": "IV", "paper": "DBMS", "room": ""},
+            {"sem": "II", "paper": "HTML", "room": ""},
+            null,
+            null
+          ]
+        },
+        {
+          "name": "Dharmeswar Tarang",
+          "periods": [
+            {"sem": "II", "paper": "CO", "room": ""},
+            {"sem": "IV", "paper": "MFCS", "room": ""},
+            null,
+            null,
+            null,
+            null,
+            null
+          ]
+        },
+        {
+          "name": "Rajdeep Ghosh",
+          "periods": [
+            null,
+            {"sem": "VI", "paper": "CD", "room": ""},
+            null,
+            null,
+            {"sem": "IV", "paper": "PY", "room": ""},
+            null,
+            null
+          ]
+        }
+      ]
+    },
+    {
+      "day": "WednesDay",
+      "faculty": [
+        {
+          "name": "Kshirod Sarmah",
+          "periods": [
+            null,
+            {"sem": "IV", "paper": "OS", "room": ""},
+            null,
+            null,
+            null,
+            {"sem": "VI", "paper": "CC", "room": ""},
+            null
+          ]
+        },
+        {
+          "name": "Sisir K Rajbongshi",
+          "periods": [
+            null,
+            null,
+            {"sem": "VI", "paper": "ATAL", "room": ""},
+            {"sem": "IV", "paper": "DBMS", "room": ""},
+            null,
+            null,
+            {"sem": "II", "paper": "HTML", "room": ""}
+          ]
+        },
+        {
+          "name": "Dharmeswar Tarang",
+          "periods": [
+            null,
+            null,
+            null,
+            {"sem": "IV", "paper": "MFCS", "room": ""},
+            {"sem": "II", "paper": "CO", "room": ""},
+            null,
+            null
+          ]
+        },
+        {
+          "name": "Rajdeep Ghosh",
+          "periods": [
+            null,
+            {"sem": "VI", "paper": "CD", "room": ""},
+            null,
+            null,
+            {"sem": "IV", "paper": "PY", "room": ""},
+            null,
+            null
+          ]
+        }
+      ]
+    },
+    {
+      "day": "ThursDay",
+      "faculty": [
+        {
+          "name": "Kshirod Sarmah",
+          "periods": [
+            null,
+            null,
+            {"sem": "IV", "paper": "OS", "room": ""},
+            null,
+            {"sem": "VI", "paper": "CC", "room": ""},
+            null,
+            null
+          ]
+        },
+        {
+          "name": "Sisir K Rajbongshi",
+          "periods": [
+            {"sem": "IV", "paper": "DBMS", "room": ""},
+            {"sem": "VI", "paper": "ATAL", "room": ""},
+            null,
+            null,
+            {"sem": "II", "paper": "HTML", "room": ""},
+            null,
+            null
+          ]
+        },
+        {
+          "name": "Dharmeswar Tarang",
+          "periods": [
+            null,
+            null,
+            null,
+            null,
+            {"sem": "IV", "paper": "MFCS", "room": ""},
+            {"sem": "II", "paper": "CO", "room": ""},
+            null
+          ]
+        },
+        {
+          "name": "Rajdeep Ghosh",
+          "periods": [
+            null,
+            null,
+            null,
+            {"sem": "VI", "paper": "CD", "room": ""},
+            {"sem": "IV", "paper": "PY", "room": ""},
+            null,
+            null
+          ]
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,88 @@
+{
+  "times": [
+    "9.00-10.00 AM",
+    "10.00-11.00 AM",
+    "11.00-12.00 Noon",
+    "12.00-1.00 PM",
+    "1.00-2.00 PM",
+    "2.00-3.00 PM",
+    "3.00-4.00 PM"
+  ],
+  "schedule": [
+    {
+      "day": "MONDAY",
+      "classes": [
+        { "name": "H.S 1st Year (Sc.)", "periods": ["Zoo", "English", "Maths", "Chemistry", "Com. Sc.-9A", "Ass/Alt.Eng/Boro", "Practical"] },
+        { "name": "H.S 2nd Year (Sc)", "periods": ["Ass/Alt.Eng/Boro", "Com. Sc.", "Physics", "English", "Botany", "Maths", "Practical (Phy/Zoo)"] },
+        { "name": "B.Sc 2nd Sem", "periods": ["Phy", "Maths", "AEC", "Che-SCR 2", "MDC", "Bot - SCR 2", "Practical"] },
+        { "name": "B.Sc 4th Sem", "periods": ["Major", "Major", "Phy", "Maths", "Che", "AEC-ECR1", "Practical/ Remedial"] },
+        { "name": "B.Sc 6th Sem", "periods": ["Remedial", "Major-13 (Bot - SCR 1)", "Major-14", "Library Work", "VAC-10", "Practical/Remedial", "Practical/Tutorial"] }
+      ]
+    },
+    {
+      "day": "TUESDAY",
+      "classes": [
+        { "name": "H.S 1st Year (Sc.)", "periods": ["Chemistry", "Physics", "Ass/Alt.Eng/Boro", "Com. Sc.-9A/Botany", "Maths", "English", "Practical"] },
+        { "name": "H.S 2nd Year (Sc)", "periods": ["Maths", "Com. Sc.-9A", "Chemistry", "English", "Zoology", "Ass/Alt.Eng/Boro", "Practical"] },
+        { "name": "B.Sc 2nd Sem", "periods": ["Com.Sc.", "Bot", "Phy-SCR 2", "Zoo-SCR 2", "SEC", "VAC", "AEC"] },
+        { "name": "B.Sc 4th Sem", "periods": ["Bot", "Major-8", "Major-6", "Com. Sc.", "Phy", "Zoo", "Practical/Tutorial"] },
+        { "name": "B.Sc 6th Sem", "periods": ["Remedial", "Major-15", "Major-12", "Major-14 Maths-SCR1", "Library Work", "Practical/Remedial", "Practical/Tutorial"] }
+      ]
+    },
+    {
+      "day": "WEDNESDAY",
+      "classes": [
+        { "name": "H.S 1st Year (Sc.)", "periods": ["Ass/Alt.Eng/Boro", "Maths", "Physics", "English", "Zoo", "Com. Sc.-9A", "Practical"] },
+        { "name": "H.S 2nd Year (Sc)", "periods": ["Physics", "Chemistry", "Maths", "Com. Sc.-9A", "Botany", "Practical", "Practical"] },
+        { "name": "B.Sc 2nd Sem", "periods": ["Che", "Zoo", "AEC", "Maths-SCR 2", "Com.Sc.", "MDC", "SEC"] },
+        { "name": "B.Sc 4th Sem", "periods": ["Major", "Major", "Com. Sc.", "Che", "Zoo", "Maths", "Remedial"] },
+        { "name": "B.Sc 6th Sem", "periods": ["Remedial", "Major-15", "Major-12 (PHY-SCR 2)", "Major-13", "VAC-10", "Practical/Tutorial", "Practical/Remedial"] }
+      ]
+    },
+    {
+      "day": "THURSDAY",
+      "classes": [
+        { "name": "H.S 1st Year (Sc.)", "periods": ["Botany", "Physics/Chemistry", "Com. Sc.-9A", "Ass/Alt.Eng/Boro", "English", "EVS", "-"] },
+        { "name": "H.S 2nd Year (Sc)", "periods": ["English", "Ass/Alt.Eng/Boro", "Maths", "Com. Sc.-9A/Zoology", "Chemistry", "Practical", "-"] },
+        { "name": "B.Sc 2nd Sem", "periods": ["Phy", "Maths/Che", "SEC", "MDC", "Comp. Sc.", "-", "-"] },
+        { "name": "B.Sc 4th Sem", "periods": ["Maths", "Major/Che", "Major", "Comp. Sc.", "Phy", "Bot", "-"] },
+        { "name": "B.Sc 6th Sem", "periods": ["Remedial", "Major-13 (CHE-SCR 2)", "Major-14", "Major-12 (BOT-SCR 1)", "Practical/Remedial", "Practical/Tutorial", "Extension Activities"] }
+      ]
+    },
+    {
+      "day": "FRIDAY",
+      "classes": [
+        { "name": "H.S 1st Year (Sc.)", "periods": ["Physics", "English/Com.Sc.", "Maths", "Zoology", "Chemistry", "Practical", "-"] },
+        { "name": "H.S 2nd Year (Sc)", "periods": ["Chemistry", "Ass/Alt.Eng/Boro", "Zoology", "English", "Botany", "Com. Sc.-9A", "Practical"] },
+        { "name": "B.Sc 2nd Sem", "periods": ["Phy", "Physics/Bot", "Com.Sc.", "Practical (Che/Com.Sc)", "Practical (Phy/Zoo)", "VAC", "-"] },
+        { "name": "B.Sc 4th Sem", "periods": ["Com.Sc.", "Major", "Major (CHE)", "Phy", "AEC-ECR1", "Bot", "Zoology"] },
+        { "name": "B.Sc 6th Sem", "periods": ["Remedial", "Major-15", "Major-13", "Library Work", "VAC-10", "Practical/Remedial", "Practical/Tutorial"] }
+      ]
+    },
+    {
+      "day": "SATURDAY",
+      "classes": [
+        { "name": "H.S 1st Year (Sc.)", "periods": ["Maths", "Physics", "Botany", "EVS", "-", "-", "-"] },
+        { "name": "H.S 2nd Year (Sc)", "periods": ["Zoology", "Chemistry/Ass/Alt", "Maths", "Physics", "-", "-", "-"] },
+        { "name": "B.Sc 2nd Sem", "periods": ["Zoology", "Mathematics/Che", "Botany", "AEC", "-", "-", "-"] },
+        { "name": "B.Sc 4th Sem", "periods": ["Major", "Major/Zoology", "Mathematics", "Che", "-", "-", "-"] },
+        { "name": "B.Sc 6th Sem", "periods": ["Remedial", "Major-14 (Math-SCR 2)", "Major-12 (ZOO-SCR 1)", "Major-15", "Practical/Tutorial", "-", "-"] }
+      ]
+    }
+  ],
+  "roomDistribution": {
+    "general": [
+      { "class": "H.S. 1st Year (Sc.)", "room": "Room No. NB-4" },
+      { "class": "H.S. 2nd Year (Sc.)", "room": "Room No. [Not Specified]" },
+      { "class": "B.Sc. 2nd Semester", "room": "Room No. 5" }
+    ],
+    "major": [
+      { "subject": "Maths", "sem4": "7", "sem6": "7A(2)" },
+      { "subject": "Botany", "sem4": "Lab", "sem6": "Class Room 3" },
+      { "subject": "Zoology", "sem4": "Lab", "sem6": "Class Room 1" },
+      { "subject": "Chemistry", "sem4": "Lab", "sem6": "7A(1)" },
+      { "subject": "Physics", "sem4": "Lab", "sem6": "9(1)" },
+      { "subject": "Com. Science", "sem4": "Comp. Lab", "sem6": "9A" }
+    ]
+  }
+}

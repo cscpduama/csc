@@ -1,0 +1,208 @@
+{
+  "higherEducation": [
+    {
+      "name": "Dhanjyoti Nath",
+      "batch": "2018-2021",
+      "path": [
+        { "text": "B.Sc. 1st Class", "type": "normal" },
+        { "text": "M.Sc.", "type": "highlight-teal" }
+      ]
+    },
+    {
+      "name": "Jinku Rabha",
+      "batch": "2018-2021",
+      "path": [
+        { "text": "B.Sc. 1st Class", "type": "normal" },
+        { "text": "MCA", "type": "highlight" }
+      ]
+    },
+    {
+      "name": "Sanjeep Kachari",
+      "batch": "2018-2021",
+      "path": [
+        { "text": "B.Sc. 1st Class", "type": "normal" },
+        { "text": "MCA", "type": "highlight" }
+      ]
+    },
+    {
+      "name": "Anupam Kumar Nath",
+      "batch": "2018-2021",
+      "path": [
+        { "text": "B.Sc. 1st Class", "type": "normal" },
+        { "text": "M.Sc.", "type": "highlight-teal" }
+      ]
+    },
+    {
+      "name": "Denish Sarma",
+      "batch": "2019-2022",
+      "path": [
+        { "text": "B.Sc. 1st Class", "type": "normal" },
+        { "text": "MCA", "type": "highlight" }
+      ]
+    },
+    {
+      "name": "Julfikar Jitu Rahman",
+      "batch": "2019-2022",
+      "path": [
+        { "text": "B.Sc. 1st Class", "type": "normal" },
+        { "text": "M.Sc.", "type": "highlight-teal" }
+      ]
+    },
+    {
+      "name": "Plaban Goswami",
+      "batch": "2019-2022",
+      "path": [
+        { "text": "B.Sc. 1st Class", "type": "normal" },
+        { "text": "M.Sc.", "type": "highlight-teal" }
+      ]
+    },
+    {
+      "name": "Rami Kashyap Basumatary",
+      "batch": "2019-2022",
+      "path": [
+        { "text": "B.Sc. 1st Class", "type": "normal" },
+        { "text": "M.Sc.", "type": "highlight-teal" }
+      ]
+    },
+    {
+      "name": "Bhanita Brahma",
+      "batch": "2019-2022",
+      "path": [
+        { "text": "B.Sc. 1st Class", "type": "normal" },
+        { "text": "M.Sc.", "type": "highlight-teal" }
+      ]
+    },
+    {
+      "name": "Jagajit Rabha",
+      "batch": "2020-2023",
+      "path": [
+        { "text": "B.Sc. 1st Class", "type": "normal" },
+        { "text": "M.Sc.", "type": "highlight-teal" }
+      ]
+    },
+    {
+      "name": "Kripa Rabha",
+      "batch": "2020-2023",
+      "path": [
+        { "text": "B.Sc. 1st Class", "type": "normal" },
+        { "text": "M.Sc.", "type": "highlight-teal" }
+      ]
+    },
+    {
+      "name": "Ritumoni Banikya",
+      "batch": "2020-2023",
+      "path": [
+        { "text": "B.Sc. 1st Class", "type": "normal" },
+        { "text": "M.Sc.", "type": "highlight-teal" }
+      ]
+    },
+    {
+      "name": "Rashi Moni Talukdar",
+      "batch": "2020-2023",
+      "path": [
+        { "text": "B.Sc. 1st Class", "type": "normal" },
+        { "text": "M.Sc.", "type": "highlight-teal" }
+      ]
+    },
+    {
+      "name": "Joy Prakash Nath",
+      "batch": "2020-2023",
+      "path": [
+        { "text": "B.Sc. 1st Class", "type": "normal" },
+        { "text": "M.Sc.", "type": "highlight-teal" }
+      ]
+    },
+    {
+      "name": "Suman Dip Khakhalary",
+      "batch": "2020-2023",
+      "path": [
+        { "text": "B.Sc. 1st Class", "type": "normal" },
+        { "text": "M.Sc.", "type": "highlight-teal" }
+      ]
+    },
+    {
+      "name": "Pankaj Barman",
+      "batch": "2020-2023",
+      "path": [
+        { "text": "B.Sc. 1st Class", "type": "normal" },
+        { "text": "M.Sc.", "type": "highlight-teal" }
+      ]
+    },
+    {
+      "name": "Rahat Islam",
+      "batch": "2020-2023",
+      "path": [
+        { "text": "B.Sc. 1st Class", "type": "normal" },
+        { "text": "M.Sc.", "type": "highlight-teal" }
+      ]
+    },
+    {
+      "name": "Arpan Mandal",
+      "batch": "2020-2023",
+      "path": [
+        { "text": "B.Sc. 1st Class", "type": "normal" },
+        { "text": "MCA", "type": "highlight" }
+      ]
+    }
+  ],
+  "employment": [
+    {
+      "name": "Sourabh Ghose",
+      "batch": "2017-2020",
+      "path": [
+        { "text": "B.Sc. 1st Class", "type": "normal" },
+        { "text": "MCA", "type": "normal" },
+        { "text": "UI/UX Developer", "type": "highlight" }
+      ]
+    },
+    {
+      "name": "Lwithw J Kachari",
+      "batch": "2017-2020",
+      "path": [
+        { "text": "B.Sc. 1st Class", "type": "normal" },
+        { "text": "MCA", "type": "normal" },
+        { "text": "Web Developer", "type": "highlight" }
+      ]
+    },
+    {
+      "name": "Samudra Basumatary",
+      "batch": "2017-2020",
+      "path": [
+        { "text": "B.Sc. 1st Class", "type": "normal" },
+        { "text": "Assistant Teacher", "type": "highlight" }
+      ]
+    },
+    {
+      "name": "Dhanjyoti Nath",
+      "batch": "2018-2021",
+      "path": [
+        { "text": "B.Sc. 1st Class", "type": "normal" },
+        { "text": "M.Sc.", "type": "highlight-teal" },
+        { "text": "Laboratory Assistant, Cotton Uni.", "type": "highlight" }
+      ]
+    },
+    {
+      "name": "Nobodhol M Sangma",
+      "batch": "2018-2021",
+      "path": [
+        { "text": "B.Sc. 1st Class", "type": "normal" },
+        { "text": "Assistant Teacher, Meghalaya", "type": "highlight" }
+      ]
+    },
+    {
+      "name": "John Basumatary",
+      "batch": "2019-2022",
+      "path": [
+        { "text": "Assam Police", "type": "highlight" }
+      ]
+    },
+    {
+      "name": "David Barman",
+      "batch": "2019-2022",
+      "path": [
+        { "text": "B.Sc. 1st Class", "type": "normal" },
+        { "text": "Cricket Player", "type": "highlight" }
+      ]
+    }
+  ]
+}

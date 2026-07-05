@@ -1,0 +1,17 @@
+# wrangler files
+.wrangler
+.dev.vars*
+!.dev.vars.example
+.env*
+!.env.example
+.vscode
+.vercel
+.env*.local
+
+# dependencies
+node_modules/
+.github/scripts/node_modules/
+.github\scripts\package-lock.json
+package-lock.json
+package.json
+!.github/scripts/package.json
