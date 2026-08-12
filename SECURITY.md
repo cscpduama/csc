@@ -59,7 +59,7 @@ To help us triage and resolve the issue quickly, please provide:
 
 The following are **in scope** for security reports:
 
-- Live site at `https://csc.pduam.dpdns.org`
+- Live site at `https://csc.pduamamjonga.in`
 - This GitHub repository (`cscpduam-alt/csc`)
 - Email notification system & subscriber data handling
 - Any exposed API endpoints or serverless functions
