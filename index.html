@@ -1,1228 +1,1605 @@
 <!DOCTYPE html>
-<html lang="en" data-theme="dark">
+<html lang="en">
 <head>
-  <script>
-    (function() {
-      if (window.location.hostname === 'cscpduam-alt.github.io') {
-        document.documentElement.style.display = 'none';
-        var path = window.location.pathname;
-        if (path.startsWith('/csc')) {
-          path = path.slice(4);
-        }
-        if (!path.startsWith('/')) {
-          path = '/' + path;
-        }
-        var newUrl = 'https://csc.pduam.dpdns.org' + path + window.location.search + window.location.hash;
-        window.location.replace(newUrl);
-      }
-    })();
-  </script>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  
-  <!-- SEO Metadata -->
-  <title>e-Portal · Dept. of Computer Science · PDUAM Amjonga</title>
-  <meta name="description" content="Official e-Portal of the Department of Computer Science, Pandit Deendayal Upadhyaya Adarsha Mahavidyalaya (PDUAM), Amjonga." />
-  <meta name="keywords" content="pduam amjonga computer science department website, Computer Science, PDUAM, Amjonga, Assam College, Department Website, BSc Computer Science, Higher Education, CS Department" />
-  <meta name="author" content="Department of Computer Science, PDUAM Amjonga" />
-  <meta name="robots" content="index, follow" />
-  
-  <!-- Canonical URL -->
-  <link rel="canonical" href="https://csc.pduam.dpdns.org/" />
-  
-  <!-- Favicon -->
-  <link rel="icon" type="image/png" href="assets/favicon/cs_department_logo.png" />
-  
-  <!-- Open Graph / Facebook -->
-  <meta property="og:type" content="website" />
-  <meta property="og:url" content="https://csc.pduam.dpdns.org/" />
-  <meta property="og:title" content="e-Portal · Dept. of Computer Science · PDUAM Amjonga" />
-  <meta property="og:description" content="Official e-Portal of the Department of Computer Science, Pandit Deendayal Upadhyaya Adarsha Mahavidyalaya (PDUAM), Amjonga." />
-  <meta property="og:image" content="https://csc.pduam.dpdns.org/assets/favicon/cs_department_logo.png" />
-  <meta property="og:image:secure_url" content="https://csc.pduam.dpdns.org/assets/favicon/cs_department_logo.png" />
-  <meta property="og:image:width" content="1200" />
-  <meta property="og:image:height" content="1200" />
-  <meta property="og:image:type" content="image/png" />
-  <meta property="og:site_name" content="CS Department, PDUAM Amjonga" />
-  
-  <!-- Twitter -->
-  <meta name="twitter:card" content="summary_large_image" />
-  <meta name="twitter:url" content="https://csc.pduam.dpdns.org/" />
-  <meta name="twitter:title" content="e-Portal · Dept. of Computer Science · PDUAM Amjonga" />
-  <meta name="twitter:description" content="Official e-Portal of the Department of Computer Science, Pandit Deendayal Upadhyaya Adarsha Mahavidyalaya (PDUAM), Amjonga." />
-  <meta name="twitter:image" content="https://csc.pduam.dpdns.org/assets/favicon/cs_department_logo.png" />
-
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Noto+Serif+Bengali:wght@400;600;700&display=swap" rel="stylesheet"/>
-  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" rel="stylesheet"/>
-
-  <style>
-  /* ════════════════════════════════════════
-     THEME TOKENS
-  ════════════════════════════════════════ */
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Advances in Multidisciplinary Research and Innovation — 2nd Edition</title>
+<meta name="description" content="Contributor index and chapter archive for Advances in Multidisciplinary Research and Innovation, 2nd Edition, published by Deep Science Publishing.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600;9..144,700&family=Work+Sans:wght@400;500;600;700&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
+<style>
   :root {
-    --gold:      #d4a843;
-    --gold-lt:   #f0c96a;
-    --gold-dim:  rgba(212,168,67,0.15);
-    --teal:      #2dd4bf;
-    --teal-dim:  rgba(45,212,191,0.12);
-    --red:       #ef4444;
-    --r:         14px;
-    --r-lg:      22px;
-    --r-xl:      28px;
-    --shadow:    0 4px 32px rgba(0,0,0,0.18);
-    --shadow-lg: 0 8px 48px rgba(0,0,0,0.24);
-    --font:      'Inter', sans-serif;
-    --font-bn:   'Noto Serif Bengali', serif;
-    --tr:        0.22s cubic-bezier(.4,0,.2,1);
+    --navy: #152238;
+    --navy-2: #1d2f4d;
+    --burgundy: #7a2038;
+    --gold: #c6a15b;
+    --gold-dim: #e4d3ac;
+    --paper: #f7f4ee;
+    --card: #ffffff;
+    --ink: #201f1d;
+    --ink-soft: #5b5850;
+    --line: #ddd6c6;
+    --radius: 3px;
   }
 
-  [data-theme="dark"] {
-    --bg:       #080c15;
-    --surface:  #111827;
-    --s2:       #1a2236;
-    --s3:       #222d42;
-    --border:   rgba(255,255,255,0.07);
-    --border2:  rgba(255,255,255,0.13);
-    --text:     #e2e8f0;
-    --muted:    #7a8ba8;
-    --heading:  #f8fafc;
-    --nav-bg:   rgba(8,12,21,0.88);
-    --hdr:      linear-gradient(135deg,#0d1321 0%,#111827 100%);
-    --glass-bg: rgba(11,15,26,0.75);
-    --glass-border: rgba(255,255,255,0.10);
+  * { box-sizing: border-box; }
+  html { scroll-behavior: smooth; }
+  body {
+    margin: 0;
+    background: var(--paper);
+    color: var(--ink);
+    font-family: 'Work Sans', sans-serif;
+    -webkit-font-smoothing: antialiased;
   }
+  a { color: inherit; }
 
-  [data-theme="light"] {
-    --bg:       #f0f4fa;
-    --surface:  #ffffff;
-    --s2:       #f4f7fc;
-    --s3:       #eaeff8;
-    --border:   rgba(0,0,0,0.08);
-    --border2:  rgba(0,0,0,0.15);
-    --text:     #1e293b;
-    --muted:    #64748b;
-    --heading:  #0f172a;
-    --nav-bg:   rgba(240,244,250,0.88);
-    --hdr:      linear-gradient(135deg,#1e3a5f 0%,#2c4a7c 100%);
-    --glass-bg: rgba(240,244,250,0.8);
-    --glass-border: rgba(0,0,0,0.10);
-  }
+  .mono { font-family: 'Space Mono', monospace; }
 
-  /* ════════ RESET ════════ */
-  *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
-  html{scroll-behavior:smooth}
-  body{
-    font-family:var(--font);
-    background:var(--bg);
-    color:var(--text);
-    line-height:1.65;
-    min-height:100vh;
-    transition:background var(--tr),color var(--tr);
-  }
-  ::-webkit-scrollbar{width:5px}
-  ::-webkit-scrollbar-track{background:var(--bg)}
-  ::-webkit-scrollbar-thumb{background:var(--gold);border-radius:99px}
-
-  /* ════════ HEADER ════════ */
-  header{background:var(--hdr);position:relative;overflow:hidden}
-  header::before{
-    content:'';position:absolute;inset:0;pointer-events:none;
-    background:
-      radial-gradient(ellipse 70% 80% at 15% 60%,rgba(212,168,67,.18) 0%,transparent 55%),
-      radial-gradient(ellipse 50% 60% at 85% 20%,rgba(45,212,191,.10) 0%,transparent 55%);
-  }
-  header::after{
-    content:'';position:absolute;inset:0;pointer-events:none;
-    background-image:radial-gradient(rgba(255,255,255,.055) 1px,transparent 1px);
-    background-size:28px 28px;
-  }
-
-  .hdr-inner{
-    position:relative;z-index:3;
-    max-width:1280px;margin:0 auto;
-    padding:2.8rem 2rem 2.2rem;
-    display:grid;
-    grid-template-columns:88px 1fr 88px;
-    align-items:center;gap:2rem;
-  }
-  .hdr-logo{display:flex;justify-content:center}
-  .hdr-logo img{
-    height:76px;width:76px;border-radius:50%;
-    object-fit:contain;
-    border:2.5px solid rgba(212,168,67,.6);
-    padding:4px;background:rgba(255,255,255,.08);
-    box-shadow:0 0 24px rgba(212,168,67,.35),0 0 0 6px rgba(212,168,67,.08);
-    transition:transform var(--tr),box-shadow var(--tr);
-  }
-  .hdr-logo img:hover{
-    transform:scale(1.07);
-    box-shadow:0 0 36px rgba(212,168,67,.5),0 0 0 9px rgba(212,168,67,.12);
-  }
-
-  .hdr-center{text-align:center}
-  .hdr-uni{
-    font-size:clamp(.58rem,1.1vw,.75rem);font-weight:500;
-    color:rgba(255,255,255,.5);letter-spacing:.12em;text-transform:uppercase;margin-bottom:.5rem;
-  }
-  .hdr-assamese{
-    font-family:var(--font-bn);
-    font-size:clamp(1.5rem,4vw,2.8rem);
-    font-weight:700;color:#fff;line-height:1.25;
-    text-shadow:0 2px 20px rgba(0,0,0,.4);
-  }
-  .hdr-assamese span{
-    background:linear-gradient(90deg,var(--gold-lt),var(--gold));
-    -webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;
-  }
-  .hdr-sub{
-    margin-top:.45rem;
-    font-size:clamp(.65rem,1.3vw,.85rem);
-    color:rgba(255,255,255,.45);letter-spacing:.05em;
-  }
-  .hdr-tagline{
-    display:inline-flex;align-items:center;gap:.5rem;margin-top:1rem;
-    font-family:var(--font-bn);font-size:clamp(.7rem,1.4vw,.92rem);
-    color:var(--teal);background:rgba(45,212,191,.1);
-    border:1px solid rgba(45,212,191,.25);
-    padding:.35rem 1rem;border-radius:99px;backdrop-filter:blur(8px);
-  }
-  .live-dot{
-    width:7px;height:7px;background:var(--teal);
-    border-radius:50%;flex-shrink:0;animation:livePulse 2s infinite;
-  }
-  @keyframes livePulse{
-    0%,100%{opacity:1;box-shadow:0 0 0 0 rgba(45,212,191,.6)}
-    50%{opacity:.7;box-shadow:0 0 0 5px rgba(45,212,191,0)}
-  }
-
-  /* ════════ NAV ════════ */
-  nav{
-    background:var(--nav-bg);
-    backdrop-filter:blur(20px);-webkit-backdrop-filter:blur(20px);
-    border-bottom:1px solid var(--border);
-    position:sticky;top:0;z-index:200;
-    transition:background var(--tr);
-  }
-  .nav-inner{
-    max-width:1280px;margin:0 auto;
-    display:flex;align-items:center;justify-content:space-between;
-    padding:0 2rem;gap:1rem;
-  }
-  .nav-brand{
-    display:flex;align-items:center;gap:.5rem;
-    font-size:.82rem;font-weight:700;color:var(--gold);
-    letter-spacing:.05em;white-space:nowrap;flex-shrink:0;padding:.85rem 0;
-  }
-  .nav-brand i{font-size:.9rem}
-  .nav-links{display:flex;list-style:none;gap:0;flex:1;justify-content:center}
-  .nav-links a{
-    display:flex;align-items:center;gap:.3rem;
-    padding:.85rem .65rem;color:var(--muted);text-decoration:none;
-    font-size:.77rem;font-weight:500;letter-spacing:.01em;
-    transition:color var(--tr);position:relative;white-space:nowrap;
-  }
-  .nav-links a i{font-size:.7rem;opacity:.7}
-  .nav-links a::after{
-    content:'';position:absolute;bottom:0;left:.65rem;right:.65rem;
-    height:2px;background:linear-gradient(90deg,var(--gold),var(--teal));
-    border-radius:99px;transform:scaleX(0);transform-origin:left;transition:transform .25s;
-  }
-  .nav-links a:hover{color:var(--heading)}
-  .nav-links a:hover::after{transform:scaleX(1)}
-
-  .nav-actions{display:flex;align-items:center;gap:.6rem;flex-shrink:0}
-
-  /* theme toggle */
-  .theme-btn{
-    position:relative;width:52px;height:28px;
-    background:var(--s3);border:1px solid var(--border2);
-    border-radius:99px;cursor:pointer;padding:0;overflow:hidden;
-    transition:background var(--tr);
-  }
-  .theme-btn:focus-visible{outline:2px solid var(--gold);outline-offset:2px}
-  .toggle-track{
-    position:absolute;inset:0;
-    display:flex;align-items:center;justify-content:space-between;
-    padding:0 6px;pointer-events:none;
-  }
-  .toggle-track i{font-size:.62rem}
-  .track-sun{color:#f59e0b}
-  .track-moon{color:#818cf8}
-  .toggle-knob{
-    position:absolute;top:3px;left:3px;
-    width:20px;height:20px;
-    background:linear-gradient(135deg,var(--gold),#b8860b);
-    border-radius:50%;pointer-events:none;
-    transition:transform var(--tr),background var(--tr);
-    box-shadow:0 2px 8px rgba(0,0,0,.3);
-  }
-  [data-theme="light"] .toggle-knob{
-    transform:translateX(24px);
-    background:linear-gradient(135deg,#818cf8,#6366f1);
-  }
-
-  /* ── Hamburger button — simple, no morph animation ── */
-  .nav-toggle{
-    display:none;
-    background:var(--s2);border:1px solid var(--border);
-    border-radius:10px;cursor:pointer;
-    width:40px;height:40px;
-    align-items:center;justify-content:center;
-    position:relative;
-    transition:background var(--tr),border-color var(--tr);
-    flex-shrink:0;
-    color:var(--text);font-size:1rem;
-  }
-  .nav-toggle:hover{background:var(--s3);border-color:var(--border2)}
-
-  /* ════════ MOBILE OVERLAY — GLASSMORPHISM ════════ */
-  .mob-overlay{
-    display:none;
-    position:fixed;inset:0;z-index:400;
-    /* glass */
-    background:var(--glass-bg);
-    backdrop-filter:blur(24px) saturate(180%);
-    -webkit-backdrop-filter:blur(24px) saturate(180%);
-    border-right:1px solid var(--glass-border);
-    flex-direction:column;
-    padding:0;
-    overflow-y:auto;
-    /* slide-in animation */
-    transform:translateX(-100%);
-    transition:transform .38s cubic-bezier(.4,0,.2,1),
-               opacity .3s;
-    opacity:0;
-    max-width:320px;
-  }
-  .mob-overlay.open{
-    display:flex;
-    transform:translateX(0);
-    opacity:1;
-  }
-
-  /* backdrop scrim */
-  .mob-scrim{
-    display:none;position:fixed;inset:0;z-index:399;
-    background:rgba(0,0,0,.45);
-    backdrop-filter:blur(2px);
-    opacity:0;transition:opacity .3s;
-  }
-  .mob-scrim.open{display:block;opacity:1}
-
-  .mob-head{
-    display:flex;align-items:center;justify-content:space-between;
-    padding:1.4rem 1.5rem 1rem;
-    border-bottom:1px solid var(--glass-border);
-  }
-  .mob-brand{font-size:.9rem;font-weight:700;color:var(--gold);letter-spacing:.05em}
-  .mob-brand i{margin-right:.4rem}
-
-  /* close button inside overlay (X) */
-  .mob-close-btn{
-    background:rgba(255,255,255,.06);
-    border:1px solid var(--glass-border);
-    color:var(--text);padding:.45rem .65rem;
-    border-radius:8px;cursor:pointer;font-size:.95rem;
-    transition:background var(--tr);
-  }
-  .mob-close-btn:hover{background:rgba(255,255,255,.12)}
-
-  .mob-links{
-    display:flex;flex-direction:column;
-    padding:1rem 1rem 0.5rem;gap:.15rem;flex:1;
-  }
-  .mob-links a{
-    display:flex;align-items:center;gap:.8rem;
-    padding:.8rem 1rem;
-    color:var(--text);text-decoration:none;
-    font-size:.95rem;font-weight:500;
-    border-radius:var(--r);
-    transition:background var(--tr),color var(--tr);
-    border:1px solid transparent;
-  }
-  .mob-links a i{
-    width:20px;text-align:center;
-    color:var(--gold);font-size:.85rem;flex-shrink:0;
-  }
-  .mob-links a:hover{
-    background:rgba(212,168,67,.08);
-    border-color:rgba(212,168,67,.15);
-    color:var(--gold);
-  }
-
-  .mob-theme{
-    margin:1rem;
-    display:flex;align-items:center;justify-content:space-between;
-    padding:.85rem 1rem;
-    background:rgba(255,255,255,.04);
-    border:1px solid var(--glass-border);
-    border-radius:var(--r);
-  }
-  .mob-theme span{font-size:.82rem;font-weight:500;color:var(--muted)}
-
-  /* ════════ MAIN WRAP ════════ */
-  .wrap{max-width:1280px;margin:0 auto;padding:2.5rem 2rem}
-
-  /* ════════ HERO GRID ════════ */
-  .hero-grid{display:grid;grid-template-columns:1fr 360px;gap:1.5rem}
-
-  /* slideshow */
-  .slide-box{
-    border-radius:var(--r-xl);overflow:hidden;
-    position:relative;aspect-ratio:16/9;
-    background:var(--s2);border:1px solid var(--border);
-    box-shadow:var(--shadow-lg);
-  }
-  .slide-box::after{
-    content:'';position:absolute;inset:0;
-    background:linear-gradient(to top,rgba(0,0,0,.55) 0%,transparent 45%);
-    z-index:2;pointer-events:none;
-  }
-  .slideshow img{
-    position:absolute;inset:0;width:100%;height:100%;
-    object-fit:cover;object-position:center top;
-    opacity:0;transition:opacity 1.2s ease;
-  }
-  .slideshow img.active{opacity:1}
-  .slide-ui{
-    position:absolute;bottom:1.1rem;left:50%;transform:translateX(-50%);
-    z-index:3;display:flex;align-items:center;gap:.65rem;
-  }
-  .slide-btn{
-    background:rgba(255,255,255,.15);
-    border:1px solid rgba(255,255,255,.2);backdrop-filter:blur(8px);
-    color:#fff;border-radius:50%;width:32px;height:32px;
-    display:flex;align-items:center;justify-content:center;
-    cursor:pointer;font-size:.72rem;transition:background var(--tr);
-  }
-  .slide-btn:hover{background:rgba(212,168,67,.5)}
-  .slide-dots{display:flex;gap:5px}
-  .dot{
-    width:6px;height:6px;border-radius:3px;
-    background:rgba(255,255,255,.3);border:none;cursor:pointer;
-    transition:background .3s,width .3s;
-  }
-  .dot.active{background:var(--gold);width:20px}
-  .slide-counter{
-    position:absolute;top:1rem;right:1rem;z-index:3;
-    background:rgba(0,0,0,.45);backdrop-filter:blur(8px);
-    border:1px solid rgba(255,255,255,.15);
-    padding:.25rem .7rem;border-radius:99px;
-    font-size:.7rem;color:rgba(255,255,255,.7);
-  }
-
-  /* notifications */
-  .notif-box{
-    background:var(--surface);border:1px solid var(--border);
-    border-radius:var(--r-xl);
-    display:flex;flex-direction:column;overflow:hidden;
-    box-shadow:var(--shadow);max-height:440px;
-    transition:background var(--tr);
-  }
-  .notif-head{
-    padding:1rem 1.4rem .85rem;border-bottom:1px solid var(--border);
-    display:flex;align-items:center;gap:.55rem;
-    flex-shrink:0;background:var(--s2);
-  }
-  .notif-ico{
-    width:30px;height:30px;
-    background:linear-gradient(135deg,rgba(212,168,67,.2),rgba(45,212,191,.15));
-    border-radius:8px;display:flex;align-items:center;justify-content:center;
-    color:var(--gold);font-size:.78rem;
-  }
-  .notif-head h3{
-    font-size:.78rem;font-weight:700;color:var(--heading);
-    text-transform:uppercase;letter-spacing:.07em;flex:1;
-  }
-  .badge-live{
-    background:var(--red);color:#fff;font-size:.58rem;font-weight:700;
-    padding:.12rem .5rem;border-radius:99px;letter-spacing:.05em;
-    animation:bpulse 3s infinite;
-  }
-  @keyframes bpulse{0%,100%{opacity:1}50%{opacity:.6}}
-  .notif-scroll{flex:1;overflow:hidden;min-height:0}
-  .notif-list{list-style:none;animation:scrollUp 24s linear infinite}
-  .notif-list:hover{animation-play-state:paused}
-  @keyframes scrollUp{from{transform:translateY(0)}to{transform:translateY(-50%)}}
-  .notif-item{
-    padding:.85rem 1.4rem;border-bottom:1px solid var(--border);
-    transition:background var(--tr);
-  }
-  .notif-item:hover{background:var(--s2)}
-  .notif-item a{
-    text-decoration:none;color:var(--text);font-size:.8rem;
-    line-height:1.55;display:block;transition:color var(--tr);
-  }
-  .notif-item a:hover{color:var(--gold)}
-  .notif-item a strong{color:var(--gold-lt)}
-  .notif-item small{display:block;color:var(--muted);font-size:.7rem;margin-top:.3rem}
-  .notif-item small a{color:var(--teal)}
-  .badge-new{
-    display:inline-flex;align-items:center;
-    background:linear-gradient(135deg,var(--gold),#c8960a);
-    color:#000;font-size:.58rem;font-weight:800;
-    padding:.12rem .5rem;border-radius:99px;
-    margin-left:.35rem;vertical-align:middle;
-    letter-spacing:.06em;text-transform:uppercase;
-  }
-
-  /* loading / error state */
-  .notif-loading{
-    display:flex;align-items:center;justify-content:center;
-    padding:2rem;color:var(--muted);font-size:.82rem;gap:.6rem;flex-direction:column;
-  }
-  .spin{animation:spin .9s linear infinite;font-size:1.1rem;color:var(--gold)}
-  @keyframes spin{to{transform:rotate(360deg)}}
-
-  /* ════════ SECTION HEADER ════════ */
-  .sec-head{display:flex;align-items:center;gap:.8rem;margin:3rem 0 1.5rem}
-  .sec-line{
-    width:4px;height:26px;
-    background:linear-gradient(to bottom,var(--gold),var(--teal));
-    border-radius:99px;flex-shrink:0;
-  }
-  .sec-head h2{font-size:1rem;font-weight:700;color:var(--heading);letter-spacing:.04em}
-  .sec-head p{font-size:.77rem;color:var(--muted);margin-top:.1rem}
-
-  /* ════════ QUICK GRID ════════ */
-  .quick-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(155px,1fr));gap:1rem}
-  .qcard{
-    background:var(--surface);border:1px solid var(--border);
-    border-radius:var(--r-lg);padding:1.3rem 1rem 1.1rem;
-    text-decoration:none;color:var(--text);
-    display:flex;flex-direction:column;align-items:center;gap:.7rem;text-align:center;
-    transition:border-color var(--tr),transform var(--tr),box-shadow var(--tr);
-    position:relative;overflow:hidden;
-  }
-  .qcard::before{
-    content:'';position:absolute;inset:0;
-    background:linear-gradient(135deg,var(--gold-dim),transparent);
-    opacity:0;transition:opacity var(--tr);
-  }
-  .qcard:hover::before{opacity:1}
-  .qcard:hover{border-color:rgba(212,168,67,.4);transform:translateY(-4px);box-shadow:0 12px 36px rgba(212,168,67,.12)}
-  .qcard-ico{
-    width:46px;height:46px;border-radius:12px;
-    display:flex;align-items:center;justify-content:center;
-    font-size:1.1rem;position:relative;z-index:1;
-    transition:transform var(--tr);
-  }
-  .qcard:hover .qcard-ico{transform:scale(1.12)}
-  .qcard span{font-size:.79rem;font-weight:600;color:var(--text);position:relative;z-index:1;line-height:1.3;transition:color var(--tr)}
-  .qcard:hover span{color:var(--heading)}
-
-  .ic-blue  {background:rgba(59,130,246,.15);color:#60a5fa}
-  .ic-purple{background:rgba(139,92,246,.15);color:#a78bfa}
-  .ic-green {background:rgba(16,185,129,.15);color:#34d399}
-  .ic-orange{background:rgba(249,115,22,.15);color:#fb923c}
-  .ic-teal  {background:rgba(45,212,191,.15);color:#2dd4bf}
-  .ic-pink  {background:rgba(236,72,153,.15);color:#f472b6}
-  .ic-gold  {background:rgba(212,168,67,.15);color:var(--gold)}
-  .ic-red   {background:rgba(239,68,68,.15);color:#f87171}
-  .ic-indigo{background:rgba(99,102,241,.15);color:#818cf8}
-  .ic-sky   {background:rgba(14,165,233,.15);color:#38bdf8}
-  .ic-lime  {background:rgba(132,204,22,.15);color:#a3e635}
-  .ic-rose  {background:rgba(244,63,94,.15);color:#fb7185}
-
-  /* ════════ PUBLICATION ════════ */
-  .pub-card{
-    background:var(--surface);border:1px solid var(--border);
-    border-radius:var(--r-xl);padding:1.75rem 2rem;
-    display:flex;gap:1.75rem;align-items:flex-start;
-    text-decoration:none;color:var(--text);
-    transition:transform var(--tr),box-shadow var(--tr),border-color var(--tr);
-    position:relative;overflow:hidden;
-  }
-  .pub-card::before{
-    content:'';position:absolute;left:0;top:0;bottom:0;width:4px;
-    background:linear-gradient(to bottom,var(--gold),var(--teal));
-    border-radius:99px 0 0 99px;
-  }
-  .pub-card:hover{transform:translateY(-3px);box-shadow:0 12px 48px rgba(212,168,67,.1);border-color:rgba(212,168,67,.3)}
-  .pub-card + .pub-card{margin-top:1.25rem}
-  .pub-ico{
-    width:60px;height:60px;flex-shrink:0;
-    background:linear-gradient(135deg,var(--gold),#b8860b);
-    border-radius:var(--r);
-    display:flex;align-items:center;justify-content:center;
-    font-size:1.5rem;color:#0b0f1a;
-    box-shadow:0 4px 16px rgba(212,168,67,.35);
-  }
-  .pub-body h3{font-size:1rem;font-weight:700;color:var(--heading);margin-bottom:.4rem;line-height:1.4}
-  .pub-body p{font-size:.82rem;color:var(--muted);line-height:1.6}
-  .pub-pills{display:flex;flex-wrap:wrap;gap:.5rem;margin-top:.85rem}
-  .pill{
-    background:var(--s2);border:1px solid var(--border);
-    border-radius:99px;font-size:.7rem;padding:.2rem .7rem;color:var(--muted);
-  }
-
-  /* ════════ FOOTER ════════ */
-  footer{background:var(--surface);border-top:1px solid var(--border);margin-top:5rem;transition:background var(--tr)}
-  .ftr-grid{
-    max-width:1280px;margin:0 auto;padding:3rem 2rem 2rem;
-    display:grid;grid-template-columns:2fr 1fr 1fr 1fr;gap:2rem;
-  }
-  .ftr-brand{display:flex;align-items:flex-start;gap:.75rem}
-  .ftr-brand-ico{
-    width:40px;height:40px;flex-shrink:0;
-    background:linear-gradient(135deg,var(--gold-dim),var(--teal-dim));
-    border:1px solid var(--border2);border-radius:10px;
-    display:flex;align-items:center;justify-content:center;
-    color:var(--gold);font-size:1rem;
-  }
-  .ftr-brand-text strong{display:block;font-size:.88rem;font-weight:700;color:var(--heading);margin-bottom:.2rem}
-  .ftr-brand-text p{font-size:.77rem;color:var(--muted);line-height:1.6}
-  .ftr-col h4{font-size:.73rem;font-weight:700;color:var(--gold);text-transform:uppercase;letter-spacing:.1em;margin-bottom:1rem}
-  .ftr-col a,.ftr-col p{
-    display:flex;align-items:center;gap:.5rem;
-    font-size:.8rem;color:var(--muted);text-decoration:none;
-    margin-bottom:.6rem;transition:color var(--tr);
-  }
-  .ftr-col a:hover{color:var(--gold)}
-  .ftr-col i{font-size:.73rem;width:14px;flex-shrink:0}
-  .ftr-bottom{border-top:1px solid var(--border);text-align:center;padding:1.2rem;font-size:.72rem;color:var(--muted);line-height:1.7}
-
-  /* ════════ RESPONSIVE ════════ */
-  @media(max-width:1024px){
-    .nav-links a{padding:.85rem .5rem;font-size:.72rem}
-  }
-  @media(max-width:900px){
-    .hero-grid{grid-template-columns:1fr}
-    .notif-box{max-height:280px}
-  }
-  @media(max-width:768px){
-    /* header: NO logos on mobile — text only, centered */
-    .hdr-inner{
-      grid-template-columns:1fr;      /* single column */
-      padding:2rem 1.25rem 1.75rem;
-      gap:0;
-    }
-    .hdr-logo{display:none}           /* hide BOTH logos */
-    .hdr-uni{font-size:.58rem}
-
-    /* nav */
-    .nav-links{display:none}
-    .nav-toggle{display:flex}
-
-    .ftr-grid{grid-template-columns:1fr;gap:2rem}
-    .wrap{padding:1.75rem 1.25rem}
-  }
-  @media(max-width:540px){
-    .quick-grid{grid-template-columns:repeat(3,1fr)}
-    .pub-card{flex-direction:column;gap:1.25rem}
-    .hdr-assamese{font-size:1.25rem}
-    .hdr-tagline{font-size:.7rem;padding:.3rem .75rem}
-  }
-  @media(max-width:380px){
-    .quick-grid{grid-template-columns:repeat(2,1fr)}
-  }
-
-  /* View All Notifications button */
-  .notif-view-all {
+  /* ---------------- Masthead ---------------- */
+  header.masthead {
+    background: linear-gradient(160deg, var(--navy) 0%, var(--navy-2) 100%);
+    color: #f4f1e8;
+    padding: 64px 24px 40px;
+    position: relative;
+    overflow: hidden;
+  }
+  header.masthead::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background-image: repeating-linear-gradient(90deg, rgba(198,161,91,0.06) 0 1px, transparent 1px 84px);
+    pointer-events: none;
+  }
+  .masthead-inner {
+    max-width: 980px;
+    margin: 0 auto;
+    position: relative;
+    display: flex;
+    align-items: flex-start;
+    gap: 48px;
+  }
+  .masthead-text {
+    flex: 1 1 auto;
+    min-width: 0;
+  }
+  .masthead-cover {
+    flex: 0 0 auto;
+    width: 190px;
+    align-self: center;
+  }
+  .masthead-cover img {
+    width: 100%;
+    height: auto;
+    display: block;
+    border-radius: 4px;
+    box-shadow: 0 18px 46px rgba(0,0,0,0.45), 0 2px 0 rgba(198,161,91,0.5);
+  }
+  @media (max-width: 720px) {
+    .masthead-inner { flex-direction: column-reverse; align-items: center; text-align: left; }
+    .masthead-cover { width: 150px; }
+  }
+  .eyebrow {
+    font-family: 'Space Mono', monospace;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    font-size: 12px;
+    color: var(--gold);
     display: flex;
     align-items: center;
+    gap: 10px;
+    margin-bottom: 22px;
+  }
+  .eyebrow .seal {
+    display: inline-flex;
+    align-items: center;
     justify-content: center;
-    gap: .55rem;
-    padding: .85rem 1.25rem;
-    border-top: 1px solid var(--border);
-    font-size: .78rem;
+    width: 22px; height: 22px;
+    border: 1px solid var(--gold);
+    border-radius: 50%;
+    font-size: 10px;
+  }
+  h1.title {
+    font-family: 'Fraunces', serif;
+    font-optical-sizing: auto;
     font-weight: 600;
-    color: var(--gold);
-    text-decoration: none;
-    background: var(--s2);
-    transition: background var(--tr), color var(--tr);
-    flex-shrink: 0;
-    letter-spacing: .02em;
+    font-size: clamp(32px, 5.4vw, 56px);
+    line-height: 1.06;
+    margin: 0 0 14px;
+    max-width: 15ch;
   }
-  .notif-view-all:hover {
-    background: rgba(212,168,67,.1);
-    color: var(--gold-lt);
+  .subtitle {
+    font-family: 'Fraunces', serif;
+    font-style: italic;
+    font-weight: 400;
+    font-size: clamp(16px, 2.1vw, 20px);
+    color: var(--gold-dim);
+    margin: 0 0 32px;
   }
-  .notif-arrow {
-    margin-left: auto;
-    font-size: .7rem;
-    transition: transform var(--tr);
+  .chips {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-bottom: 6px;
   }
-  .notif-view-all:hover .notif-arrow { transform: translateX(3px); }
-  
-  /* ════════ SKELETON UI ════════ */
-  .skeleton {
-    background: linear-gradient(90deg, var(--s3) 25%, var(--border) 50%, var(--s3) 75%);
-    background-size: 200% 100%;
-    animation: shimmer 1.5s infinite linear;
-    border-radius: var(--r);
+  .chip {
+    font-family: 'Space Mono', monospace;
+    font-size: 12px;
+    padding: 8px 12px;
+    border: 1px solid rgba(198,161,91,0.45);
+    border-radius: var(--radius);
+    color: #f4f1e8;
+    background: rgba(255,255,255,0.03);
+    white-space: nowrap;
   }
-  @keyframes shimmer {
-    0% { background-position: -200% 0; }
-    100% { background-position: 200% 0; }
-  }
-  .skeleton-text { height: 1rem; margin-bottom: 0.5rem; border-radius: 4px; }
-  .skeleton-text.w-80 { width: 80%; }
-  .skeleton-text.w-60 { width: 60%; }
-  .skeleton-text.w-40 { width: 40%; }
-  .skeleton-avatar { width: 40px; height: 40px; border-radius: 50%; }
-  .skeleton-card {
-    padding: 1.5rem; background: var(--surface); border: 1px solid var(--border);
-    border-radius: var(--r-xl); display: flex; flex-direction: column; gap: 1rem;
-  }
-  /* Progressive Image Loading */
-  .img-blur-wrap {
-    position: relative; overflow: hidden; display: block;
-    background: var(--s2);
-  }
-  .img-blur-wrap::before {
-    content: ''; position: absolute; inset: 0;
-    background: linear-gradient(90deg, var(--s3) 25%, var(--border) 50%, var(--s3) 75%);
-    background-size: 200% 100%; animation: shimmer 1.5s infinite linear;
-    z-index: 1; pointer-events: none; transition: opacity 0.5s ease;
-  }
-  .img-blur-wrap.loaded::before { opacity: 0; }
-  .img-blur-wrap img {
-    opacity: 0; filter: blur(10px) scale(1.05); transition: opacity 0.6s ease, filter 0.6s ease, transform 0.6s ease;
-    width: 100%; height: 100%; object-fit: cover; display: block;
-  }
-  .img-blur-wrap.loaded img { opacity: 1; filter: blur(0) scale(1); }
-</style>
+  .chip b { color: var(--gold); font-weight: 700; margin-right: 6px; }
+  .chip a { text-decoration: none; border-bottom: 1px dotted var(--gold); }
+  .chip a:hover { color: var(--gold); }
 
-  <!-- Vercel Analytics & Speed Insights -->
-  <script>
-    window.va = window.va || function () { (window.vaq = window.vaq || []).push(arguments); };
-  </script>
-  <script defer src="/_vercel/insights/script.js"></script>
-  <script defer src="/_vercel/speed-insights/script.js"></script>
+  .stats-row {
+    display: flex;
+    gap: 40px;
+    margin-top: 36px;
+    padding-top: 28px;
+    border-top: 1px solid rgba(198,161,91,0.25);
+    flex-wrap: wrap;
+  }
+  .stat b {
+    display: block;
+    font-family: 'Fraunces', serif;
+    font-size: 30px;
+    color: #fff;
+    line-height: 1;
+  }
+  .stat span {
+    font-size: 12px;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+    color: var(--gold-dim);
+  }
+
+  /* ---------------- Record / Ledger ---------------- */
+  .record {
+    max-width: 980px;
+    margin: -1px auto 0;
+    background: var(--paper);
+    padding: 0 24px;
+  }
+  .record-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(210px, 1fr));
+    gap: 1px;
+    background: var(--line);
+    border: 1px solid var(--line);
+    margin-top: 40px;
+  }
+  .record-cell {
+    background: var(--card);
+    padding: 22px 22px 20px;
+  }
+  .record-cell .label {
+    font-family: 'Space Mono', monospace;
+    font-size: 11px;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: var(--burgundy);
+    margin-bottom: 10px;
+    display: block;
+  }
+  .record-cell .value {
+    font-size: 14.5px;
+    line-height: 1.55;
+    color: var(--ink);
+  }
+  .record-cell .value strong {
+    display: block;
+    font-family: 'Fraunces', serif;
+    font-weight: 600;
+    font-size: 16px;
+    margin-bottom: 2px;
+  }
+  .record-cell ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+  }
+  .record-cell li {
+    margin-bottom: 9px;
+  }
+  .record-cell li:last-child { margin-bottom: 0; }
+  .record-cell .role {
+    font-size: 12px;
+    color: var(--ink-soft);
+  }
+
+  /* ---------------- Search / filter bar ---------------- */
+  .toolbar {
+    max-width: 980px;
+    margin: 48px auto 0;
+    padding: 0 24px;
+    position: sticky;
+    top: 0;
+    z-index: 20;
+  }
+  .toolbar-inner {
+    background: var(--paper);
+    border-bottom: 1px solid var(--line);
+    padding: 16px 0;
+    display: flex;
+    gap: 12px;
+    flex-wrap: wrap;
+    align-items: center;
+  }
+  .search-box {
+    flex: 1 1 260px;
+    position: relative;
+  }
+  .search-box input {
+    width: 100%;
+    padding: 11px 14px 11px 38px;
+    border: 1px solid var(--line);
+    background: var(--card);
+    border-radius: var(--radius);
+    font-family: 'Work Sans', sans-serif;
+    font-size: 14px;
+    color: var(--ink);
+  }
+  .search-box input:focus {
+    outline: none;
+    border-color: var(--gold);
+    box-shadow: 0 0 0 3px rgba(198,161,91,0.18);
+  }
+  .search-box svg {
+    position: absolute;
+    left: 13px; top: 50%;
+    transform: translateY(-50%);
+    color: var(--ink-soft);
+  }
+  select#sectionFilter {
+    padding: 11px 14px;
+    border: 1px solid var(--line);
+    background: var(--card);
+    border-radius: var(--radius);
+    font-family: 'Work Sans', sans-serif;
+    font-size: 13.5px;
+    color: var(--ink);
+    max-width: 260px;
+  }
+  .result-count {
+    font-family: 'Space Mono', monospace;
+    font-size: 12px;
+    color: var(--ink-soft);
+    white-space: nowrap;
+  }
+
+  /* ---------------- Index / theme sections ---------------- */
+  main {
+    max-width: 980px;
+    margin: 0 auto;
+    padding: 16px 24px 80px;
+  }
+  .theme { margin-top: 52px; }
+  .theme-head {
+    display: flex;
+    align-items: baseline;
+    gap: 14px;
+    border-bottom: 2px solid var(--navy);
+    padding-bottom: 10px;
+    margin-bottom: 18px;
+  }
+  .theme-tag {
+    font-family: 'Space Mono', monospace;
+    font-size: 13px;
+    color: var(--gold);
+    background: var(--navy);
+    padding: 3px 8px;
+    border-radius: var(--radius);
+  }
+  .theme-head h2 {
+    font-family: 'Fraunces', serif;
+    font-weight: 600;
+    font-size: 21px;
+    margin: 0;
+    color: var(--navy);
+    flex: 1;
+  }
+  .theme-count {
+    font-family: 'Space Mono', monospace;
+    font-size: 11.5px;
+    color: var(--ink-soft);
+  }
+
+  .cards { display: flex; flex-direction: column; gap: 10px; }
+
+  .card {
+    display: flex;
+    align-items: center;
+    gap: 18px;
+    background: var(--card);
+    border: 1px solid var(--line);
+    border-left: 3px solid var(--line);
+    border-radius: var(--radius);
+    padding: 16px 18px;
+    text-decoration: none;
+    color: var(--ink);
+    transition: border-color .15s ease, transform .15s ease, box-shadow .15s ease;
+  }
+  .card:hover {
+    border-left-color: var(--gold);
+    transform: translateX(2px);
+    box-shadow: 0 4px 14px rgba(21,34,56,0.08);
+  }
+  .card-num {
+    font-family: 'Fraunces', serif;
+    font-weight: 500;
+    font-size: 26px;
+    color: var(--line);
+    -webkit-text-stroke: 1px var(--navy);
+    color: transparent;
+    min-width: 42px;
+    text-align: center;
+    flex-shrink: 0;
+  }
+  .card:hover .card-num {
+    -webkit-text-stroke: 1px var(--gold);
+  }
+  .card-body {
+    display: flex;
+    flex-direction: column;
+    gap: 3px;
+    flex: 1;
+    min-width: 0;
+  }
+  .card-title {
+    font-family: 'Fraunces', serif;
+    font-weight: 600;
+    font-size: 15.5px;
+    line-height: 1.35;
+    color: var(--navy);
+  }
+  .card-authors {
+    font-size: 13px;
+    color: var(--ink);
+    font-weight: 500;
+  }
+  .card-affil {
+    font-size: 12px;
+    color: var(--ink-soft);
+    font-style: italic;
+  }
+  .card-go {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 2px;
+    color: var(--burgundy);
+    flex-shrink: 0;
+    padding-left: 10px;
+    border-left: 1px solid var(--line);
+  }
+  .card-go-label {
+    font-family: 'Space Mono', monospace;
+    font-size: 9.5px;
+    letter-spacing: 0.06em;
+  }
+
+  .no-results {
+    display: none;
+    text-align: center;
+    padding: 60px 20px;
+    color: var(--ink-soft);
+    font-family: 'Fraunces', serif;
+    font-style: italic;
+    font-size: 16px;
+  }
+
+  /* ---------------- Footer ---------------- */
+  footer {
+    background: var(--navy);
+    color: #cfd3dd;
+    padding: 40px 24px 28px;
+  }
+  .footer-inner {
+    max-width: 980px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    gap: 24px;
+    flex-wrap: wrap;
+    font-size: 13px;
+  }
+  .footer-inner a {
+    text-decoration: none;
+    color: #cfd3dd;
+    border-bottom: 1px dotted rgba(207,211,221,0.4);
+  }
+  .footer-inner a:hover { color: var(--gold); border-color: var(--gold); }
+  .footer-col b {
+    display: block;
+    color: #fff;
+    font-family: 'Space Mono', monospace;
+    font-size: 11px;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    margin-bottom: 10px;
+  }
+  .footer-col div { margin-bottom: 6px; }
+  .footer-bottom {
+    max-width: 980px;
+    margin: 28px auto 0;
+    padding-top: 18px;
+    border-top: 1px solid rgba(255,255,255,0.1);
+    font-size: 11.5px;
+    color: #8f95a8;
+    font-family: 'Space Mono', monospace;
+  }
+
+  @media (max-width: 600px) {
+    header.masthead { padding: 44px 18px 32px; }
+    .stats-row { gap: 24px; }
+    .card { padding: 13px 14px; gap: 12px; }
+    .card-num { font-size: 20px; min-width: 30px; }
+    .card-go-label { display: none; }
+    .toolbar { position: static; }
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    html { scroll-behavior: auto; }
+    .card { transition: none; }
+  }
+
+  :focus-visible {
+    outline: 2px solid var(--gold);
+    outline-offset: 2px;
+  }
+</style>
 </head>
 <body>
 
-<!-- ════ HEADER ════ -->
-<header>
-  <div class="hdr-inner">
-    <div class="hdr-logo">
-      <img src="assets/logo/gov_logo.jpg" alt="PDUAM Logo" fetchpriority="high"/>
-    </div>
-    <div class="hdr-center">
-      <div class="hdr-uni">Pandit Deendayal Upadhyaya Adarsha Mahavidyalaya, Amjonga</div>
-      <div class="hdr-assamese">কম্পিউটাৰ বিজ্ঞান <span>বিভাগলৈ স্বাগতম</span></div>
-      <div class="hdr-sub">e-Portal · Department of Computer Science · PDUAM, Amjonga, Assam</div>
-      <div>
-        <span class="hdr-tagline">
-          <span class="live-dot"></span>প্রযুক্তিৰ পোহৰেৰে উদ্ভাসিত পৃথিৱী
-        </span>
+<header class="masthead">
+  <div class="masthead-inner">
+    <div class="masthead-text">
+      <div class="eyebrow"><span class="seal">CS</span> Department of Computer Science · PDUAM, Amjonga, Goalpara, Assam</div>
+      <h1 class="title">Advances in Multidisciplinary Research and Innovation</h1>
+      <p class="subtitle">Second Edition — International Edited Volume · Deep Science Publishing (USA · UK · India · Turkey)</p>
+      <div class="chips">
+        <span class="chip mono"><b>ISBN</b>978-93-7185-118-3</span>
+        <span class="chip mono"><b>E-ISBN</b>978-93-7185-110-7</span>
+        <span class="chip mono"><b>DOI</b><a href="https://doi.org/10.70593/978-93-7185-110-7" target="_blank" rel="noopener">10.70593/978-93-7185-110-7</a></span>
+      </div>
+      <div class="stats-row">
+        <div class="stat"><b>68</b><span>Chapters</span></div>
+        <div class="stat"><b>134</b><span>Contributors</span></div>
+        <div class="stat"><b>10</b><span>Sections</span></div>
+        <div class="stat"><b>2026</b><span>Publication Year</span></div>
       </div>
     </div>
-    <!-- right logo: hidden on mobile via .hdr-logo-right -->
-    <div class="hdr-logo hdr-logo-right">
-      <img src="assets/logo/pduam-logo.jpg" alt="CS Dept Logo" fetchpriority="high"/>
+    <div class="masthead-cover">
+      <img src="assets/cover.png" alt="Advances in Multidisciplinary Research and Innovation — book cover">
     </div>
   </div>
 </header>
 
-<!-- ════ NAV ════ -->
-<nav>
-  <div class="nav-inner">
-    <a href="index" class="nav-brand" style="text-decoration: none;"><i class="fa-solid fa-microchip"></i> CS · PDUAM</a>
-
-    <ul class="nav-links">
-      <li><a href="index"><i class="fa-solid fa-house"></i> Home</a></li>
-      <li><a href="mission"><i class="fa-solid fa-bullseye"></i> Mission</a></li>
-      <li><a href="faculty"><i class="fa-solid fa-chalkboard-user"></i> Faculty</a></li>
-      <li><a href="students"><i class="fa-solid fa-graduation-cap"></i> Students</a></li>
-      <li><a href="gallery"><i class="fa-solid fa-images"></i> Gallery</a></li>
-      <li><a href="events"><i class="fa-solid fa-calendar-days"></i> Events</a></li>
-      <li><a href="alumni"><i class="fa-solid fa-people-group"></i> Alumni</a></li>
-      <li><a href="archives"><i class="fa-solid fa-box-archive"></i> Archives</a></li>
-      <li><a href="tribute"><i class="fa-solid fa-hand-holding-heart"></i> Tribute</a></li>
-      <li><a href="contact"><i class="fa-solid fa-paper-plane"></i> Contact</a></li>
-    </ul>
-
-    <div class="nav-actions">
-      <!-- Desktop theme btn -->
-      <button class="theme-btn" id="themeBtn" aria-label="Toggle theme">
-        <div class="toggle-track">
-          <i class="fa-solid fa-sun track-sun"></i>
-          <i class="fa-solid fa-moon track-moon"></i>
-        </div>
-        <div class="toggle-knob"></div>
-      </button>
-      <!-- Hamburger (morphs to ×) -->
-      <button class="nav-toggle" id="menuBtn" aria-label="Toggle menu" aria-expanded="false">
-        <i class="fa-solid fa-bars" id="menuIcon"></i>
-      </button>
-    </div>
-  </div>
-</nav>
-
-<!-- ════ MOBILE SCRIM (backdrop) ════ -->
-<div class="mob-scrim" id="mobScrim"></div>
-
-<!-- ════ MOBILE OVERLAY — GLASSMORPHISM ════ -->
-<div class="mob-overlay" id="mobOverlay" role="dialog" aria-modal="true" aria-label="Navigation menu">
-  <div class="mob-head">
-    <a href="index" class="mob-brand" style="text-decoration: none;"><i class="fa-solid fa-microchip"></i> CS · PDUAM</a>
-    <button class="mob-close-btn" id="mobClose" aria-label="Close menu">
-      <i class="fa-solid fa-xmark"></i>
-    </button>
-  </div>
-
-  <nav class="mob-links">
-    <a href="index"><i class="fa-solid fa-house"></i>Home</a>
-    <a href="mission"><i class="fa-solid fa-bullseye"></i>Mission</a>
-    <a href="faculty"><i class="fa-solid fa-chalkboard-user"></i>Faculty</a>
-    <a href="students"><i class="fa-solid fa-graduation-cap"></i>Student Corner</a>
-    <a href="gallery"><i class="fa-solid fa-images"></i>Gallery</a>
-    <a href="events"><i class="fa-solid fa-calendar-days"></i>Events</a>
-    <a href="alumni"><i class="fa-solid fa-people-group"></i>Alumni</a>
-    <a href="archives"><i class="fa-solid fa-box-archive"></i>Archives</a>
-    <a href="tribute"><i class="fa-solid fa-hand-holding-heart"></i>Tribute</a>
-    <a href="contact"><i class="fa-solid fa-paper-plane"></i>Contact</a>
-  </nav>
-
-  <div class="mob-theme">
-    <span id="mobThemeLabel">Switch to Light Mode</span>
-    <button class="theme-btn" id="themeBtnMob" aria-label="Toggle theme">
-      <div class="toggle-track">
-        <i class="fa-solid fa-sun track-sun"></i>
-        <i class="fa-solid fa-moon track-moon"></i>
+<div class="record">
+  <div class="record-grid">
+    <div class="record-cell">
+      <span class="label">Published By</span>
+      <div class="value">
+        <strong>Deep Science Publishing</strong>
+        Global academic publisher — USA · UK · India · Turkey
       </div>
-      <div class="toggle-knob"></div>
-    </button>
+    </div>
+    <div class="record-cell">
+      <span class="label">Host Department</span>
+      <div class="value">
+        <strong>Department of Computer Science</strong>
+        Pandit Deendayal Upadhyaya Adarsha Mahavidyalaya (PDUAM)<br>
+        Amjonga, Goalpara, Assam – 783124, India
+      </div>
+    </div>
+    <div class="record-cell">
+      <span class="label">Editors</span>
+      <div class="value">
+        <ul>
+          <li>Dr. Sisir Kumar Rajbongshi</li>
+          <li>Dr. Kshirod Sarmah</li>
+          <li>Dr. Rajdeep Ghosh</li>
+          <li>Dharmeswar Tarang</li>
+        </ul>
+      </div>
+    </div>
+    <div class="record-cell">
+      <span class="label">Advisory Board</span>
+      <div class="value">
+        <ul>
+          <li>Prof. Anjana Kakoti Mahanta <span class="role">— Computer Science, Gauhati University</span></li>
+          <li>Prof. Helen K. Saikia <span class="role">— Mathematics, Gauhati University</span></li>
+          <li>Prof. Jagadish Sarma <span class="role">— Sanskrit, Gauhati University</span></li>
+        </ul>
+      </div>
+    </div>
   </div>
 </div>
 
-<!-- ════ MAIN ════ -->
-<main class="wrap">
-
-  <div class="hero-grid">
-    <!-- Slideshow -->
-    <div class="slide-box">
-      <div class="slideshow" id="slideshow">
-        <!-- Dynamic content from data/index_images.json -->
-      </div>
-      <div class="slide-counter" id="slideCounter">1 / 13</div>
-      <div class="slide-ui">
-        <button class="slide-btn" id="slidePrev" aria-label="Previous"><i class="fa-solid fa-chevron-left"></i></button>
-        <div class="slide-dots" id="slideDots"></div>
-        <button class="slide-btn" id="slideNext" aria-label="Next"><i class="fa-solid fa-chevron-right"></i></button>
-      </div>
+<div class="toolbar">
+  <div class="toolbar-inner">
+    <div class="search-box">
+      <svg width="15" height="15" viewBox="0 0 15 15" fill="none"><circle cx="6.5" cy="6.5" r="5" stroke="currentColor" stroke-width="1.3"/><path d="M10.5 10.5L14 14" stroke="currentColor" stroke-width="1.3" stroke-linecap="round"/></svg>
+      <input type="text" id="searchInput" placeholder="Search by chapter title or author…" autocomplete="off">
     </div>
+    <select id="sectionFilter">
+      <option value="all">All sections</option>
+      <option value="sec-0">Artificial Intelligence, Data Science &amp; Intelligent Computing</option>
+<option value="sec-1">Physical Sciences, Materials Science &amp; Nanotechnology</option>
+<option value="sec-2">Agriculture, Environmental Studies &amp; Sustainability</option>
+<option value="sec-3">Indian Knowledge Systems &amp; Interdisciplinary Studies</option>
+<option value="sec-4">Mathematical Sciences</option>
+<option value="sec-5">Life Sciences, Agriculture, Biotechnology &amp; Healthcare</option>
+<option value="sec-6">Chemical Sciences</option>
+<option value="sec-7">Commerce, Economics, Management &amp; Public Policy</option>
+<option value="sec-8">Education, Psychology &amp; Social Sciences</option>
+<option value="sec-9">Arts, Literature, Language &amp; Cultural Studies</option>
+    </select>
+    <span class="result-count" id="resultCount">68 chapters</span>
+  </div>
+</div>
 
-    <!-- Notifications — rendered dynamically from JSON -->
-    <div class="notif-box">
-      <div class="notif-head">
-        <div class="notif-ico"><i class="fa-solid fa-bell"></i></div>
-        <h3>Notifications</h3>
-        <span class="badge-live">Live</span>
-      </div>
-      <div class="notif-scroll" id="notifScroll">
-        <!-- Loading state -->
-        <!-- Skeleton state -->
-        <div class="notif-loading" id="notifLoading" aria-busy="true" style="display:block; padding:0;">
-          <div class="notif-item" style="pointer-events:none;"><div class="skeleton skeleton-text w-80"></div><div class="skeleton skeleton-text w-40" style="margin-top:0.4rem; height:0.6rem;"></div></div>
-          <div class="notif-item" style="pointer-events:none;"><div class="skeleton skeleton-text w-60"></div><div class="skeleton skeleton-text w-40" style="margin-top:0.4rem; height:0.6rem;"></div></div>
-          <div class="notif-item" style="pointer-events:none; border-bottom:none;"><div class="skeleton skeleton-text w-80"></div><div class="skeleton skeleton-text w-40" style="margin-top:0.4rem; height:0.6rem;"></div></div>
-        </div>
-        <!-- List injected by JS -->
-        <ul class="notif-list" id="notifList" style="display:none"></ul>
-      </div>
-      <!-- View All footer -->
-      <a href="notifications" class="notif-view-all">
-        <i class="fa-solid fa-list"></i>
-        View All Notifications
-        <i class="fa-solid fa-arrow-right notif-arrow"></i>
-      </a>
-    </div>
-  </div>
+<main id="mainIndex">
 
-  <!-- Quick Access -->
-  <div class="sec-head">
-    <div class="sec-line"></div>
-    <div><h2>Quick Access</h2><p>Everything you need, one tap away</p></div>
-  </div>
-  <div class="quick-grid">
-    <a class="qcard" href="mission">
-      <div class="qcard-ico ic-blue"><i class="fa-solid fa-bullseye"></i></div><span>Mission &amp; Vision</span>
-    </a>
-    <a class="qcard" href="faculty">
-      <div class="qcard-ico ic-purple"><i class="fa-solid fa-chalkboard-user"></i></div><span>Faculty</span>
-    </a>
-    <a class="qcard" href="students">
-      <div class="qcard-ico ic-green"><i class="fa-solid fa-graduation-cap"></i></div><span>Student Corner</span>
-    </a>
-    <a class="qcard" href="events">
-      <div class="qcard-ico ic-orange"><i class="fa-solid fa-calendar-days"></i></div><span>Events</span>
-    </a>
-    <a class="qcard" href="gallery">
-      <div class="qcard-ico ic-teal"><i class="fa-solid fa-images"></i></div><span>Gallery</span>
-    </a>
-    <a class="qcard" href="alumni">
-      <div class="qcard-ico ic-pink"><i class="fa-solid fa-people-group"></i></div><span>Alumni</span>
-    </a>
-    <a class="qcard" href="archives">
-      <div class="qcard-ico ic-gold"><i class="fa-solid fa-box-archive"></i></div><span>Archives</span>
-    </a>
-    <a class="qcard" href="tribute">
-      <div class="qcard-ico ic-red"><i class="fa-solid fa-hand-holding-heart"></i></div><span>Tribute</span>
-    </a>
-    <a class="qcard" href="contact">
-      <div class="qcard-ico ic-indigo"><i class="fa-solid fa-paper-plane"></i></div><span>Contact</span>
-    </a>
-    <a class="qcard" href="routine">
-      <div class="qcard-ico ic-sky"><i class="fa-solid fa-table-cells-large"></i></div><span>Class Routine</span>
-    </a>
-    <a class="qcard" href="https://drive.google.com/drive/folders/14CjyuJb6DAtywFV9AIpFjaCYRcA6Yapg?usp=sharing" target="_blank">
-      <div class="qcard-ico ic-lime"><i class="fa-solid fa-book-open-reader"></i></div><span>Syllabus</span>
-    </a>
-    <a class="qcard" href="https://gauhati.ac.in/media/notification/1734503844.pdf" target="_blank">
-      <div class="qcard-ico ic-rose"><i class="fa-solid fa-umbrella-beach"></i></div><span>Holiday List</span>
-    </a>
-  </div>
-
-  <!-- Featured Publication -->
-  <div class="sec-head">
-    <div class="sec-line"></div>
-    <div><h2>Featured Publications</h2><p>Latest research volumes published by the department</p></div>
-  </div>
-  <a class="pub-card" href="/multidisciplinary-book-publish/edition-2" target="_blank" rel="noopener">
-    <div class="pub-ico"><i class="fa-solid fa-book"></i></div>
-    <div class="pub-body">
-      <h3>Advances in Multidisciplinary Research and Innovation</h3>
-      <p>Second edition edited book published by Deep Science Publishing (USA · UK · India · Turkey) · 2026</p>
-      <div class="pub-pills">
-        <span class="pill">ISBN: 978-93-7185-118-3</span>
-        <span class="pill">E-ISBN: 978-93-7185-110-7</span>
-        <span class="pill">DOI: 10.70593/978-93-7185-110-7</span>
-        <span class="badge-new">New</span>
+    <section class="theme" id="sec-0">
+      <div class="theme-head">
+        <span class="theme-tag">§01</span>
+        <h2>Artificial Intelligence, Data Science &amp; Intelligent Computing</h2>
+        <span class="theme-count">24 chapters</span>
       </div>
-    </div>
-  </a>
-  <a class="pub-card" href="/multidisciplinary-book-publish/edition-1" target="_blank" rel="noopener">
-    <div class="pub-ico"><i class="fa-solid fa-book"></i></div>
-    <div class="pub-body">
-      <h3>Multidisciplinary Research: Innovations in Science, Arts and Commerce</h3>
-      <p>First edition edited book published by Deep Science Publishing (USA · UK · India · Turkey) · November 2025</p>
-      <div class="pub-pills">
-        <span class="pill">ISBN: 978-93-7185-157-2</span>
-        <span class="pill">E-ISBN: 978-93-7185-737-6</span>
-        <span class="pill">DOI: 10.70593/978-93-7185-737-6</span>
+      <div class="cards">
+        
+        <a class="card" href="chapters/chapter1.pdf" target="_blank" rel="noopener"
+           data-section="sec-0" data-search="safety-oriented traffic conflict detection and resolution for autonomous vehicles at unsignalised intersections using carla simulation johirol islam artificial intelligence, data science &amp; intelligent computing">
+          <span class="card-num">01</span>
+          <span class="card-body">
+            <span class="card-title">Safety-Oriented Traffic Conflict Detection and Resolution for Autonomous Vehicles at Unsignalised Intersections Using CARLA Simulation</span>
+            <span class="card-authors">Johirol Islam</span>
+            <span class="card-affil">School of Information Technology, Yulin University, Yulin City, Shaanxi Province, China</span>
+          </span>
+          <span class="card-go" aria-hidden="true">
+            <svg width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M4 12L12 4M12 4H5M12 4V11" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            <span class="card-go-label">PDF</span>
+          </span>
+        </a>
+        <a class="card" href="chapters/chapter2.pdf" target="_blank" rel="noopener"
+           data-section="sec-0" data-search="building a field-ready iot smart farming prototype: circuit design, embedded firmware, and multi-season deployment evidence from smallholder farms in pune, maharashtra prof. kavita ramdas sandbhor prof. jyoti p. sarwade prof. rajashri sanjay khadake artificial intelligence, data science &amp; intelligent computing">
+          <span class="card-num">02</span>
+          <span class="card-body">
+            <span class="card-title">Building a Field-Ready IoT Smart Farming Prototype: Circuit Design, Embedded Firmware, and Multi-Season Deployment Evidence from Smallholder Farms in Pune, Maharashtra</span>
+            <span class="card-authors">Prof. Kavita Ramdas Sandbhor, Prof. Jyoti P. Sarwade, Prof. Rajashri Sanjay Khadake</span>
+            <span class="card-affil">Department of Computer Application / Department of Computer Science, MAEER&#x27;s MIT ACSC, Alandi (D), Pune, Maharashtra, India · et al.</span>
+          </span>
+          <span class="card-go" aria-hidden="true">
+            <svg width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M4 12L12 4M12 4H5M12 4V11" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            <span class="card-go-label">PDF</span>
+          </span>
+        </a>
+        <a class="card" href="chapters/chapter3.pdf" target="_blank" rel="noopener"
+           data-section="sec-0" data-search="ai-driven portable on-premise iot cloud mini server for secure sensor data management in future classrooms and msme applications ithaya priya b megna k lavanya s venkatesan r artificial intelligence, data science &amp; intelligent computing">
+          <span class="card-num">03</span>
+          <span class="card-body">
+            <span class="card-title">AI-Driven Portable On-Premise IoT Cloud Mini Server for Secure Sensor Data Management in Future Classrooms and MSME Applications</span>
+            <span class="card-authors">Ithaya Priya B, Megna K, Lavanya S, Venkatesan R</span>
+            <span class="card-affil">Department of Computer Science and Engineering, E.G.S. Pillay Engineering College, Nagapattinam, Tamil Nadu, India · et al.</span>
+          </span>
+          <span class="card-go" aria-hidden="true">
+            <svg width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M4 12L12 4M12 4H5M12 4V11" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            <span class="card-go-label">PDF</span>
+          </span>
+        </a>
+        <a class="card" href="chapters/chapter4.pdf" target="_blank" rel="noopener"
+           data-section="sec-0" data-search="applicability of vector databases in agentic ai systems -- accelerating and spreading intelligent systems shankar kumar artificial intelligence, data science &amp; intelligent computing">
+          <span class="card-num">04</span>
+          <span class="card-body">
+            <span class="card-title">Applicability of Vector Databases in Agentic AI Systems -- Accelerating and Spreading Intelligent Systems</span>
+            <span class="card-authors">Shankar Kumar</span>
+            <span class="card-affil">Haspura High School, Haspura, Aurangabad, Bihar, India</span>
+          </span>
+          <span class="card-go" aria-hidden="true">
+            <svg width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M4 12L12 4M12 4H5M12 4V11" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            <span class="card-go-label">PDF</span>
+          </span>
+        </a>
+        <a class="card" href="chapters/chapter5.pdf" target="_blank" rel="noopener"
+           data-section="sec-0" data-search="a detailed study of dynamic query optimization techniques shankar kumar artificial intelligence, data science &amp; intelligent computing">
+          <span class="card-num">05</span>
+          <span class="card-body">
+            <span class="card-title">A Detailed Study of Dynamic Query Optimization Techniques</span>
+            <span class="card-authors">Shankar Kumar</span>
+            <span class="card-affil">Haspura High School, Haspura, Aurangabad, Bihar, India</span>
+          </span>
+          <span class="card-go" aria-hidden="true">
+            <svg width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M4 12L12 4M12 4H5M12 4V11" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            <span class="card-go-label">PDF</span>
+          </span>
+        </a>
+        <a class="card" href="chapters/chapter6.pdf" target="_blank" rel="noopener"
+           data-section="sec-0" data-search="quantifying the acoustic distance between assamese and mising: a spectral and computational approach to an indo-aryan--sino-tibetan contact zone parismita gogoi aditya kaushik aryan biswa neelam saikia artificial intelligence, data science &amp; intelligent computing">
+          <span class="card-num">06</span>
+          <span class="card-body">
+            <span class="card-title">Quantifying the Acoustic Distance Between Assamese and Mising: A Spectral and Computational Approach to an Indo-Aryan--Sino-Tibetan Contact Zone</span>
+            <span class="card-authors">Parismita Gogoi, Aditya Kaushik, Aryan Biswa, Neelam Saikia</span>
+            <span class="card-affil">Department of Electronics and Communication Engineering, Dibrugarh University Institute of Engineering and Technology, Dibrugarh University, Dibrugarh, Assam, India · et al.</span>
+          </span>
+          <span class="card-go" aria-hidden="true">
+            <svg width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M4 12L12 4M12 4H5M12 4V11" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            <span class="card-go-label">PDF</span>
+          </span>
+        </a>
+        <a class="card" href="chapters/chapter7.pdf" target="_blank" rel="noopener"
+           data-section="sec-0" data-search="a comparative analysis of fft and quantum fourier transform for eeg spectral analysis parnasree chakraborty a. ambika c. tharini artificial intelligence, data science &amp; intelligent computing">
+          <span class="card-num">07</span>
+          <span class="card-body">
+            <span class="card-title">A Comparative Analysis of FFT and Quantum Fourier Transform for EEG Spectral Analysis</span>
+            <span class="card-authors">Parnasree Chakraborty, A. Ambika, C. Tharini</span>
+            <span class="card-affil">B.S. Abdur Rahman Crescent Institute of Science and Technology, Tamil Nadu, India · et al.</span>
+          </span>
+          <span class="card-go" aria-hidden="true">
+            <svg width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M4 12L12 4M12 4H5M12 4V11" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            <span class="card-go-label">PDF</span>
+          </span>
+        </a>
+        <a class="card" href="chapters/chapter8.pdf" target="_blank" rel="noopener"
+           data-section="sec-0" data-search="transformer models for hate speech detection in low-resource languages: a systematic review of methods, datasets, and open challenges mrs. punam patel dr. mahendra gawali artificial intelligence, data science &amp; intelligent computing">
+          <span class="card-num">08</span>
+          <span class="card-body">
+            <span class="card-title">Transformer Models for Hate Speech Detection in Low-Resource Languages: A Systematic Review of Methods, Datasets, and Open Challenges</span>
+            <span class="card-authors">Mrs. Punam Patel, Dr. Mahendra Gawali</span>
+            <span class="card-affil">Department of Computer Science and Engineering, Sanjivani University, Kopargaon, Maharashtra, India · et al.</span>
+          </span>
+          <span class="card-go" aria-hidden="true">
+            <svg width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M4 12L12 4M12 4H5M12 4V11" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            <span class="card-go-label">PDF</span>
+          </span>
+        </a>
+        <a class="card" href="chapters/chapter9.pdf" target="_blank" rel="noopener"
+           data-section="sec-0" data-search="aortic stenosis: diagnosis, treatment and its impact on healthcare in india purabi choudhury dr. jyotismita talukdar artificial intelligence, data science &amp; intelligent computing">
+          <span class="card-num">09</span>
+          <span class="card-body">
+            <span class="card-title">Aortic Stenosis: Diagnosis, Treatment and Its Impact on Healthcare in India</span>
+            <span class="card-authors">Purabi Choudhury, Dr. Jyotismita Talukdar</span>
+            <span class="card-affil">Department of Computer Science and Engineering, Tezpur University, Assam, India · et al.</span>
+          </span>
+          <span class="card-go" aria-hidden="true">
+            <svg width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M4 12L12 4M12 4H5M12 4V11" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            <span class="card-go-label">PDF</span>
+          </span>
+        </a>
+        <a class="card" href="chapters/chapter10.pdf" target="_blank" rel="noopener"
+           data-section="sec-0" data-search="next-generation iomt solutions for real-time diabetes monitoring and decision support sathiyamurthi k venkatesan r sharmi b ithaya priya b artificial intelligence, data science &amp; intelligent computing">
+          <span class="card-num">10</span>
+          <span class="card-body">
+            <span class="card-title">Next-Generation IoMT Solutions for Real-Time Diabetes Monitoring and Decision Support</span>
+            <span class="card-authors">Sathiyamurthi K, Venkatesan R, Sharmi B, Ithaya Priya B</span>
+            <span class="card-affil">Department of Biomedical Engineering, E.G.S. Pillay Engineering College, Nagapattinam, Tamil Nadu, India · et al.</span>
+          </span>
+          <span class="card-go" aria-hidden="true">
+            <svg width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M4 12L12 4M12 4H5M12 4V11" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            <span class="card-go-label">PDF</span>
+          </span>
+        </a>
+        <a class="card" href="chapters/chapter11.pdf" target="_blank" rel="noopener"
+           data-section="sec-0" data-search="artificial intelligence in higher education: transforming teaching, learning, and assessment in the digital era prof. rajashri sanjay khadake prof. jyoti p. sarwade prof. preeti b. lokhande kavita ramdas sandbhor artificial intelligence, data science &amp; intelligent computing">
+          <span class="card-num">11</span>
+          <span class="card-body">
+            <span class="card-title">Artificial Intelligence in Higher Education: Transforming Teaching, Learning, and Assessment in the Digital Era</span>
+            <span class="card-authors">Prof. Rajashri Sanjay Khadake, Prof. Jyoti P. Sarwade, Prof. Preeti B. Lokhande, Kavita Ramdas Sandbhor</span>
+            <span class="card-affil">Department of Computer Application / Department of Computer Science, MAEER&#x27;s MIT Arts, Commerce and Science College, Alandi, Pune, Maharashtra, India · et al.</span>
+          </span>
+          <span class="card-go" aria-hidden="true">
+            <svg width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M4 12L12 4M12 4H5M12 4V11" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            <span class="card-go-label">PDF</span>
+          </span>
+        </a>
+        <a class="card" href="chapters/chapter12.pdf" target="_blank" rel="noopener"
+           data-section="sec-0" data-search="ai-driven health monitoring in pig farming: a technological perspective from northeast india dr. angshumala talukdar mr. ullash roy artificial intelligence, data science &amp; intelligent computing">
+          <span class="card-num">12</span>
+          <span class="card-body">
+            <span class="card-title">AI-Driven Health Monitoring in Pig Farming: A Technological Perspective from Northeast India</span>
+            <span class="card-authors">Dr. Angshumala Talukdar, Mr. Ullash Roy</span>
+            <span class="card-affil">Assistant Professor, Assam down town University, Assam, India · et al.</span>
+          </span>
+          <span class="card-go" aria-hidden="true">
+            <svg width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M4 12L12 4M12 4H5M12 4V11" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            <span class="card-go-label">PDF</span>
+          </span>
+        </a>
+        <a class="card" href="chapters/chapter13.pdf" target="_blank" rel="noopener"
+           data-section="sec-0" data-search="deep learning frameworks for text classification in low-resource languages anupam kumar nath artificial intelligence, data science &amp; intelligent computing">
+          <span class="card-num">13</span>
+          <span class="card-body">
+            <span class="card-title">Deep Learning Frameworks for Text Classification in Low-Resource Languages</span>
+            <span class="card-authors">Anupam Kumar Nath</span>
+            <span class="card-affil">M.Sc. Computer Science, Gauhati University, Assam, India</span>
+          </span>
+          <span class="card-go" aria-hidden="true">
+            <svg width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M4 12L12 4M12 4H5M12 4V11" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            <span class="card-go-label">PDF</span>
+          </span>
+        </a>
+        <a class="card" href="chapters/chapter14.pdf" target="_blank" rel="noopener"
+           data-section="sec-0" data-search="an explainable employee attrition prediction framework using feature selection and gradient-boosted trees arpan tewary dr. abhishek bandyopadhyay arup kumar chakraborty ashutosh kumar singh artificial intelligence, data science &amp; intelligent computing">
+          <span class="card-num">14</span>
+          <span class="card-body">
+            <span class="card-title">An Explainable Employee Attrition Prediction Framework Using Feature Selection and Gradient-Boosted Trees</span>
+            <span class="card-authors">Arpan Tewary, Dr. Abhishek Bandyopadhyay, Arup Kumar Chakraborty, Ashutosh Kumar Singh</span>
+            <span class="card-affil">State Aided College Teacher (Category-I), Department of Computer Science, Banwarilal Bhalotia College, Asansol, West Bengal, India · et al.</span>
+          </span>
+          <span class="card-go" aria-hidden="true">
+            <svg width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M4 12L12 4M12 4H5M12 4V11" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            <span class="card-go-label">PDF</span>
+          </span>
+        </a>
+        <a class="card" href="chapters/chapter15.pdf" target="_blank" rel="noopener"
+           data-section="sec-0" data-search="5g/6g-enabled edge intelligence arun kumar rathore sachin lakhera shweta gupta artificial intelligence, data science &amp; intelligent computing">
+          <span class="card-num">15</span>
+          <span class="card-body">
+            <span class="card-title">5G/6G-Enabled Edge Intelligence</span>
+            <span class="card-authors">Arun Kumar Rathore, Sachin Lakhera, Shweta Gupta</span>
+            <span class="card-affil">J.B. Institute of Technology, Dehradun, Uttarakhand, India · et al.</span>
+          </span>
+          <span class="card-go" aria-hidden="true">
+            <svg width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M4 12L12 4M12 4H5M12 4V11" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            <span class="card-go-label">PDF</span>
+          </span>
+        </a>
+        <a class="card" href="chapters/chapter16.pdf" target="_blank" rel="noopener"
+           data-section="sec-0" data-search="machine learning-based prediction of muga cocoon drying: comparative study of convection and infrared methods dr. chayanika bhagabati artificial intelligence, data science &amp; intelligent computing">
+          <span class="card-num">16</span>
+          <span class="card-body">
+            <span class="card-title">Machine Learning-Based Prediction of Muga Cocoon Drying: Comparative Study of Convection and Infrared Methods</span>
+            <span class="card-authors">Dr. Chayanika Bhagabati</span>
+            <span class="card-affil">IIMT University, Greater Noida, Uttar Pradesh, India</span>
+          </span>
+          <span class="card-go" aria-hidden="true">
+            <svg width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M4 12L12 4M12 4H5M12 4V11" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            <span class="card-go-label">PDF</span>
+          </span>
+        </a>
+        <a class="card" href="chapters/chapter17.pdf" target="_blank" rel="noopener"
+           data-section="sec-0" data-search="a comprehensive review of explainable artificial intelligence in breast cancer detection dr. manjula kalita artificial intelligence, data science &amp; intelligent computing">
+          <span class="card-num">17</span>
+          <span class="card-body">
+            <span class="card-title">A Comprehensive Review of Explainable Artificial Intelligence in Breast Cancer Detection</span>
+            <span class="card-authors">Dr. Manjula Kalita</span>
+            <span class="card-affil">Assistant Professor, Girijananda Chowdhury University, Azara, Guwahati, Assam, India</span>
+          </span>
+          <span class="card-go" aria-hidden="true">
+            <svg width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M4 12L12 4M12 4H5M12 4V11" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            <span class="card-go-label">PDF</span>
+          </span>
+        </a>
+        <a class="card" href="chapters/chapter18.pdf" target="_blank" rel="noopener"
+           data-section="sec-0" data-search="public legal education platform indibor goswami daisy sharmah artificial intelligence, data science &amp; intelligent computing">
+          <span class="card-num">18</span>
+          <span class="card-body">
+            <span class="card-title">Public Legal Education Platform</span>
+            <span class="card-authors">Indibor Goswami, Daisy Sharmah</span>
+            <span class="card-affil">MCA, Department of Computer Science, University of Science &amp; Technology Meghalaya, India · et al.</span>
+          </span>
+          <span class="card-go" aria-hidden="true">
+            <svg width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M4 12L12 4M12 4H5M12 4V11" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            <span class="card-go-label">PDF</span>
+          </span>
+        </a>
+        <a class="card" href="chapters/chapter19.pdf" target="_blank" rel="noopener"
+           data-section="sec-0" data-search="compatibility of artificial intelligence in field research: a sustainable development perspective: a conceptual and scoping review dr. tanmay dhar artificial intelligence, data science &amp; intelligent computing">
+          <span class="card-num">19</span>
+          <span class="card-body">
+            <span class="card-title">Compatibility of Artificial Intelligence in Field Research: A Sustainable Development Perspective: A Conceptual and Scoping Review</span>
+            <span class="card-authors">Dr. Tanmay Dhar</span>
+            <span class="card-affil">Uttaranchal University, Dehradun, Uttarakhand, India</span>
+          </span>
+          <span class="card-go" aria-hidden="true">
+            <svg width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M4 12L12 4M12 4H5M12 4V11" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            <span class="card-go-label">PDF</span>
+          </span>
+        </a>
+        <a class="card" href="chapters/chapter20.pdf" target="_blank" rel="noopener"
+           data-section="sec-0" data-search="self-driving cars and fuzzy logic dr. bimal kumar kalita artificial intelligence, data science &amp; intelligent computing">
+          <span class="card-num">20</span>
+          <span class="card-body">
+            <span class="card-title">Self-Driving Cars and Fuzzy Logic</span>
+            <span class="card-authors">Dr. Bimal Kumar Kalita</span>
+            <span class="card-affil">Assistant Professor (Selection), Department of Computer Application, Assam Don Bosco University, Assam, India</span>
+          </span>
+          <span class="card-go" aria-hidden="true">
+            <svg width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M4 12L12 4M12 4H5M12 4V11" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            <span class="card-go-label">PDF</span>
+          </span>
+        </a>
+        <a class="card" href="chapters/chapter21.pdf" target="_blank" rel="noopener"
+           data-section="sec-0" data-search="next- generation net metering data centers: integrating blockchain, cloud computing and artificial intelligence godfrey murairidzi gotora blessed ziyambe eunice mfula godfrey benjamin zulu artificial intelligence, data science &amp; intelligent computing">
+          <span class="card-num">21</span>
+          <span class="card-body">
+            <span class="card-title">Next- Generation Net Metering Data Centers: Integrating Blockchain, Cloud Computing and Artificial Intelligence</span>
+            <span class="card-authors">Godfrey Murairidzi Gotora, Blessed Ziyambe, Eunice Mfula, Godfrey Benjamin Zulu</span>
+            <span class="card-affil">School of Engineering and ICT, Arrupe Jesuit University, Zimbabwe · et al.</span>
+          </span>
+          <span class="card-go" aria-hidden="true">
+            <svg width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M4 12L12 4M12 4H5M12 4V11" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            <span class="card-go-label">PDF</span>
+          </span>
+        </a>
+        <a class="card" href="chapters/chapter22.pdf" target="_blank" rel="noopener"
+           data-section="sec-0" data-search="deception at a cost: reinforcement learning for resilient infrastructure dr. tapashi kashyap das artificial intelligence, data science &amp; intelligent computing">
+          <span class="card-num">22</span>
+          <span class="card-body">
+            <span class="card-title">Deception at a Cost: Reinforcement Learning for Resilient Infrastructure</span>
+            <span class="card-authors">Dr. Tapashi Kashyap Das</span>
+            <span class="card-affil">Assistant Professor, Discipline of Computer Science, Krishna Kanta Handiqui State Open University (KKHSOU), Guwahati, Assam, India</span>
+          </span>
+          <span class="card-go" aria-hidden="true">
+            <svg width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M4 12L12 4M12 4H5M12 4V11" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            <span class="card-go-label">PDF</span>
+          </span>
+        </a>
+        <a class="card" href="chapters/chapter23.pdf" target="_blank" rel="noopener"
+           data-section="sec-0" data-search="generative artificial intelligence in higher education: opportunities, risks, and governance mrs. jyoti sarwade mrs. anita atiwadkar prof. rajashri sanjay khadake prof. kavita ramdas sandbhor artificial intelligence, data science &amp; intelligent computing">
+          <span class="card-num">23</span>
+          <span class="card-body">
+            <span class="card-title">Generative Artificial Intelligence in Higher Education: Opportunities, Risks, and Governance</span>
+            <span class="card-authors">Mrs. Jyoti Sarwade, Mrs. Anita Atiwadkar, Prof. Rajashri Sanjay Khadake, Prof. Kavita Ramdas Sandbhor</span>
+            <span class="card-affil">Department of Computer Application / Department of Computer Science, MAEER&#x27;s MIT ACSC, Alandi (D), Pune, Maharashtra, India · et al.</span>
+          </span>
+          <span class="card-go" aria-hidden="true">
+            <svg width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M4 12L12 4M12 4H5M12 4V11" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            <span class="card-go-label">PDF</span>
+          </span>
+        </a>
+        <a class="card" href="chapters/chapter24.pdf" target="_blank" rel="noopener"
+           data-section="sec-0" data-search="from application to belonging: a human-in-the-loop framework for ai-assisted advising in indian student mobility nikunj doshi artificial intelligence, data science &amp; intelligent computing">
+          <span class="card-num">24</span>
+          <span class="card-body">
+            <span class="card-title">From Application to Belonging: A Human-in-the-Loop Framework for AI-Assisted Advising in Indian Student Mobility</span>
+            <span class="card-authors">Nikunj Doshi</span>
+            <span class="card-affil">Northeastern University, Boston, Massachusetts, USA</span>
+          </span>
+          <span class="card-go" aria-hidden="true">
+            <svg width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M4 12L12 4M12 4H5M12 4V11" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            <span class="card-go-label">PDF</span>
+          </span>
+        </a>
       </div>
-    </div>
-  </a>
-  <div style="text-align: center; margin-top: 1.5rem; margin-bottom: 2rem;">
-    <a href="/multidisciplinary-book-publish" style="display: inline-flex; align-items: center; gap: 8px; font-size: 0.85rem; font-weight: 600; color: var(--gold, #d4af37); border: 1px solid var(--gold, #d4af37); padding: 10px 22px; border-radius: 8px; transition: all 0.25s; text-transform: uppercase; letter-spacing: 0.05em; background: transparent; text-decoration: none;" onmouseover="this.style.background='rgba(212,175,55,0.08)'; this.style.transform='translateY(-1px)';" onmouseout="this.style.background='transparent'; this.style.transform='none';">
-      <i class="fa-solid fa-book-open"></i> View Publications Portal &rarr;
-    </a>
-  </div>
+    </section>
 
+    <section class="theme" id="sec-1">
+      <div class="theme-head">
+        <span class="theme-tag">§02</span>
+        <h2>Physical Sciences, Materials Science &amp; Nanotechnology</h2>
+        <span class="theme-count">5 chapters</span>
+      </div>
+      <div class="cards">
+        
+        <a class="card" href="chapters/chapter25.pdf" target="_blank" rel="noopener"
+           data-section="sec-1" data-search="nano-innovations for a green tomorrow: physics-driven materials and devices anil kumar pramod kumar physical sciences, materials science &amp; nanotechnology">
+          <span class="card-num">25</span>
+          <span class="card-body">
+            <span class="card-title">Nano-Innovations for a Green Tomorrow: Physics-Driven Materials and Devices</span>
+            <span class="card-authors">Anil Kumar, Pramod Kumar</span>
+            <span class="card-affil">Department of Physics, Brahmanand College, Kanpur, Uttar Pradesh, India · et al.</span>
+          </span>
+          <span class="card-go" aria-hidden="true">
+            <svg width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M4 12L12 4M12 4H5M12 4V11" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            <span class="card-go-label">PDF</span>
+          </span>
+        </a>
+        <a class="card" href="chapters/chapter26.pdf" target="_blank" rel="noopener"
+           data-section="sec-1" data-search="advanced electronic materials and emerging device technologies bappi mallik physical sciences, materials science &amp; nanotechnology">
+          <span class="card-num">26</span>
+          <span class="card-body">
+            <span class="card-title">Advanced Electronic Materials and Emerging Device Technologies</span>
+            <span class="card-authors">Bappi Mallik</span>
+            <span class="card-affil">Department of Physics, Central Institute of Technology Kokrajhar, Kokrajhar, Assam, India</span>
+          </span>
+          <span class="card-go" aria-hidden="true">
+            <svg width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M4 12L12 4M12 4H5M12 4V11" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            <span class="card-go-label">PDF</span>
+          </span>
+        </a>
+        <a class="card" href="chapters/chapter27.pdf" target="_blank" rel="noopener"
+           data-section="sec-1" data-search="recent advances in rare-earth free permanent magnet materials for future device applications d. rajbanshi n. deka physical sciences, materials science &amp; nanotechnology">
+          <span class="card-num">27</span>
+          <span class="card-body">
+            <span class="card-title">Recent Advances in Rare-Earth Free Permanent Magnet Materials for Future Device Applications</span>
+            <span class="card-authors">D. Rajbanshi, N. Deka</span>
+            <span class="card-affil">Department of Physics, Central Institute of Technology Kokrajhar, Kokrajhar, Assam, India · et al.</span>
+          </span>
+          <span class="card-go" aria-hidden="true">
+            <svg width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M4 12L12 4M12 4H5M12 4V11" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            <span class="card-go-label">PDF</span>
+          </span>
+        </a>
+        <a class="card" href="chapters/chapter28.pdf" target="_blank" rel="noopener"
+           data-section="sec-1" data-search="rare-earth iron garnets (r₃fe₅o₁₂): structure, synthesis, properties, and multifunctional technological applications mahanta chouhan b. n. parida physical sciences, materials science &amp; nanotechnology">
+          <span class="card-num">28</span>
+          <span class="card-body">
+            <span class="card-title">Rare-Earth Iron Garnets (R₃Fe₅O₁₂): Structure, Synthesis, Properties, and Multifunctional Technological Applications</span>
+            <span class="card-authors">Mahanta Chouhan, B. N. Parida</span>
+            <span class="card-affil">Department of Physics, Basugaon College, BTR, Assam, India; Department of Physics, Central Institute of Technology Kokrajhar (Deemed to be University), BTR, Assam, India · et al.</span>
+          </span>
+          <span class="card-go" aria-hidden="true">
+            <svg width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M4 12L12 4M12 4H5M12 4V11" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            <span class="card-go-label">PDF</span>
+          </span>
+        </a>
+        <a class="card" href="chapters/chapter29.pdf" target="_blank" rel="noopener"
+           data-section="sec-1" data-search="optical and electrical properties of nanostructured cds-ps: p-si heterostructure dr. samarjit sarmah physical sciences, materials science &amp; nanotechnology">
+          <span class="card-num">29</span>
+          <span class="card-body">
+            <span class="card-title">Optical and Electrical Properties of Nanostructured CdS-PS: p-Si Heterostructure</span>
+            <span class="card-authors">Dr. Samarjit Sarmah</span>
+            <span class="card-affil">Assistant Professor (Physics), Department of Physics, Pub Kamrup College, Baihata Chariali, Kamrup, Assam, India</span>
+          </span>
+          <span class="card-go" aria-hidden="true">
+            <svg width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M4 12L12 4M12 4H5M12 4V11" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            <span class="card-go-label">PDF</span>
+          </span>
+        </a>
+      </div>
+    </section>
+
+    <section class="theme" id="sec-2">
+      <div class="theme-head">
+        <span class="theme-tag">§03</span>
+        <h2>Agriculture, Environmental Studies &amp; Sustainability</h2>
+        <span class="theme-count">2 chapters</span>
+      </div>
+      <div class="cards">
+        
+        <a class="card" href="chapters/chapter30.pdf" target="_blank" rel="noopener"
+           data-section="sec-2" data-search="baranaja: multicropping indigenous system of uttarakhand himalaya as a model of sustainable agriculture and food security jitendra kumar lohani arti joshi agriculture, environmental studies &amp; sustainability">
+          <span class="card-num">30</span>
+          <span class="card-body">
+            <span class="card-title">Baranaja: Multicropping Indigenous System of Uttarakhand Himalaya as a Model of Sustainable Agriculture and Food Security</span>
+            <span class="card-authors">Jitendra Kumar Lohani, Arti Joshi</span>
+            <span class="card-affil">Assistant Professor, D.S.B. Campus, Kumaun University, Nainital, Uttarakhand, India · et al.</span>
+          </span>
+          <span class="card-go" aria-hidden="true">
+            <svg width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M4 12L12 4M12 4H5M12 4V11" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            <span class="card-go-label">PDF</span>
+          </span>
+        </a>
+        <a class="card" href="chapters/chapter31.pdf" target="_blank" rel="noopener"
+           data-section="sec-2" data-search="mithun (bos frontalis): a review on feeding ecology, natural fodder resource management, habitat and conservation in the eastern himalaya sangeeta deka liagi tajo vishnu dutt monya kato jini a. murugan insan ara rahman dibyajyoti deka agriculture, environmental studies &amp; sustainability">
+          <span class="card-num">31</span>
+          <span class="card-body">
+            <span class="card-title">Mithun (Bos frontalis): A Review on Feeding Ecology, Natural Fodder Resource Management, Habitat and Conservation in the Eastern Himalaya</span>
+            <span class="card-authors">Sangeeta Deka, Liagi Tajo, Vishnu Dutt, Monya Kato Jini, A. Murugan, Insan Ara Rahman, Dibyajyoti Deka</span>
+            <span class="card-affil">Pandit Deendayal Upadhyaya Adarsha Mahavidyalaya, Amjonga, Goalpara District, Assam, India · et al.</span>
+          </span>
+          <span class="card-go" aria-hidden="true">
+            <svg width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M4 12L12 4M12 4H5M12 4V11" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            <span class="card-go-label">PDF</span>
+          </span>
+        </a>
+      </div>
+    </section>
+
+    <section class="theme" id="sec-3">
+      <div class="theme-head">
+        <span class="theme-tag">§04</span>
+        <h2>Indian Knowledge Systems &amp; Interdisciplinary Studies</h2>
+        <span class="theme-count">2 chapters</span>
+      </div>
+      <div class="cards">
+        
+        <a class="card" href="chapters/chapter32.pdf" target="_blank" rel="noopener"
+           data-section="sec-3" data-search="the renaissance of indigeneity: integrating iks into nep 2020 leeladhar chouhan sanghita chakravarty indian knowledge systems &amp; interdisciplinary studies">
+          <span class="card-num">32</span>
+          <span class="card-body">
+            <span class="card-title">The Renaissance of Indigeneity: Integrating IKS into NEP 2020</span>
+            <span class="card-authors">Leeladhar Chouhan, Sanghita Chakravarty</span>
+            <span class="card-affil">Department of Physics, Kokrajhar University, Kokrajhar, Assam, India · et al.</span>
+          </span>
+          <span class="card-go" aria-hidden="true">
+            <svg width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M4 12L12 4M12 4H5M12 4V11" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            <span class="card-go-label">PDF</span>
+          </span>
+        </a>
+        <a class="card" href="chapters/chapter33.pdf" target="_blank" rel="noopener"
+           data-section="sec-3" data-search="digital resource creation for bishnupriya manipuri: corpus development and computational perspectives for a low-resource language dr. rita sinha indian knowledge systems &amp; interdisciplinary studies">
+          <span class="card-num">33</span>
+          <span class="card-body">
+            <span class="card-title">Digital Resource Creation for Bishnupriya Manipuri: Corpus Development and Computational Perspectives for a Low-Resource Language</span>
+            <span class="card-authors">Dr. Rita Sinha</span>
+            <span class="card-affil">Assistant Professor, Department of Computer Science, Lalit Chandra Bharali College, Assam, India</span>
+          </span>
+          <span class="card-go" aria-hidden="true">
+            <svg width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M4 12L12 4M12 4H5M12 4V11" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            <span class="card-go-label">PDF</span>
+          </span>
+        </a>
+      </div>
+    </section>
+
+    <section class="theme" id="sec-4">
+      <div class="theme-head">
+        <span class="theme-tag">§05</span>
+        <h2>Mathematical Sciences</h2>
+        <span class="theme-count">9 chapters</span>
+      </div>
+      <div class="cards">
+        
+        <a class="card" href="chapters/chapter34.pdf" target="_blank" rel="noopener"
+           data-section="sec-4" data-search="an in-depth examination of the indian mathematical knowledge system a. y. shaikh mathematical sciences">
+          <span class="card-num">34</span>
+          <span class="card-body">
+            <span class="card-title">An In-depth Examination of the Indian Mathematical Knowledge System</span>
+            <span class="card-authors">A. Y. Shaikh</span>
+            <span class="card-affil">Department of Mathematics, Indira Gandhi Mahavidyalaya, Ralegaon, Maharashtra, India</span>
+          </span>
+          <span class="card-go" aria-hidden="true">
+            <svg width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M4 12L12 4M12 4H5M12 4V11" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            <span class="card-go-label">PDF</span>
+          </span>
+        </a>
+        <a class="card" href="chapters/chapter35.pdf" target="_blank" rel="noopener"
+           data-section="sec-4" data-search="predictive modelling of personal loan acceptance: a logistic regression-based variable importance study argha nath bhattacharyya sayantika paul mathematical sciences">
+          <span class="card-num">35</span>
+          <span class="card-body">
+            <span class="card-title">Predictive Modelling of Personal Loan Acceptance: A Logistic Regression-Based Variable Importance Study</span>
+            <span class="card-authors">Argha Nath Bhattacharyya, Sayantika Paul</span>
+            <span class="card-affil">Assistant Professor, Department of Statistics, Sister Nivedita University, Kolkata, West Bengal, India · et al.</span>
+          </span>
+          <span class="card-go" aria-hidden="true">
+            <svg width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M4 12L12 4M12 4H5M12 4V11" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            <span class="card-go-label">PDF</span>
+          </span>
+        </a>
+        <a class="card" href="chapters/chapter36.pdf" target="_blank" rel="noopener"
+           data-section="sec-4" data-search="nonlinear kinetic alfvén solitary waves in dusty plasmas with charge-varying dust grains and non-extensive electrons mamani choudhury mathematical sciences">
+          <span class="card-num">36</span>
+          <span class="card-body">
+            <span class="card-title">Nonlinear Kinetic Alfvén Solitary Waves in Dusty Plasmas with Charge-Varying Dust Grains and Non-Extensive Electrons</span>
+            <span class="card-authors">Mamani Choudhury</span>
+            <span class="card-affil">Department of Mathematics, Handique Girls&#x27; College, Guwahati, Assam, India</span>
+          </span>
+          <span class="card-go" aria-hidden="true">
+            <svg width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M4 12L12 4M12 4H5M12 4V11" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            <span class="card-go-label">PDF</span>
+          </span>
+        </a>
+        <a class="card" href="chapters/chapter37.pdf" target="_blank" rel="noopener"
+           data-section="sec-4" data-search="degree centrality in network analysis: theory, variants and applications munmi saikia mathematical sciences">
+          <span class="card-num">37</span>
+          <span class="card-body">
+            <span class="card-title">Degree Centrality in Network Analysis: Theory, Variants and Applications</span>
+            <span class="card-authors">Munmi Saikia</span>
+            <span class="card-affil">Department of Mathematics, Patharkandi College, Patharkandi, Sribhumi, Assam, India</span>
+          </span>
+          <span class="card-go" aria-hidden="true">
+            <svg width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M4 12L12 4M12 4H5M12 4V11" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            <span class="card-go-label">PDF</span>
+          </span>
+        </a>
+        <a class="card" href="chapters/chapter38.pdf" target="_blank" rel="noopener"
+           data-section="sec-4" data-search="use of ai-enabled ict tools in mathematics teaching pramit rej mathematical sciences">
+          <span class="card-num">38</span>
+          <span class="card-body">
+            <span class="card-title">Use of AI-Enabled ICT Tools in Mathematics Teaching</span>
+            <span class="card-authors">Pramit Rej</span>
+            <span class="card-affil">Department of Mathematics, Sarat Centenary College, Dhaniakhali, Hooghly, West Bengal, India</span>
+          </span>
+          <span class="card-go" aria-hidden="true">
+            <svg width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M4 12L12 4M12 4H5M12 4V11" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            <span class="card-go-label">PDF</span>
+          </span>
+        </a>
+        <a class="card" href="chapters/chapter39.pdf" target="_blank" rel="noopener"
+           data-section="sec-4" data-search="linear algebra: essential for machine learning and optimization raj kumar mathematical sciences">
+          <span class="card-num">39</span>
+          <span class="card-body">
+            <span class="card-title">Linear Algebra: Essential for Machine Learning and Optimization</span>
+            <span class="card-authors">Raj Kumar</span>
+            <span class="card-affil">Secretary, St. Ignatius School, Aurangabad, Bihar, India</span>
+          </span>
+          <span class="card-go" aria-hidden="true">
+            <svg width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M4 12L12 4M12 4H5M12 4V11" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            <span class="card-go-label">PDF</span>
+          </span>
+        </a>
+        <a class="card" href="chapters/chapter40.pdf" target="_blank" rel="noopener"
+           data-section="sec-4" data-search="estimation of the growth of iterated entire functions ratan kumar dutta mathematical sciences">
+          <span class="card-num">40</span>
+          <span class="card-body">
+            <span class="card-title">Estimation of the Growth of Iterated Entire Functions</span>
+            <span class="card-authors">Ratan Kumar Dutta</span>
+            <span class="card-affil">Department of Mathematics, Rishi Bankim Chandra College, Naihati, West Bengal, India</span>
+          </span>
+          <span class="card-go" aria-hidden="true">
+            <svg width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M4 12L12 4M12 4H5M12 4V11" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            <span class="card-go-label">PDF</span>
+          </span>
+        </a>
+        <a class="card" href="chapters/chapter41.pdf" target="_blank" rel="noopener"
+           data-section="sec-4" data-search="clifford algebra and hypercomplex numbers in application: foundations, computational methods, and emerging technologies santosh kumar mathematical sciences">
+          <span class="card-num">41</span>
+          <span class="card-body">
+            <span class="card-title">Clifford Algebra and Hypercomplex Numbers in Application: Foundations, Computational Methods, and Emerging Technologies</span>
+            <span class="card-authors">Santosh Kumar</span>
+            <span class="card-affil">Department of Mathematics, Deo Chand College, Hajipur (Vaishali), B.R.A. Bihar University, Muzaffarpur, Bihar, India</span>
+          </span>
+          <span class="card-go" aria-hidden="true">
+            <svg width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M4 12L12 4M12 4H5M12 4V11" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            <span class="card-go-label">PDF</span>
+          </span>
+        </a>
+        <a class="card" href="chapters/chapter42.pdf" target="_blank" rel="noopener"
+           data-section="sec-4" data-search="on the structure and properties of g-rings md shahidul islam khan mathematical sciences">
+          <span class="card-num">42</span>
+          <span class="card-body">
+            <span class="card-title">On the Structure and Properties of G-rings</span>
+            <span class="card-authors">Md Shahidul Islam Khan</span>
+            <span class="card-affil">Assistant Professor, Department of Mathematics, PDUAM, Amjonga, Assam, India</span>
+          </span>
+          <span class="card-go" aria-hidden="true">
+            <svg width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M4 12L12 4M12 4H5M12 4V11" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            <span class="card-go-label">PDF</span>
+          </span>
+        </a>
+      </div>
+    </section>
+
+    <section class="theme" id="sec-5">
+      <div class="theme-head">
+        <span class="theme-tag">§06</span>
+        <h2>Life Sciences, Agriculture, Biotechnology &amp; Healthcare</h2>
+        <span class="theme-count">9 chapters</span>
+      </div>
+      <div class="cards">
+        
+        <a class="card" href="chapters/chapter43.pdf" target="_blank" rel="noopener"
+           data-section="sec-5" data-search="emerging frontiers in horticultural science: integrated approaches from biotechnology to precision agriculture bambang hariyanto riry prihatini life sciences, agriculture, biotechnology &amp; healthcare">
+          <span class="card-num">43</span>
+          <span class="card-body">
+            <span class="card-title">Emerging Frontiers in Horticultural Science: Integrated Approaches from Biotechnology to Precision Agriculture</span>
+            <span class="card-authors">Bambang Hariyanto, Riry Prihatini</span>
+            <span class="card-affil">Research Center for Horticulture, National Research and Innovation Agency, Cibinong, West Java, Indonesia · et al.</span>
+          </span>
+          <span class="card-go" aria-hidden="true">
+            <svg width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M4 12L12 4M12 4H5M12 4V11" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            <span class="card-go-label">PDF</span>
+          </span>
+        </a>
+        <a class="card" href="chapters/chapter44.pdf" target="_blank" rel="noopener"
+           data-section="sec-5" data-search="in silico evaluation of l-theanine, a component of tea, as a potential mao-b inhibitor for dopamine preservation in parkinson&#x27;s disease satarupa deb venkateshwarla rama raju nisat firduse dipta rajkumari life sciences, agriculture, biotechnology &amp; healthcare">
+          <span class="card-num">44</span>
+          <span class="card-body">
+            <span class="card-title">In Silico Evaluation of L-theanine, a Component of Tea, as a Potential MAO-B Inhibitor for Dopamine Preservation in Parkinson&#x27;s Disease</span>
+            <span class="card-authors">Satarupa Deb, Venkateshwarla Rama Raju, Nisat Firduse, Dipta Rajkumari</span>
+            <span class="card-affil">Department of Zoology, Patharkandi College, Patharkandi, Sribhumi, Assam, India · et al.</span>
+          </span>
+          <span class="card-go" aria-hidden="true">
+            <svg width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M4 12L12 4M12 4H5M12 4V11" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            <span class="card-go-label">PDF</span>
+          </span>
+        </a>
+        <a class="card" href="chapters/chapter45.pdf" target="_blank" rel="noopener"
+           data-section="sec-5" data-search="women empowerment through sericulture: a socio-economic perspective with special reference to assam subhadeep seal sayantika dey life sciences, agriculture, biotechnology &amp; healthcare">
+          <span class="card-num">45</span>
+          <span class="card-body">
+            <span class="card-title">Women Empowerment through Sericulture: A Socio-economic Perspective with Special Reference to Assam</span>
+            <span class="card-authors">Subhadeep Seal, Sayantika Dey</span>
+            <span class="card-affil">Department of Zoology, Cotton University, Assam, India · et al.</span>
+          </span>
+          <span class="card-go" aria-hidden="true">
+            <svg width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M4 12L12 4M12 4H5M12 4V11" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            <span class="card-go-label">PDF</span>
+          </span>
+        </a>
+        <a class="card" href="chapters/chapter46.pdf" target="_blank" rel="noopener"
+           data-section="sec-5" data-search="the emerging multidisciplinary trends in dermatoglyphics: the science of palmar and plantar configurations sijo jacob life sciences, agriculture, biotechnology &amp; healthcare">
+          <span class="card-num">46</span>
+          <span class="card-body">
+            <span class="card-title">The Emerging Multidisciplinary Trends in Dermatoglyphics: The Science of Palmar and Plantar Configurations</span>
+            <span class="card-authors">Sijo Jacob</span>
+            <span class="card-affil">Research Scholar, Department of Zoology, Mar Thoma College, Tiruvalla, Pathanamthitta, Kerala, India</span>
+          </span>
+          <span class="card-go" aria-hidden="true">
+            <svg width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M4 12L12 4M12 4H5M12 4V11" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            <span class="card-go-label">PDF</span>
+          </span>
+        </a>
+        <a class="card" href="chapters/chapter47.pdf" target="_blank" rel="noopener"
+           data-section="sec-5" data-search="application of machine learning in improved diagnosis, treatment and disease monitoring of people living with hiv (plwh) sushanta kumar barik bharat r. naiknaware archana panche sanjay n. harke prapti deshmukh keshar kunja mohanty shripad a. patil srikanth prasad tripathy life sciences, agriculture, biotechnology &amp; healthcare">
+          <span class="card-num">47</span>
+          <span class="card-body">
+            <span class="card-title">Application of Machine Learning in Improved Diagnosis, Treatment and Disease Monitoring of People Living with HIV (PLWH)</span>
+            <span class="card-authors">Sushanta Kumar Barik, Bharat R. Naiknaware, Archana Panche, Sanjay N. Harke, Prapti Deshmukh, Keshar Kunja Mohanty, Shripad A. Patil, Srikanth Prasad Tripathy</span>
+            <span class="card-affil">Institute of Biosciences and Technology, MGM University, Chhatrapati Sambhajinagar, Maharashtra, India · et al.</span>
+          </span>
+          <span class="card-go" aria-hidden="true">
+            <svg width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M4 12L12 4M12 4H5M12 4V11" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            <span class="card-go-label">PDF</span>
+          </span>
+        </a>
+        <a class="card" href="chapters/chapter48.pdf" target="_blank" rel="noopener"
+           data-section="sec-5" data-search="pharmacogenomics and personalized medicine: the future of precision therapeutics dr. syeda nishat fathima life sciences, agriculture, biotechnology &amp; healthcare">
+          <span class="card-num">48</span>
+          <span class="card-body">
+            <span class="card-title">Pharmacogenomics and Personalized Medicine: The Future of Precision Therapeutics</span>
+            <span class="card-authors">Dr. Syeda Nishat Fathima</span>
+            <span class="card-affil">Associate Professor, Department of Pharmacology, Jayamukhi College of Pharmacy, Warangal, Telangana, India</span>
+          </span>
+          <span class="card-go" aria-hidden="true">
+            <svg width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M4 12L12 4M12 4H5M12 4V11" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            <span class="card-go-label">PDF</span>
+          </span>
+        </a>
+        <a class="card" href="chapters/chapter49.pdf" target="_blank" rel="noopener"
+           data-section="sec-5" data-search="green nanofertilizer: sustainable nanotechnology for precision plant nutrition kistu singh nongthombam monica sanabam ningombam bijaya devi life sciences, agriculture, biotechnology &amp; healthcare">
+          <span class="card-num">49</span>
+          <span class="card-body">
+            <span class="card-title">Green Nanofertilizer: Sustainable Nanotechnology for Precision Plant Nutrition</span>
+            <span class="card-authors">Kistu Singh Nongthombam, Monica Sanabam, Ningombam Bijaya Devi</span>
+            <span class="card-affil">Department of Botany, Kumbi College, Kumbi, Manipur, India · et al.</span>
+          </span>
+          <span class="card-go" aria-hidden="true">
+            <svg width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M4 12L12 4M12 4H5M12 4V11" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            <span class="card-go-label">PDF</span>
+          </span>
+        </a>
+        <a class="card" href="chapters/chapter50.pdf" target="_blank" rel="noopener"
+           data-section="sec-5" data-search="marine bioprospecting and sustainable utilisation for the development of novel cancer therapeutics anu swedha ananthan sumithra. b kiruthika s life sciences, agriculture, biotechnology &amp; healthcare">
+          <span class="card-num">50</span>
+          <span class="card-body">
+            <span class="card-title">Marine Bioprospecting and Sustainable Utilisation for the Development of Novel Cancer Therapeutics</span>
+            <span class="card-authors">Anu Swedha Ananthan, Sumithra. B, Kiruthika S</span>
+            <span class="card-affil">Associate Professor, Department of Microbiology, Justice Basheer Ahmed Sayeed College for Women (Autonomous), Chennai-600018 · et al.</span>
+          </span>
+          <span class="card-go" aria-hidden="true">
+            <svg width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M4 12L12 4M12 4H5M12 4V11" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            <span class="card-go-label">PDF</span>
+          </span>
+        </a>
+        <a class="card" href="chapters/chapter51.pdf" target="_blank" rel="noopener"
+           data-section="sec-5" data-search="from urine analysis to precision medicine: the role of artificial intelligence in urinary tract infection diagnosis anu swedha ananthan s. sasikala life sciences, agriculture, biotechnology &amp; healthcare">
+          <span class="card-num">51</span>
+          <span class="card-body">
+            <span class="card-title">From Urine Analysis to Precision Medicine: The Role of Artificial Intelligence in Urinary Tract Infection Diagnosis</span>
+            <span class="card-authors">Anu Swedha Ananthan, S. Sasikala</span>
+            <span class="card-affil">Research Scholar, Department of Microbiology and Biotechnology, Presidency College (Autonomous), Chennai-600005 &amp; Associate Professor, Department of Microbiology, Justice Basheer Ahmed Sayeed College for Women (Autonomous), Chennai-600018 · et al.</span>
+          </span>
+          <span class="card-go" aria-hidden="true">
+            <svg width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M4 12L12 4M12 4H5M12 4V11" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            <span class="card-go-label">PDF</span>
+          </span>
+        </a>
+      </div>
+    </section>
+
+    <section class="theme" id="sec-6">
+      <div class="theme-head">
+        <span class="theme-tag">§07</span>
+        <h2>Chemical Sciences</h2>
+        <span class="theme-count">2 chapters</span>
+      </div>
+      <div class="cards">
+        
+        <a class="card" href="chapters/chapter52.pdf" target="_blank" rel="noopener"
+           data-section="sec-6" data-search="life cycle assessment of green chemical processes: a critical review of methods, evidence, and decision practice rizia jahan riza chemical sciences">
+          <span class="card-num">52</span>
+          <span class="card-body">
+            <span class="card-title">Life Cycle Assessment of Green Chemical Processes: A Critical Review of Methods, Evidence, and Decision Practice</span>
+            <span class="card-authors">Rizia Jahan Riza</span>
+            <span class="card-affil">School of Chemical Engineering, Yulin University, Yulin, Shaanxi, China</span>
+          </span>
+          <span class="card-go" aria-hidden="true">
+            <svg width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M4 12L12 4M12 4H5M12 4V11" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            <span class="card-go-label">PDF</span>
+          </span>
+        </a>
+        <a class="card" href="chapters/chapter53.pdf" target="_blank" rel="noopener"
+           data-section="sec-6" data-search="current landscape of artificial intelligence (ai) and machine learning (ml) in chemistry dr. bhaskar sarmah chemical sciences">
+          <span class="card-num">53</span>
+          <span class="card-body">
+            <span class="card-title">Current Landscape of Artificial Intelligence (AI) and Machine Learning (ML) in Chemistry</span>
+            <span class="card-authors">Dr. Bhaskar Sarmah</span>
+            <span class="card-affil">Asst. Professor of Chemistry, Department of Basic Science &amp; Humanities, Assam Skill University, Bidya Nagar, Mangaldoi, Assam 784125</span>
+          </span>
+          <span class="card-go" aria-hidden="true">
+            <svg width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M4 12L12 4M12 4H5M12 4V11" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            <span class="card-go-label">PDF</span>
+          </span>
+        </a>
+      </div>
+    </section>
+
+    <section class="theme" id="sec-7">
+      <div class="theme-head">
+        <span class="theme-tag">§08</span>
+        <h2>Commerce, Economics, Management &amp; Public Policy</h2>
+        <span class="theme-count">3 chapters</span>
+      </div>
+      <div class="cards">
+        
+        <a class="card" href="chapters/chapter54.pdf" target="_blank" rel="noopener"
+           data-section="sec-7" data-search="financial inclusion, financial sustainability, and india&#x27;s journey towards viksit bharat 2047 dr. nagaraju l. g. h. s. prakasha priya n commerce, economics, management &amp; public policy">
+          <span class="card-num">54</span>
+          <span class="card-body">
+            <span class="card-title">Financial Inclusion, Financial Sustainability, and India&#x27;s Journey Towards Viksit Bharat 2047</span>
+            <span class="card-authors">Dr. Nagaraju L. G., H. S. Prakasha, Priya N</span>
+            <span class="card-affil">Assistant Professor and IQAC Vertical Head, School of Management Studies, REVA University, Bengaluru, Karnataka, India · et al.</span>
+          </span>
+          <span class="card-go" aria-hidden="true">
+            <svg width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M4 12L12 4M12 4H5M12 4V11" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            <span class="card-go-label">PDF</span>
+          </span>
+        </a>
+        <a class="card" href="chapters/chapter55.pdf" target="_blank" rel="noopener"
+           data-section="sec-7" data-search="socio-economic impacts of lpg adoption among rural women in bihar: a study under pradhan mantri ujjwala yojana (pmuy) abhinaw kumar commerce, economics, management &amp; public policy">
+          <span class="card-num">55</span>
+          <span class="card-body">
+            <span class="card-title">Socio-Economic Impacts of LPG Adoption Among Rural Women in Bihar: A Study Under Pradhan Mantri Ujjwala Yojana (PMUY)</span>
+            <span class="card-authors">Abhinaw Kumar</span>
+            <span class="card-affil">Research Scholar, Lovely Professional University, Punjab, India</span>
+          </span>
+          <span class="card-go" aria-hidden="true">
+            <svg width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M4 12L12 4M12 4H5M12 4V11" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            <span class="card-go-label">PDF</span>
+          </span>
+        </a>
+        <a class="card" href="chapters/chapter56.pdf" target="_blank" rel="noopener"
+           data-section="sec-7" data-search="attention as a scarce resource: exploring the determinants of attention consumption among gen-z harijit bhakat sagartirtha chakraborty commerce, economics, management &amp; public policy">
+          <span class="card-num">56</span>
+          <span class="card-body">
+            <span class="card-title">Attention as a Scarce Resource: Exploring the Determinants of Attention Consumption among Gen-Z</span>
+            <span class="card-authors">Harijit Bhakat, Sagartirtha Chakraborty</span>
+            <span class="card-affil">Undergraduate Scholar, Department of Economics, Cotton University, Assam, India · et al.</span>
+          </span>
+          <span class="card-go" aria-hidden="true">
+            <svg width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M4 12L12 4M12 4H5M12 4V11" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            <span class="card-go-label">PDF</span>
+          </span>
+        </a>
+      </div>
+    </section>
+
+    <section class="theme" id="sec-8">
+      <div class="theme-head">
+        <span class="theme-tag">§09</span>
+        <h2>Education, Psychology &amp; Social Sciences</h2>
+        <span class="theme-count">6 chapters</span>
+      </div>
+      <div class="cards">
+        
+        <a class="card" href="chapters/chapter57.pdf" target="_blank" rel="noopener"
+           data-section="sec-8" data-search="transforming higher education through artificial intelligence: a study of students&#x27; perceptions and learning experiences dr. dinesh sambhaji gore mrs. priyanka dattatraya newase education, psychology &amp; social sciences">
+          <span class="card-num">57</span>
+          <span class="card-body">
+            <span class="card-title">Transforming Higher Education Through Artificial Intelligence: A Study of Students&#x27; Perceptions and Learning Experiences</span>
+            <span class="card-authors">Dr. Dinesh Sambhaji Gore, Mrs. Priyanka Dattatraya Newase</span>
+            <span class="card-affil">Assistant Professor, Department of Commerce, Tuljaram Chaturchand College of Arts, Science and Commerce (Empowered Autonomous), Baramati, Maharashtra, India · et al.</span>
+          </span>
+          <span class="card-go" aria-hidden="true">
+            <svg width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M4 12L12 4M12 4H5M12 4V11" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            <span class="card-go-label">PDF</span>
+          </span>
+        </a>
+        <a class="card" href="chapters/chapter58.pdf" target="_blank" rel="noopener"
+           data-section="sec-8" data-search="knowledge, attitude and practices of primigravida mothers regarding antenatal care at palakkad district of kerala state dr. k. parthasarathy education, psychology &amp; social sciences">
+          <span class="card-num">58</span>
+          <span class="card-body">
+            <span class="card-title">Knowledge, Attitude and Practices of Primigravida Mothers Regarding Antenatal Care at Palakkad District of Kerala State</span>
+            <span class="card-authors">Dr. K. Parthasarathy</span>
+            <span class="card-affil">Associate Professor &amp; Head, Department of Social Work, Nehru Arts and Science College (Autonomous), Coimbatore, Tamil Nadu, India</span>
+          </span>
+          <span class="card-go" aria-hidden="true">
+            <svg width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M4 12L12 4M12 4H5M12 4V11" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            <span class="card-go-label">PDF</span>
+          </span>
+        </a>
+        <a class="card" href="chapters/chapter59.pdf" target="_blank" rel="noopener"
+           data-section="sec-8" data-search="mental health of adolescents in relation to home environment, emotional intelligence and self-concept in thodupuzha taluk, kerala state dr. k. parthasarathy education, psychology &amp; social sciences">
+          <span class="card-num">59</span>
+          <span class="card-body">
+            <span class="card-title">Mental Health of Adolescents in Relation to Home Environment, Emotional Intelligence and Self-Concept in Thodupuzha Taluk, Kerala State</span>
+            <span class="card-authors">Dr. K. Parthasarathy</span>
+            <span class="card-affil">Associate Professor &amp; Head, Department of Social Work, Nehru Arts and Science College (Autonomous), Coimbatore, Tamil Nadu, India</span>
+          </span>
+          <span class="card-go" aria-hidden="true">
+            <svg width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M4 12L12 4M12 4H5M12 4V11" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            <span class="card-go-label">PDF</span>
+          </span>
+        </a>
+        <a class="card" href="chapters/chapter60.pdf" target="_blank" rel="noopener"
+           data-section="sec-8" data-search="empowering the future: assessing the impact of students&#x27; contributions on modern society dr. reynaldo v. moral education, psychology &amp; social sciences">
+          <span class="card-num">60</span>
+          <span class="card-body">
+            <span class="card-title">Empowering the Future: Assessing the Impact of Students&#x27; Contributions on Modern Society</span>
+            <span class="card-authors">Dr. Reynaldo V. Moral</span>
+            <span class="card-affil">College of Teacher Education, Cebu Normal University, Osmeña Boulevard, Cebu City, Philippines</span>
+          </span>
+          <span class="card-go" aria-hidden="true">
+            <svg width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M4 12L12 4M12 4H5M12 4V11" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            <span class="card-go-label">PDF</span>
+          </span>
+        </a>
+        <a class="card" href="chapters/chapter61.pdf" target="_blank" rel="noopener"
+           data-section="sec-8" data-search="digital learning and fomo among adolescents: challenges to mental well-being madhusmita deka education, psychology &amp; social sciences">
+          <span class="card-num">61</span>
+          <span class="card-body">
+            <span class="card-title">Digital Learning and FOMO Among Adolescents: Challenges to Mental Well-Being</span>
+            <span class="card-authors">Madhusmita Deka</span>
+            <span class="card-affil">M.A. in Education, Tezpur University, Assam, India</span>
+          </span>
+          <span class="card-go" aria-hidden="true">
+            <svg width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M4 12L12 4M12 4H5M12 4V11" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            <span class="card-go-label">PDF</span>
+          </span>
+        </a>
+        <a class="card" href="chapters/chapter62.pdf" target="_blank" rel="noopener"
+           data-section="sec-8" data-search="reimagining mental healthcare through artificial intelligence: a psychological perspective on innovation, ethics, and human-centered care upasana mazumder education, psychology &amp; social sciences">
+          <span class="card-num">62</span>
+          <span class="card-body">
+            <span class="card-title">Reimagining Mental Healthcare Through Artificial Intelligence: A Psychological Perspective on Innovation, Ethics, and Human-Centered Care</span>
+            <span class="card-authors">Upasana Mazumder</span>
+            <span class="card-affil">Postgraduate Student, Department of Psychiatry, Kasturba Medical College, Mangalore, Manipal Academy of Higher Education, Karnataka, India</span>
+          </span>
+          <span class="card-go" aria-hidden="true">
+            <svg width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M4 12L12 4M12 4H5M12 4V11" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            <span class="card-go-label">PDF</span>
+          </span>
+        </a>
+      </div>
+    </section>
+
+    <section class="theme" id="sec-9">
+      <div class="theme-head">
+        <span class="theme-tag">§10</span>
+        <h2>Arts, Literature, Language &amp; Cultural Studies</h2>
+        <span class="theme-count">6 chapters</span>
+      </div>
+      <div class="cards">
+        
+        <a class="card" href="chapters/chapter63.pdf" target="_blank" rel="noopener"
+           data-section="sec-9" data-search="women, nature, and ecological ethics in kalidasa&#x27;s literary imagination: an ecofeminist study aishwarya singh arts, literature, language &amp; cultural studies">
+          <span class="card-num">63</span>
+          <span class="card-body">
+            <span class="card-title">Women, Nature, and Ecological Ethics in Kalidasa&#x27;s Literary Imagination: An Ecofeminist Study</span>
+            <span class="card-authors">Aishwarya Singh</span>
+            <span class="card-affil">Research Scholar, Maharaja Agrasen Himalayan Garhwal University, Pauri Garhwal, Uttarakhand, India</span>
+          </span>
+          <span class="card-go" aria-hidden="true">
+            <svg width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M4 12L12 4M12 4H5M12 4V11" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            <span class="card-go-label">PDF</span>
+          </span>
+        </a>
+        <a class="card" href="chapters/chapter64.pdf" target="_blank" rel="noopener"
+           data-section="sec-9" data-search="gender representation in film and media: interrogating the gaze, the stereotype, and the possibility of change dr. debashree chakraborty arts, literature, language &amp; cultural studies">
+          <span class="card-num">64</span>
+          <span class="card-body">
+            <span class="card-title">Gender Representation in Film and Media: Interrogating the Gaze, the Stereotype, and the Possibility of Change</span>
+            <span class="card-authors">Dr. Debashree Chakraborty</span>
+            <span class="card-affil">Assistant Professor of English, Gargi Memorial Institute of Technology, Baruipur, West Bengal, India</span>
+          </span>
+          <span class="card-go" aria-hidden="true">
+            <svg width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M4 12L12 4M12 4H5M12 4V11" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            <span class="card-go-label">PDF</span>
+          </span>
+        </a>
+        <a class="card" href="chapters/chapter65.pdf" target="_blank" rel="noopener"
+           data-section="sec-9" data-search="dialect, identity, and authenticity in contemporary telugu cinema: a sociolinguistic analysis dr. p. gopikrishna dr. v. s. sai tharun dr. k. shanmugapriya arts, literature, language &amp; cultural studies">
+          <span class="card-num">65</span>
+          <span class="card-body">
+            <span class="card-title">Dialect, Identity, and Authenticity in Contemporary Telugu Cinema: A Sociolinguistic Analysis</span>
+            <span class="card-authors">Dr. P. Gopikrishna, Dr. V. S. Sai Tharun, Dr. K. Shanmugapriya</span>
+            <span class="card-affil">Assistant Professor, Department of English, Marri Laxman Reddy Institute of Technology and Management, Hyderabad, Telangana, India · et al.</span>
+          </span>
+          <span class="card-go" aria-hidden="true">
+            <svg width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M4 12L12 4M12 4H5M12 4V11" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            <span class="card-go-label">PDF</span>
+          </span>
+        </a>
+        <a class="card" href="chapters/chapter66.pdf" target="_blank" rel="noopener"
+           data-section="sec-9" data-search="behavioral psychology and operant conditioning in george orwell&#x27;s animal farm: a psychological analysis dr. u. pushpalatha arts, literature, language &amp; cultural studies">
+          <span class="card-num">66</span>
+          <span class="card-body">
+            <span class="card-title">Behavioral Psychology and Operant Conditioning in George Orwell&#x27;s Animal Farm: A Psychological Analysis</span>
+            <span class="card-authors">Dr. U. Pushpalatha</span>
+            <span class="card-affil">Assistant Professor (Selection Grade), KCG College of Technology, Chennai, Tamil Nadu, India</span>
+          </span>
+          <span class="card-go" aria-hidden="true">
+            <svg width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M4 12L12 4M12 4H5M12 4V11" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            <span class="card-go-label">PDF</span>
+          </span>
+        </a>
+        <a class="card" href="chapters/chapter67.pdf" target="_blank" rel="noopener"
+           data-section="sec-9" data-search="traditional assamese food culture and environmental sustainability: an analytical study of bihu songs dr. mala hazarika arts, literature, language &amp; cultural studies">
+          <span class="card-num">67</span>
+          <span class="card-body">
+            <span class="card-title">Traditional Assamese Food Culture and Environmental Sustainability: An Analytical Study of Bihu Songs</span>
+            <span class="card-authors">Dr. Mala Hazarika</span>
+            <span class="card-affil">Assistant Professor, Department of Assamese, Amguri College, Sivasagar, Assam, India</span>
+          </span>
+          <span class="card-go" aria-hidden="true">
+            <svg width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M4 12L12 4M12 4H5M12 4V11" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            <span class="card-go-label">PDF</span>
+          </span>
+        </a>
+        <a class="card" href="chapters/chapter68.pdf" target="_blank" rel="noopener"
+           data-section="sec-9" data-search="art that heals: tracing catharsis in poems on pestilence arya mohan arts, literature, language &amp; cultural studies">
+          <span class="card-num">68</span>
+          <span class="card-body">
+            <span class="card-title">Art that Heals: Tracing Catharsis in Poems on Pestilence</span>
+            <span class="card-authors">Arya Mohan</span>
+            <span class="card-affil">Assistant Professor of English, Prathyusha Engineering College, Chennai, Tamil Nadu, India</span>
+          </span>
+          <span class="card-go" aria-hidden="true">
+            <svg width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M4 12L12 4M12 4H5M12 4V11" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            <span class="card-go-label">PDF</span>
+          </span>
+        </a>
+      </div>
+    </section>
+  <p class="no-results" id="noResults">No chapters match your search.</p>
 </main>
 
-<!-- ════ FOOTER ════ -->
 <footer>
-  <div class="ftr-grid">
-    <div class="ftr-col">
-      <div class="ftr-brand">
-        <div class="ftr-brand-ico"><i class="fa-solid fa-microchip"></i></div>
-        <div class="ftr-brand-text">
-          <strong>Department of Computer Science</strong>
-          <p>Pandit Deendayal Upadhyaya Adarsha Mahavidyalaya, Amjonga, Assam, India</p>
-        </div>
-      </div>
+  <div class="footer-inner">
+    <div class="footer-col">
+      <b>College</b>
+      <div><a href="https://pduamjonga.ac.in" target="_blank" rel="noopener">pduamjonga.ac.in</a></div>
+      <div><a href="https://csc.pduam.dpdns.org" target="_blank" rel="noopener">Department E-Portal</a></div>
     </div>
-    <div class="ftr-col">
-      <h4>Connect</h4>
-      <a href="https://www.pduamamjonga.ac.in/department-details/83" target="_blank"><i class="fa-solid fa-globe"></i>College Website</a>
-      <a href="mailto:pduamcsc2017@gmail.com"><i class="fa-solid fa-envelope"></i>pduamcsc2017@gmail.com</a>
-      <a href="https://maps.app.goo.gl/WDbDdr6dqUqA9LVGA?g_st=aw" target="_blank"><i class="fa-solid fa-location-dot"></i>Locate Us on Maps</a>
+    <div class="footer-col">
+      <b>Publisher</b>
+      <div><a href="https://deepscienceresearch.com" target="_blank" rel="noopener">deepscienceresearch.com</a></div>
+      <div><a href="https://sisirkrajbongshi.github.io/Multidisciplinary-Book-Dept-CSc/" target="_blank" rel="noopener">1st Edition Archive</a></div>
     </div>
-    <div class="ftr-col">
-      <h4>Resources</h4>
-      <a href="routine"><i class="fa-solid fa-table-cells-large"></i>Class Routine</a>
-      <a href="https://drive.google.com/drive/folders/14CjyuJb6DAtywFV9AIpFjaCYRcA6Yapg?usp=sharing" target="_blank"><i class="fa-solid fa-book-open-reader"></i>Syllabus</a>
-      <a href="https://gauhati.ac.in/media/notification/1734503844.pdf" target="_blank"><i class="fa-solid fa-umbrella-beach"></i>Holiday List (GU)</a>
+    <div class="footer-col">
+      <b>Queries</b>
+      <div><a href="mailto:cscpduambookchapter@gmail.com">cscpduambookchapter@gmail.com</a></div>
+      <div>+91 94018 00625 · +91 97077 21185</div>
     </div>
-    <div class="ftr-col">
-      <h4>Useful Links</h4>
-      <a href="https://gauhati.ac.in/" target="_blank"><i class="fa-solid fa-link"></i>Gauhati University</a>
-      <a href="https://ahsec.assam.gov.in/" target="_blank"><i class="fa-solid fa-link"></i>AHSEC</a>
-      <a href="https://darpan.ahseconline.in/" target="_blank"><i class="fa-solid fa-link"></i>Darpan</a>
+    <div class="footer-col">
+      <b>Indexed In</b>
+      <div>Google Scholar · ResearchGate · ORCID · Zenodo · WorldCat</div>
     </div>
   </div>
-  <div class="ftr-bottom">
-    &copy; 2026 Department of Computer Science, PDUAM Amjonga. All Rights Reserved.
-    <p style="margin-top: 0.8rem; margin-bottom: 0.4rem;">
-      Developed by the <a href="faculty" style="color: var(--teal); text-decoration: none;">Faculty</a> of the Department of Computer Science,
-      Pandit Deendayal Upadhyaya Adarsha Mahavidyalaya (PDUAM), Amjonga
-    </p>
-    <p>
-      Redesigned and improved by 
-      <a href="https://sonajit.in" target="_blank" rel="noopener noreferrer" style="color: var(--teal); text-decoration: none;">
-        sOn4jit
-      </a>
-    </p>
-  </div>
+  <div class="footer-bottom">© 2026 Department of Computer Science, PDUAM · Advances in Multidisciplinary Research and Innovation, 2nd Edition</div>
 </footer>
 
 <script>
-/* ═══════════════════════════════════════
-   1. THEME — system-aware + toggle
-═══════════════════════════════════════ */
-const html = document.documentElement;
-const SKEY = 'pduam-cs-theme';
+  const searchInput = document.getElementById('searchInput');
+  const sectionFilter = document.getElementById('sectionFilter');
+  const resultCount = document.getElementById('resultCount');
+  const noResults = document.getElementById('noResults');
+  const cards = Array.from(document.querySelectorAll('.card'));
+  const themes = Array.from(document.querySelectorAll('.theme'));
 
-const getSys  = () => window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
-const applyTheme = t => {
-  html.setAttribute('data-theme', t);
-  localStorage.setItem(SKEY, t);
-  const lbl = document.getElementById('mobThemeLabel');
-  if (lbl) lbl.textContent = t === 'dark' ? 'Switch to Light Mode' : 'Switch to Dark Mode';
-};
-const toggleTheme = () => applyTheme(html.getAttribute('data-theme') === 'dark' ? 'light' : 'dark');
+  function applyFilters() {
+    const q = searchInput.value.trim().toLowerCase();
+    const sec = sectionFilter.value;
+    let visible = 0;
 
-applyTheme(localStorage.getItem(SKEY) || getSys());
-
-window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', e => {
-  if (!localStorage.getItem(SKEY)) applyTheme(e.matches ? 'dark' : 'light');
-});
-
-document.getElementById('themeBtn').addEventListener('click', toggleTheme);
-document.getElementById('themeBtnMob').addEventListener('click', toggleTheme);
-
-/* ═══════════════════════════════════════
-   2. DYNAMIC SLIDESHOW
-═══════════════════════════════════════ */
-const slideshowEl = document.getElementById('slideshow');
-const dotsEl      = document.getElementById('slideDots');
-const ctrEl       = document.getElementById('slideCounter');
-let slides = [], dots = [], cur = 0, autoTimer;
-
-fetch('data/index_images.json')
-  .then(res => res.json())
-  .then(data => {
-    if (!data || data.length === 0) return;
-    
-    data.forEach((imgData, i) => {
-      const img = document.createElement('img');
-      img.src = imgData.src;
-      img.alt = imgData.alt;
-      if (i === 0) {
-        img.className = 'active';
-        img.setAttribute('fetchpriority', 'high');
-      } else {
-        img.setAttribute('loading', 'lazy');
-      }
-      slideshowEl.appendChild(img);
-      
-      // Pre-load logic for smoother transitions
-      if (i > 0) {
-        const pre = new Image();
-        pre.src = imgData.src;
-      }
+    cards.forEach(card => {
+      const matchesQuery = !q || card.dataset.search.includes(q);
+      const matchesSection = sec === 'all' || card.dataset.section === sec;
+      const show = matchesQuery && matchesSection;
+      card.style.display = show ? '' : 'none';
+      if (show) visible++;
     });
-    
-    slides = Array.from(slideshowEl.querySelectorAll('img'));
-    
-    slides.forEach((_, i) => {
-      const b = document.createElement('button');
-      b.className = 'dot' + (i === 0 ? ' active' : '');
-      b.setAttribute('aria-label', 'Slide ' + (i + 1));
-      b.addEventListener('click', () => { goTo(i); resetAuto(); });
-      dotsEl.appendChild(b);
+
+    themes.forEach(theme => {
+      const anyVisible = theme.querySelectorAll('.card:not([style*="display: none"])').length > 0;
+      theme.style.display = anyVisible ? '' : 'none';
     });
-    dots = Array.from(dotsEl.children);
-    
-    ctrEl.textContent = '1 / ' + slides.length;
-    resetAuto();
-  })
-  .catch(err => console.error('Error loading slideshow:', err));
 
-function goTo(n) {
-  if(slides.length === 0) return;
-  slides[cur].classList.remove('active');
-  dots[cur].classList.remove('active');
-  cur = (n + slides.length) % slides.length;
-  slides[cur].classList.add('active');
-  dots[cur].classList.add('active');
-  ctrEl.textContent = (cur + 1) + ' / ' + slides.length;
-}
-
-function resetAuto() {
-  clearInterval(autoTimer);
-  if(slides.length > 0) {
-    autoTimer = setInterval(() => goTo(cur + 1), 3500);
+    resultCount.textContent = visible + (visible === 1 ? ' chapter' : ' chapters');
+    noResults.style.display = visible === 0 ? 'block' : 'none';
   }
-}
 
-document.getElementById('slideNext').addEventListener('click', () => { goTo(cur + 1); resetAuto(); });
-document.getElementById('slidePrev').addEventListener('click', () => { goTo(cur - 1); resetAuto(); });
-
-/* ═══════════════════════════════════════
-   3. MOBILE NAV — hamburger morph + glass overlay
-═══════════════════════════════════════ */
-const menuBtn  = document.getElementById('menuBtn');
-const overlay  = document.getElementById('mobOverlay');
-const scrim    = document.getElementById('mobScrim');
-
-function openMenu() {
-  menuBtn.setAttribute('aria-expanded', 'true');
-  overlay.classList.add('open');
-  scrim.classList.add('open');
-  document.body.style.overflow = 'hidden';
-  document.getElementById('menuIcon').className = 'fa-solid fa-xmark';
-}
-function closeMenu() {
-  menuBtn.setAttribute('aria-expanded', 'false');
-  overlay.classList.remove('open');
-  scrim.classList.remove('open');
-  document.body.style.overflow = '';
-  document.getElementById('menuIcon').className = 'fa-solid fa-bars';
-}
-
-menuBtn.addEventListener('click', () =>
-  overlay.classList.contains('open') ? closeMenu() : openMenu()
-);
-document.getElementById('mobClose').addEventListener('click', closeMenu);
-scrim.addEventListener('click', closeMenu);
-overlay.querySelectorAll('a').forEach(a => a.addEventListener('click', closeMenu));
-document.addEventListener('keydown', e => { if (e.key === 'Escape') closeMenu(); });
-
-/* ═══════════════════════════════════════
-   4. NOTIFICATIONS — fetch from JSON
-═══════════════════════════════════════ */
-async function loadNotifications() {
-  const listEl    = document.getElementById('notifList');
-  const loadingEl = document.getElementById('notifLoading');
-
-  // Format ISO date → "15 Nov 2025"
-  const fmtDate = iso => {
-    const d = new Date(iso + 'T00:00:00');
-    return d.toLocaleDateString('en-IN', { day: 'numeric', month: 'short', year: 'numeric' });
-  };
-
-  try {
-    const res  = await fetch('data/notifications.json');
-    if (!res.ok) throw new Error('HTTP ' + res.status);
-    let data = await res.json();
-
-    // Filter to show only "New" notifications on the homepage
-    let filteredData = data.filter(n => n.isNew === true);
-    
-    data = filteredData;
-    
-    // Sort: New tags first, then by date descending
-    data.sort((a, b) => {
-      if (a.isNew !== b.isNew) return a.isNew ? -1 : 1;
-      return new Date(b.date) - new Date(a.date);
-    });
-
-    const buildItem = n => {
-      const li = document.createElement('li');
-      li.className = 'notif-item';
-
-      const a = document.createElement('a');
-      a.href   = n.url;
-      a.target = '_blank';
-      a.rel    = 'noopener';
-
-      const strong = document.createElement('strong');
-      strong.textContent = n.title + ':';
-      a.appendChild(strong);
-      a.append(' ' + n.text);
-
-      if (n.isNew) {
-        const badge = document.createElement('span');
-        badge.className   = 'badge-new';
-        badge.textContent = 'New';
-        a.appendChild(badge);
-      }
-      li.appendChild(a);
-
-      // date + meta line
-      const small = document.createElement('small');
-      const dateSpan = document.createElement('span');
-      dateSpan.style.cssText = 'display:inline-flex;align-items:center;gap:.3rem;margin-right:.5rem;';
-      dateSpan.innerHTML = `<i class="fa-regular fa-calendar" style="font-size:.65rem;color:var(--gold);opacity:.7"></i>${fmtDate(n.date)}`;
-      small.appendChild(dateSpan);
-
-      if (n.meta) {
-        small.append(' · ' + n.meta);
-        if (n.metaLink) {
-          small.append(' · ');
-          const ml = document.createElement('a');
-          ml.href   = n.metaLink.url;
-          ml.target = '_blank';
-          ml.rel    = 'noopener';
-          ml.textContent = n.metaLink.label;
-          small.appendChild(ml);
-        }
-      }
-      li.appendChild(small);
-      return li;
-    };
-
-    // Duplicate data if it's too short to fill the 440px container
-    let duplicatedData = [...data];
-    if (duplicatedData.length > 0) {
-      while (duplicatedData.length < 8) {
-        duplicatedData = duplicatedData.concat(data);
-      }
-    }
-
-    // Append twice for infinite seamless scroll
-    [...duplicatedData, ...duplicatedData].forEach(n => listEl.appendChild(buildItem(n)));
-
-    // Adjust animation duration to keep speed roughly consistent
-    const totalItems = duplicatedData.length * 2;
-    listEl.style.animationDuration = `${totalItems * 2.5}s`;
-
-    loadingEl.style.display = 'none';
-    listEl.style.display    = 'block';
-
-  } catch (err) {
-    loadingEl.innerHTML = '<i class="fa-solid fa-triangle-exclamation" style="color:var(--red)"></i><span style="color:var(--muted);font-size:.78rem">Could not load notifications.</span>';
-    console.warn('Notification fetch failed:', err);
-  }
-}
-
-loadNotifications();
+  searchInput.addEventListener('input', applyFilters);
+  sectionFilter.addEventListener('change', applyFilters);
 </script>
 
-<script>
-/* ════════ PROGRESSIVE IMAGE LOADING ════════ */
-document.addEventListener("DOMContentLoaded", () => {
-  const images = document.querySelectorAll("img");
-  images.forEach(img => {
-    // Add lazy loading
-    if (!img.hasAttribute("loading")) {
-      img.setAttribute("loading", "lazy");
-    }
-    // Only wrap images that are not tiny logos or already wrapped
-    if (img.classList.contains('hdr-logo-img') || img.closest('.img-blur-wrap') || img.closest('.hdr-logo') || img.closest('.slideshow')) return;
-    
-    // Wrap img
-    const wrap = document.createElement("div");
-    wrap.className = "img-blur-wrap";
-    
-    // Copy computed border-radius and exact layout properties
-    const style = window.getComputedStyle(img);
-    wrap.style.borderRadius = style.borderRadius;
-    
-    // Attempt to maintain dimensions to prevent layout shifts
-    const w = img.getAttribute('width') || style.width;
-    const h = img.getAttribute('height') || style.height;
-    if (w !== 'auto' && w) wrap.style.width = w;
-    if (h !== 'auto' && h) wrap.style.height = h;
-    if (style.aspectRatio !== 'auto') wrap.style.aspectRatio = style.aspectRatio;
-    
-    img.parentNode.insertBefore(wrap, img);
-    wrap.appendChild(img);
-
-    // Load handling
-    if (img.complete) {
-      wrap.classList.add("loaded");
-    } else {
-      img.addEventListener("load", () => wrap.classList.add("loaded"));
-      img.addEventListener("error", () => wrap.classList.add("loaded")); // fallback
-    }
-  });
-});
-</script>
 </body>
 </html>
