@@ -1,3 +1,13 @@
 {
-  "cleanUrls": true
+  "cleanUrls": true,
+  "rewrites": [
+    {
+      "source": "/books-publish",
+      "destination": "https://multidisciplinary-book-publish.vercel.app"
+    },
+    {
+      "source": "/books-publish/:path*",
+      "destination": "https://multidisciplinary-book-publish.vercel.app/:path*"
+    }
+  ]
 }
