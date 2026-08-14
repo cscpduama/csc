@@ -1,8 +1,13 @@
 {
   "cleanUrls": true,
+  "trailingSlash": false,
   "rewrites": [
     {
       "source": "/multidisciplinary-book-publish",
+      "destination": "https://multidisciplinary-book-publish.vercel.app"
+    },
+    {
+      "source": "/multidisciplinary-book-publish/",
       "destination": "https://multidisciplinary-book-publish.vercel.app"
     },
     {
