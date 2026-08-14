@@ -37,7 +37,7 @@ This Code of Conduct applies to:
 - This GitHub repository and all its contents
 - Issues, pull requests, and discussions on GitHub
 - Any communications related to this project (email, social media, etc.)
-- The live e-Portal at `https://csc.pduam.dpdns.org`
+- The live e-Portal at `https://csc.pduamamjonga.in`
 
 ---
 

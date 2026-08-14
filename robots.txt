@@ -2,4 +2,4 @@ User-agent: *
 Disallow: /assets/
 Allow: /
 
-Sitemap: https://csc.pduam.dpdns.org/sitemap.xml
+Sitemap: https://csc.pduamamjonga.in/sitemap.xml

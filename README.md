@@ -6,7 +6,7 @@
 
 <div align="center">
 
-[![Live Site](https://img.shields.io/badge/🌐_Live_Site-csc.pduam.dpdns.org-d4a843?style=flat-square&labelColor=0d1117)](http://csc.pduam.dpdns.org)
+[![Live Site](https://img.shields.io/badge/🌐_Live_Site-csc.pduamamjonga.in-d4a843?style=flat-square&labelColor=0d1117)](http://csc.pduamamjonga.in)
 [![GitHub](https://img.shields.io/badge/GitHub-cscpduam--alt-181717?style=flat-square&logo=github&labelColor=0d1117)](https://github.com/cscpduam-alt)
 [![License](https://img.shields.io/badge/License-All_Rights_Reserved-e05252?style=flat-square&labelColor=0d1117)](./LICENSE)
 [![Stars](https://img.shields.io/github/stars/cscpduam-alt/csc?style=flat-square&labelColor=0d1117&color=d4a843)](https://github.com/cscpduam-alt/csc/stargazers)
@@ -137,7 +137,7 @@ The site is production-ready for any static hosting platform:
 ## 🏆 Recent Milestones
 
 - **Account Migration** — moved to `@cscpduam-alt` as active account while primary is under suspension & appeal
-- **Domain Migration** — successfully transitioned to `csc.pduam.dpdns.org` infrastructure
+- **Domain Migration** — successfully transitioned to `csc.pduamamjonga.in` infrastructure
 - **Email Automation** — rebuilt notification mailer using Node.js + GitHub Actions + Gmail SMTP
 
 ---

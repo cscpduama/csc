@@ -62,7 +62,7 @@ Go to your GitHub Repository > **Settings > Secrets and variables > Actions**. A
 | `REPLY_TO_EMAIL` | The email where you want to receive replies (e.g., `csc-queries@sonajit.in`). |
 | `GOOGLE_SHEET_ID` | The long ID from your Google Sheet URL. |
 | `GOOGLE_SERVICE_JSON` | The **entire content** of the JSON file you downloaded from Google Cloud. |
-| `SITE_URL` | Your website URL (e.g., `https://csc.pduam.dpdns.org`). |
+| `SITE_URL` | Your website URL (e.g., `https://csc.pduamamjonga.in`). |
 
 ---
 

@@ -26,10 +26,21 @@ module.exports = async (req, res) => {
     
     // Default image if none found
     if (!image) {
-      image = `${baseUrl}/assets/favicon/cs_department_logo.jpg`;
+      image = `${baseUrl}/assets/logo/pduam-logo.jpg`;
     }
 
     const imageType = image.toLowerCase().endsWith('.png') ? 'image/png' : 'image/jpeg';
+
+    // Bot detection for crawlers (WhatsApp, Facebook, Twitter, Discord, etc.)
+    const userAgent = req.headers['user-agent'] || '';
+    const isBot = /facebookexternalhit|twitterbot|whatsapp|telegrambot|discordbot|googlebot|bingbot|slackbot|vkShare|W3C_Validator/i.test(userAgent);
+
+    const redirectMeta = isBot ? '' : `<meta http-equiv="refresh" content="0;url=/events#event-${e.id}">`;
+    const redirectScript = isBot ? '' : `
+  <script>
+    window.location.href = "/events#event-${e.id}";
+  </script>
+    `;
 
     const html = `
 <!DOCTYPE html>
@@ -57,14 +68,12 @@ module.exports = async (req, res) => {
   <meta name="twitter:image" content="${image}">
   <meta name="twitter:url" content="${baseUrl}/events#event-${e.id}">
 
-  <!-- Meta Refresh Redirect for Users -->
-  <meta http-equiv="refresh" content="0;url=/events#event-${e.id}">
+  <!-- Redirect for human users -->
+  ${redirectMeta}
 </head>
 <body>
   <p>Redirecting to event: <strong>${e.title}</strong>...</p>
-  <script>
-    window.location.href = "/events#event-${e.id}";
-  </script>
+  ${redirectScript}
 </body>
 </html>
     `;

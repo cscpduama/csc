@@ -17,7 +17,7 @@ const GMAIL_APP_PASSWORD = process.env.GMAIL_APP_PASSWORD;
 const CUSTOM_FROM_EMAIL  = process.env.CUSTOM_FROM_EMAIL || GMAIL_USER;
 const GOOGLE_SHEET_ID    = process.env.GOOGLE_SHEET_ID;
 const GOOGLE_SERVICE_JSON= process.env.GOOGLE_SERVICE_JSON;
-const SITE_URL           = (process.env.SITE_URL || 'https://csc.pduam.dpdns.org').replace(/\/$/, '');
+const SITE_URL           = (process.env.SITE_URL || 'https://csc.pduamamjonga.in').replace(/\/$/, '');
 const REPLY_TO_EMAIL     = process.env.REPLY_TO_EMAIL || CUSTOM_FROM_EMAIL;
 
 const SENDER_NAME = "Dept. Of Computer Science PDUAM";
