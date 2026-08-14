@@ -608,6 +608,211 @@
   .share-btn.wa:hover { background: #25d366; color: #fff; border-color: #25d366; }
   
   .event-share-row { display: flex; gap: 0.6rem; align-items: center; margin-left: auto; }
+
+  /* ════════ DETAILED EVENT VIEW (Responsive) ════════ */
+  .detail-share-group {
+    display: flex;
+    gap: 0.6rem;
+  }
+
+  .detail-share-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0.6rem 1.2rem;
+    font-size: 0.85rem;
+    border-radius: 8px;
+    font-weight: 600;
+    cursor: pointer;
+    font-family: inherit;
+    transition: all var(--tr);
+    border: 1px solid var(--border2);
+    text-decoration: none;
+  }
+  .detail-share-btn.wa {
+    background: #25d366;
+    color: #fff;
+    border-color: #25d366;
+  }
+  .detail-share-btn.wa:hover {
+    background: #20ba5a;
+    border-color: #20ba5a;
+    transform: translateY(-2px);
+  }
+  .detail-share-btn.copy {
+    background: var(--s2);
+    color: var(--text);
+  }
+  .detail-share-btn.copy:hover {
+    background: var(--s3);
+    border-color: var(--gold);
+    color: var(--gold);
+    transform: translateY(-2px);
+  }
+
+  @media (max-width: 768px) {
+    .detail-share-group {
+      position: fixed;
+      bottom: 24px;
+      right: 24px;
+      flex-direction: column-reverse;
+      gap: 0.8rem;
+      z-index: 9999;
+    }
+    .detail-share-btn {
+      width: 50px;
+      height: 50px;
+      border-radius: 50%;
+      padding: 0;
+      justify-content: center;
+      box-shadow: 0 4px 16px rgba(0, 0, 0, 0.35);
+    }
+    .detail-share-btn span {
+      display: none;
+    }
+    .detail-share-btn i {
+      font-size: 1.35rem;
+    }
+  }
+
+  .detail-header-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 1rem;
+    margin-bottom: 1.5rem;
+    flex-wrap: wrap;
+  }
+  
+  .detail-card {
+    background: var(--surface);
+    border: 1px solid var(--border2);
+    border-radius: 16px;
+    overflow: hidden;
+    box-shadow: var(--shadow);
+  }
+  
+  .detail-letterhead {
+    background: var(--hdr);
+    color: #fff;
+    border-bottom: 4px solid var(--gold);
+    position: relative;
+    overflow: hidden;
+    padding: 2rem;
+  }
+  
+  .detail-letterhead-inner {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 1.5rem;
+    flex-wrap: wrap;
+    position: relative;
+    z-index: 2;
+  }
+  
+  .detail-logo-section {
+    display: flex;
+    align-items: center;
+    gap: 1.2rem;
+    flex-wrap: nowrap;
+  }
+  
+  .detail-logo-section img {
+    width: 64px;
+    height: 64px;
+    border-radius: 50%;
+    object-fit: contain;
+    border: 2px solid rgba(212,168,67,.6);
+    padding: 2px;
+    background: #fff;
+    flex-shrink: 0;
+  }
+  
+  .detail-college-title {
+    font-size: 1.25rem;
+    font-weight: 700;
+    color: #fff;
+    margin-top: 2px;
+    line-height: 1.25;
+  }
+  
+  .detail-ref-box {
+    text-align: right;
+    font-family: 'Space Mono', monospace;
+    font-size: 0.75rem;
+    background: rgba(0,0,0,0.2);
+    padding: 0.6rem 1rem;
+    border-radius: 8px;
+    border: 1px solid rgba(255,255,255,0.1);
+    min-width: 180px;
+  }
+  
+  .detail-body {
+    padding: 2.5rem 2rem;
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+  }
+  
+  .detail-title {
+    font-size: 1.6rem;
+    color: var(--heading);
+    font-weight: 700;
+    line-height: 1.35;
+    margin-top: 0.5rem;
+  }
+  
+  .detail-content {
+    font-size: 1.02rem;
+    color: var(--text);
+    line-height: 1.7;
+    white-space: pre-line;
+    padding: 0.5rem 0;
+  }
+
+  @media (max-width: 768px) {
+    .detail-letterhead {
+      padding: 1.25rem;
+    }
+    
+    .detail-logo-section {
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+      width: 100%;
+      gap: 0.8rem;
+    }
+    
+    .detail-logo-section img {
+      width: 56px;
+      height: 56px;
+    }
+    
+    .detail-college-title {
+      font-size: 1.1rem;
+    }
+    
+    .detail-ref-box {
+      text-align: center;
+      width: 100%;
+      min-width: 0;
+      margin-top: 0.5rem;
+    }
+    
+    .detail-body {
+      padding: 1.5rem 1.1rem;
+      gap: 1.2rem;
+    }
+    
+    .detail-title {
+      font-size: 1.35rem;
+    }
+    
+    .detail-content {
+      font-size: 0.95rem;
+    }
+  }
   </style>
 
   <!-- Vercel Analytics & Speed Insights -->
@@ -743,7 +948,9 @@
 
 <!-- ════ MAIN CONTENT ════ -->
 <main class="wrap">
-  
+  <!-- Dynamic detailed event view (starts hidden) -->
+  <div id="eventDetailView" style="display:none; margin-top:1.5rem;"></div>
+
   <div id="eventsContainer">
       <!-- Loading State -->
       <div class="events-status" id="eventsLoading">
@@ -1024,7 +1231,9 @@ document.addEventListener('keydown', e => {
 });
 
 /* ════════ SHARE FUNCTIONS ════════ */
-async function shareEvent(id, title) {
+async function shareEvent(id) {
+    const item = allEventsData.find(x => String(x.id) === String(id));
+    const title = item ? item.title : 'CS Dept Event';
     const baseUrl = window.location.origin;
     const shareUrl = `${baseUrl}/api/events/share?id=${id}`;
     
@@ -1042,11 +1251,156 @@ async function shareEvent(id, title) {
     }
 }
 
-function shareWhatsApp(id, title) {
+function shareWhatsApp(id) {
+    const item = allEventsData.find(x => String(x.id) === String(id));
+    const title = item ? item.title : '';
     const baseUrl = window.location.origin;
     const shareUrl = `${baseUrl}/api/events/share?id=${id}`;
     const text = encodeURIComponent(`*CS Dept Event:* ${title}\n\nRead more here: ${shareUrl}`);
     window.open(`https://wa.me/?text=${text}`, '_blank');
+}
+
+/* ════════ DETAILED EVENT ROUTING ════════ */
+function checkUrlParams() {
+  const params = new URLSearchParams(window.location.search);
+  const hash = window.location.hash;
+  let id = params.get('id');
+  
+  if (!id && hash && hash.startsWith('#event-')) {
+    id = hash.replace('#event-', '');
+  }
+
+  const listSec = document.getElementById('eventsContainer');
+  const detailSec = document.getElementById('eventDetailView');
+
+  if (id && allEventsData.length > 0) {
+    const item = allEventsData.find(x => String(x.id) === String(id));
+    if (item) {
+      if (listSec) listSec.style.display = 'none';
+      if (detailSec) {
+        detailSec.style.display = 'block';
+        renderDetailView(item);
+      }
+      document.title = `${item.title} · Dept. of Computer Science`;
+      window.scrollTo({ top: 0, behavior: 'instant' });
+      return;
+    }
+  }
+
+  // Show list
+  if (detailSec) detailSec.style.display = 'none';
+  if (listSec) listSec.style.display = 'block';
+  document.title = "Events · Dept. of Computer Science · PDUAM Amjonga";
+}
+
+function goBackToList() {
+  window.history.pushState(null, '', window.location.pathname);
+  checkUrlParams();
+}
+
+window.addEventListener('popstate', checkUrlParams);
+window.addEventListener('hashchange', checkUrlParams);
+
+function renderDetailView(item) {
+  const container = document.getElementById('eventDetailView');
+  
+  let linksHtml = '';
+  if(item.links && item.links.length > 0) {
+    linksHtml += item.links.map(link => `
+      <a href="${link.url}" target="_blank" rel="noopener" class="ncard-link" style="padding:0.75rem 1.5rem; font-size:0.9rem; background:linear-gradient(135deg,rgba(212,168,67,.18),rgba(212,168,67,.08)); color:var(--gold); border-color:rgba(212,168,67,.3); text-decoration:none; display:inline-flex; align-items:center; gap:0.5rem; font-weight:600; border-radius:8px;">
+        <i class="fa-solid fa-arrow-up-right-from-square"></i> ${link.label}
+      </a>
+    `).join('');
+  }
+
+  const evDate = new Date(item.date);
+  const now = new Date();
+  now.setHours(0,0,0,0);
+  if (evDate >= now) {
+    linksHtml += `
+      <a href="${getGCalUrl(item)}" target="_blank" rel="noopener" class="ncard-link" style="padding:0.75rem 1.5rem; font-size:0.9rem; background:var(--teal-dim); color:var(--teal); border-color:var(--teal); text-decoration:none; display:inline-flex; align-items:center; gap:0.5rem; font-weight:600; border-radius:8px;">
+        <i class="fa-brands fa-google"></i> Add to Calendar
+      </a>
+    `;
+  }
+
+  const imgHtml = item.image ? `
+    <div style="border:1px solid var(--border2); border-radius:12px; overflow:hidden; background:var(--s2); padding:0.5rem; text-align:center; margin-bottom:1.5rem;">
+      <img src="${item.image}" alt="${item.title}" style="max-width:100%; max-height:550px; object-fit:contain; border-radius:8px;" />
+    </div>
+  ` : '';
+
+  container.innerHTML = `
+    <!-- Top breadcrumb and sharing -->
+    <div class="detail-header-row">
+      <button onclick="goBackToList()" style="display:inline-flex; align-items:center; gap:0.5rem; padding:0.6rem 1.2rem; font-size:0.85rem; background:transparent; border:1px solid var(--border2); color:var(--text); border-radius:8px; cursor:pointer; font-weight:500; transition:var(--tr); font-family:inherit;">
+        <i class="fa-solid fa-arrow-left"></i> Back to All Events
+      </button>
+      <div class="detail-share-group">
+        <button class="detail-share-btn wa" onclick="shareWhatsApp('${item.id}')" title="Share via WhatsApp">
+          <i class="fa-brands fa-whatsapp"></i> <span>WhatsApp Share</span>
+        </button>
+        <button class="detail-share-btn copy" onclick="shareEvent('${item.id}')" title="Copy Link">
+          <i class="fa-solid fa-share-nodes"></i> <span>Copy Link</span>
+        </button>
+      </div>
+    </div>
+
+    <!-- Official Event Paper Card -->
+    <article class="detail-card">
+      
+      <!-- Official Letterhead Header -->
+      <div class="detail-letterhead">
+        <div class="detail-letterhead-inner">
+          <div class="detail-logo-section">
+            <img src="assets/logo/pduam-logo.jpg" alt="PDUAM CS Logo">
+            <div>
+              <div style="font-family:'Space Mono', monospace; font-size:0.75rem; color:var(--gold-lt); text-transform:uppercase; letter-spacing:0.1em; font-weight:bold;">
+                Department of Computer Science
+              </div>
+              <h2 class="detail-college-title">Pandit Deendayal Upadhyaya Adarsha Mahavidyalaya</h2>
+              <p style="font-size:0.75rem; opacity:0.75; margin-top:2px;">Amjonga, Goalpara, Assam — 783124 | Gauhati University Affiliate</p>
+            </div>
+          </div>
+          <div class="detail-ref-box">
+            <div style="font-weight:bold; font-size:0.8rem; color:#fff;">Date: ${item.displayDate}</div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Main Body -->
+      <div class="detail-body">
+        
+        <!-- Meta Row -->
+        <div style="display:flex; justify-content:space-between; align-items:center; gap:1rem; border-bottom:1px solid var(--border); padding-bottom:1rem; flex-wrap:wrap;">
+          <span class="cat-pill cat-pub" style="font-size:0.75rem; padding:0.3rem 0.8rem; background:rgba(45, 212, 191, 0.12); color:var(--teal);"><i class="fa-regular fa-calendar-check fa-xs"></i> Department Event</span>
+          <div style="font-size:0.8rem; color:var(--muted); display:flex; gap:1rem; flex-wrap:wrap;">
+            ${item.time ? `<span><i class="fa-regular fa-clock"></i> ${item.time}</span>` : ''}
+            ${item.location ? `<span><i class="fa-solid fa-location-dot"></i> ${item.location}</span>` : ''}
+          </div>
+        </div>
+
+        <!-- Event Title -->
+        <h3 class="detail-title">${item.title}</h3>
+
+        <!-- Image Banner -->
+        ${imgHtml}
+
+        <!-- Event Details Text -->
+        <div class="detail-content">
+          ${item.description || 'No additional details provided.'}
+        </div>
+
+        <!-- Registration & Reference Links -->
+        ${linksHtml ? `
+          <div style="display:flex; gap:1rem; flex-wrap:wrap; margin-top:1.5rem; border-top:1px solid var(--border); padding-top:1.5rem;">
+            ${linksHtml}
+          </div>
+        ` : ''}
+
+      </div>
+    </article>
+  `;
 }
 
 
@@ -1154,10 +1508,10 @@ document.addEventListener('DOMContentLoaded', () => {
                       <div style="display:flex; align-items:center; gap:1rem; margin-top:auto; flex-wrap:wrap;">
                         ${linksHtml}
                         <div class="event-share-row">
-                          <button class="share-btn wa" onclick="event.stopPropagation(); shareWhatsApp('${item.id}', '${item.title.replace(/'/g, "\\'")}')" title="Share on WhatsApp">
+                          <button class="share-btn wa" onclick="event.stopPropagation(); shareWhatsApp('${item.id}')" title="Share on WhatsApp">
                             <i class="fa-brands fa-whatsapp"></i>
                           </button>
-                          <button class="share-btn" onclick="event.stopPropagation(); shareEvent('${item.id}', '${item.title.replace(/'/g, "\\'")}')" title="Copy Link">
+                          <button class="share-btn" onclick="event.stopPropagation(); shareEvent('${item.id}')" title="Copy Link">
                             <i class="fa-solid fa-share-nodes"></i>
                           </button>
                         </div>
@@ -1166,8 +1520,9 @@ document.addEventListener('DOMContentLoaded', () => {
               `;
               
               card.addEventListener('click', (e) => {
-                  if (e.target.closest('.event-btn') || e.target.closest('.share-btn')) return; // ignore clicks on buttons inside the card
-                  openEventModal(item);
+                  if (e.target.closest('.event-btn') || e.target.closest('.share-btn') || e.target.closest('button')) return;
+                  window.history.pushState(null, '', `?id=${item.id}`);
+                  checkUrlParams();
               });
               
               upList.appendChild(card);
@@ -1208,18 +1563,19 @@ document.addEventListener('DOMContentLoaded', () => {
                       <p>${item.description || ''}</p>
                   </div>
                   <div class="event-share-row" style="margin-left:auto; padding-left:1rem;">
-                    <button class="share-btn wa" onclick="event.stopPropagation(); shareWhatsApp('${item.id}', '${item.title.replace(/'/g, "\\'")}')" title="Share on WhatsApp">
+                    <button class="share-btn wa" onclick="event.stopPropagation(); shareWhatsApp('${item.id}')" title="Share on WhatsApp">
                       <i class="fa-brands fa-whatsapp"></i>
                     </button>
-                    <button class="share-btn" onclick="event.stopPropagation(); shareEvent('${item.id}', '${item.title.replace(/'/g, "\\'")}')" title="Copy Link">
+                    <button class="share-btn" onclick="event.stopPropagation(); shareEvent('${item.id}')" title="Copy Link">
                       <i class="fa-solid fa-share-nodes"></i>
                     </button>
                   </div>
               `;
               
               card.addEventListener('click', (e) => {
-                  if (e.target.closest('.event-btn')) return; // ignore clicks on buttons inside the card
-                  openEventModal(item);
+                  if (e.target.closest('.event-btn') || e.target.closest('.share-btn') || e.target.closest('button')) return;
+                  window.history.pushState(null, '', `?id=${item.id}`);
+                  checkUrlParams();
               });
               
               pastList.appendChild(card);
@@ -1227,30 +1583,10 @@ document.addEventListener('DOMContentLoaded', () => {
           container.appendChild(pastList);
       }
 
-      // Handle deep linking via hash (#event-ID)
+      // Handle deep linking and URL routing on load
       setTimeout(() => {
-        const hash = window.location.hash;
-        if (hash) {
-          const id = hash.replace('#event-', '');
-          const target = document.getElementById(`event-${id}`);
-          if (target) {
-            target.scrollIntoView({ behavior: 'smooth', block: 'center' });
-            target.style.borderColor = 'var(--gold)';
-            target.style.boxShadow = '0 0 20px var(--gold-dim)';
-            
-            // Highlight the card temporarily
-            setTimeout(() => {
-                target.style.transition = 'all 1s ease';
-                target.style.borderColor = '';
-                target.style.boxShadow = '';
-            }, 3000);
-
-            // If it's a past event, we might want to open the modal too
-            const item = allEventsData.find(e => e.id === id);
-            if (item) openEventModal(item);
-          }
-        }
-      }, 500);
+        checkUrlParams();
+      }, 50);
 
     })
     .catch(error => {

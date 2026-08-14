@@ -1134,30 +1134,26 @@ async function loadNotifications() {
     if (!res.ok) throw new Error('HTTP ' + res.status);
     let data = await res.json();
 
-    // Filter to show only "New" notifications on the homepage
-    let filteredData = data.filter(n => n.isNew === true);
-    
-    data = filteredData;
-    
     // Sort: New tags first, then by date descending
     data.sort((a, b) => {
       if (a.isNew !== b.isNew) return a.isNew ? -1 : 1;
       return new Date(b.date) - new Date(a.date);
     });
 
+    // Show only the 4 most recent notifications on the homepage
+    data = data.slice(0, 4);
+
     const buildItem = n => {
       const li = document.createElement('li');
       li.className = 'notif-item';
 
       const a = document.createElement('a');
-      a.href   = n.url;
-      a.target = '_blank';
-      a.rel    = 'noopener';
+      a.href   = `notifications.html?id=${n.id}`;
+      a.style.cssText = 'text-decoration:none; display:block; color:inherit;';
 
       const strong = document.createElement('strong');
-      strong.textContent = n.title + ':';
+      strong.textContent = n.title;
       a.appendChild(strong);
-      a.append(' ' + n.text);
 
       if (n.isNew) {
         const badge = document.createElement('span');
@@ -1165,10 +1161,10 @@ async function loadNotifications() {
         badge.textContent = 'New';
         a.appendChild(badge);
       }
-      li.appendChild(a);
 
       // date + meta line
       const small = document.createElement('small');
+      small.style.cssText = 'display:block; margin-top:0.25rem;';
       const dateSpan = document.createElement('span');
       dateSpan.style.cssText = 'display:inline-flex;align-items:center;gap:.3rem;margin-right:.5rem;';
       dateSpan.innerHTML = `<i class="fa-regular fa-calendar" style="font-size:.65rem;color:var(--gold);opacity:.7"></i>${fmtDate(n.date)}`;
@@ -1183,10 +1179,12 @@ async function loadNotifications() {
           ml.target = '_blank';
           ml.rel    = 'noopener';
           ml.textContent = n.metaLink.label;
+          ml.onclick = e => e.stopPropagation();
           small.appendChild(ml);
         }
       }
-      li.appendChild(small);
+      a.appendChild(small);
+      li.appendChild(a);
       return li;
     };
 

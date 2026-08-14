@@ -1,7 +1,7 @@
 [
   {
     "id": "bsc-cs-merit-list-r1-non-cuet-2026",
-    "isNew": true,
+    "isNew": false,
     "date": "2026-06-02",
     "category": "admission",
     "title": "Merit List for B.Sc. in Computer Science (Round 1 - Non-CUET) PDUAM, Amjonga",
@@ -11,7 +11,7 @@
   },
   {
     "id": "call-for-book-chapters-2026",
-    "isNew": true,
+    "isNew": false,
     "date": "2026-05-23",
     "category": "publication",
     "title": "Call for Book Chapters – Second Edition",
@@ -41,7 +41,7 @@
   },
   {
     "id": "admission-open-2026-27",
-    "isNew": true,
+    "isNew": false,
     "date": "2026-05-06",
     "category": "academic",
     "title": "B.Sc. in Computer Science Admission 2026-27",
@@ -108,7 +108,7 @@
     "category": "publication",
     "title": "New Publication",
     "text": "\"Multidisciplinary Research: Innovations in Science, Arts and Commerce\" — First Edition",
-    "url": "https://cscpduam.github.io/multidisciplinary-book/",
+    "url": "/multidisciplinary-book-publish/edition-1/",
     "meta": "Deep Science Publishing (USA · UK · India · Turkey) · ISBN: 978-93-7185-157-2",
     "image": "https://cdn.jsdelivr.net/gh/cscpduam-alt/csc.pduam.cdn@main/uploads/files/notifications/2025-11-15T00-00-00-000Z-m5qg2m7kl-bmV3LXB1YmxpY2F0aW9u.webp"
   },

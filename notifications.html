@@ -817,9 +817,13 @@
     .controls {
       display: flex;
       align-items: center;
-      gap: 1rem;
+      gap: 1.2rem;
       flex-wrap: wrap;
-      margin-bottom: 1.75rem
+      margin-bottom: 2rem;
+      background: var(--s2);
+      padding: 0.8rem 1.2rem;
+      border-radius: 12px;
+      border: 1px solid var(--border);
     }
 
     /* search box */
@@ -952,14 +956,13 @@
       background: var(--surface);
       border: 1px solid var(--border);
       border-radius: var(--r-lg);
-      padding: 1.2rem;
+      padding: 1.1rem 1.3rem;
       display: flex;
-      gap: 1.5rem;
-      align-items: stretch;
+      flex-direction: column;
+      gap: 0.75rem;
       transition: border-color var(--tr), transform var(--tr), box-shadow var(--tr);
       position: relative;
       overflow: hidden;
-      min-height: 140px;
     }
 
     .ncard::before {
@@ -969,7 +972,6 @@
       top: 0;
       bottom: 0;
       width: 4px;
-      border-radius: 99px 0 0 99px;
       background: var(--border2);
       z-index: 2;
     }
@@ -984,63 +986,40 @@
       box-shadow: 0 8px 32px rgba(212, 168, 67, .08)
     }
 
-    .ncard-side {
-      width: 160px;
-      flex-shrink: 0;
-      border-radius: 12px;
-      overflow: hidden;
-      background: var(--s2);
+    .ncard-top-row {
+      display: flex;
+      align-items: center;
+      gap: 0.75rem;
+    }
+
+    .ncard-icon-badge {
+      width: 36px;
+      height: 36px;
+      border-radius: 50%;
       display: flex;
       align-items: center;
       justify-content: center;
-      border: 1px solid var(--border);
-      position: relative;
+      font-size: 1rem;
+      flex-shrink: 0;
     }
 
-    .ncard-side img {
-      width: 100%;
-      height: 100%;
-      object-fit: cover;
-      transition: transform 0.5s ease
-    }
-
-    .ncard:hover .ncard-side img {
-      transform: scale(1.08)
-    }
-
-    .ncard-side i {
-      font-size: 2rem;
-      color: var(--gold);
-      opacity: 0.5
-    }
+    .ncard-icon-badge.cat-pub { background: rgba(212, 168, 67, 0.12); color: var(--gold); }
+    .ncard-icon-badge.cat-acad { background: rgba(45, 212, 191, 0.12); color: var(--teal); }
+    .ncard-icon-badge.cat-event { background: rgba(239, 68, 68, 0.12); color: var(--red); }
+    .ncard-icon-badge.cat-gen { background: rgba(122, 139, 168, 0.12); color: var(--muted); }
 
     .ncard-body {
-      flex: 1;
-      min-width: 0;
       display: flex;
       flex-direction: column;
-      justify-content: center;
-      padding: 0.25rem 0
-    }
-
-    .ncard-date-gold {
-      font-size: 0.72rem;
-      font-weight: 700;
-      color: var(--gold);
-      display: flex;
-      align-items: center;
       gap: 0.4rem;
-      text-transform: uppercase;
-      letter-spacing: 0.05em;
-      margin-bottom: 0.5rem;
     }
 
     .ncard-title {
-      font-size: 1.15rem;
+      font-size: 1.1rem;
       font-weight: 700;
       color: var(--heading);
-      line-height: 1.3;
-      margin-bottom: 0.5rem
+      line-height: 1.35;
+      margin: 0;
     }
 
     .ncard-title a {
@@ -1054,15 +1033,10 @@
     }
 
     .ncard-desc {
-      font-size: .88rem;
+      font-size: .86rem;
       color: var(--muted);
-      line-height: 1.6;
-      margin-bottom: .75rem;
-      display: -webkit-box;
-      -webkit-line-clamp: 2;
-      line-clamp: 2;
-      -webkit-box-orient: vertical;
-      overflow: hidden
+      line-height: 1.55;
+      margin: 0;
     }
 
     .ncard-footer {
@@ -1070,23 +1044,14 @@
       align-items: center;
       gap: 1rem;
       flex-wrap: wrap;
-      margin-top: auto
+      margin-top: 0.2rem;
+      border-top: 1px solid var(--border);
+      padding-top: 0.65rem;
     }
 
     @media (max-width: 640px) {
       .ncard {
-        flex-direction: column;
-        align-items: flex-start;
-        min-height: auto;
-      }
-
-      .ncard-side {
-        width: 100%;
-        height: 180px;
-      }
-
-      .ncard-body {
-        padding: 0.5rem 0;
+        padding: 1rem;
       }
     }
 
@@ -1269,6 +1234,224 @@
     .share-btn:hover { background: var(--s3); color: var(--gold); border-color: var(--gold); transform: translateY(-2px); }
     .share-btn.wa { color: #25d366; background: rgba(37,211,102,0.1); border-color: rgba(37,211,102,0.2); }
     .share-btn.wa:hover { background: #25d366; color: #fff; border-color: #25d366; }
+
+    .detail-share-group {
+      display: flex;
+      gap: 0.6rem;
+    }
+
+    .detail-share-btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+      padding: 0.6rem 1.2rem;
+      font-size: 0.85rem;
+      border-radius: 8px;
+      font-weight: 600;
+      cursor: pointer;
+      font-family: inherit;
+      transition: all var(--tr);
+      border: 1px solid var(--border2);
+      text-decoration: none;
+    }
+    .detail-share-btn.wa {
+      background: #25d366;
+      color: #fff;
+      border-color: #25d366;
+    }
+    .detail-share-btn.wa:hover {
+      background: #20ba5a;
+      border-color: #20ba5a;
+      transform: translateY(-2px);
+    }
+    .detail-share-btn.copy {
+      background: var(--s2);
+      color: var(--text);
+    }
+    .detail-share-btn.copy:hover {
+      background: var(--s3);
+      border-color: var(--gold);
+      color: var(--gold);
+      transform: translateY(-2px);
+    }
+
+    @media (max-width: 768px) {
+      .detail-share-group {
+        position: fixed;
+        bottom: 24px;
+        right: 24px;
+        flex-direction: column-reverse;
+        gap: 0.8rem;
+        z-index: 9999;
+      }
+      .detail-share-btn {
+        width: 50px;
+        height: 50px;
+        border-radius: 50%;
+        padding: 0;
+        justify-content: center;
+        box-shadow: 0 4px 16px rgba(0, 0, 0, 0.35);
+      }
+      .detail-share-btn span {
+        display: none;
+      }
+      .detail-share-btn i {
+        font-size: 1.35rem;
+      }
+    }
+
+    /* ════════ DETAILED NOTICE VIEW (Responsive) ════════ */
+    .detail-header-row {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 1rem;
+      margin-bottom: 1.5rem;
+      flex-wrap: wrap;
+    }
+    
+    .detail-card {
+      background: var(--surface);
+      border: 1px solid var(--border2);
+      border-radius: 16px;
+      overflow: hidden;
+      box-shadow: var(--shadow);
+    }
+    
+    .detail-letterhead {
+      background: var(--hdr);
+      color: #fff;
+      border-bottom: 4px solid var(--gold);
+      position: relative;
+      overflow: hidden;
+      padding: 2rem;
+    }
+    
+    .detail-letterhead-inner {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 1.5rem;
+      flex-wrap: wrap;
+      position: relative;
+      z-index: 2;
+    }
+    
+    .detail-logo-section {
+      display: flex;
+      align-items: center;
+      gap: 1.2rem;
+      flex-wrap: nowrap;
+    }
+    
+    .detail-logo-section img {
+      width: 64px;
+      height: 64px;
+      border-radius: 50%;
+      object-fit: contain;
+      border: 2px solid rgba(212,168,67,.6);
+      padding: 2px;
+      background: #fff;
+      flex-shrink: 0;
+    }
+    
+    .detail-college-title {
+      font-size: 1.25rem;
+      font-weight: 700;
+      color: #fff;
+      margin-top: 2px;
+      line-height: 1.25;
+    }
+    
+    .detail-ref-box {
+      text-align: right;
+      font-family: 'Space Mono', monospace;
+      font-size: 0.75rem;
+      background: rgba(0,0,0,0.2);
+      padding: 0.6rem 1rem;
+      border-radius: 8px;
+      border: 1px solid rgba(255,255,255,0.1);
+      min-width: 180px;
+    }
+    
+    .detail-body {
+      padding: 2.5rem 2rem;
+      display: flex;
+      flex-direction: column;
+      gap: 1.5rem;
+    }
+    
+    .detail-title {
+      font-size: 1.6rem;
+      color: var(--heading);
+      font-weight: 700;
+      line-height: 1.35;
+      margin-top: 0.5rem;
+    }
+    
+    .detail-content {
+      font-size: 1.02rem;
+      color: var(--text);
+      line-height: 1.7;
+      white-space: pre-line;
+      padding: 0.5rem 0;
+    }
+
+    .pdf-preview-container {
+      border: 1px solid var(--border2);
+      border-radius: 12px;
+      overflow: hidden;
+      background: var(--s2);
+      display: flex;
+      flex-direction: column;
+    }
+    
+    @media (max-width: 768px) {
+      .detail-letterhead {
+        padding: 1.25rem;
+      }
+      
+      .detail-logo-section {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        width: 100%;
+        gap: 0.8rem;
+      }
+      
+      .detail-logo-section img {
+        width: 56px;
+        height: 56px;
+      }
+      
+      .detail-college-title {
+        font-size: 1.1rem;
+      }
+      
+      .detail-ref-box {
+        text-align: center;
+        width: 100%;
+        min-width: 0;
+        margin-top: 0.5rem;
+      }
+      
+      .detail-body {
+        padding: 1.5rem 1.1rem;
+        gap: 1.2rem;
+      }
+      
+      .detail-title {
+        font-size: 1.35rem;
+      }
+      
+      .detail-content {
+        font-size: 0.95rem;
+      }
+
+      .pdf-preview-container {
+        display: none;
+      }
+    }
 
     /* ════════ NOTIF MODAL (Like events.html) ════════ */
     .notif-modal {
@@ -1524,23 +1707,30 @@
       }
 
       .page-hero {
-        padding: 1.75rem 1.25rem
+        padding: 1.25rem 1rem;
       }
 
       .page-hero-inner {
         flex-direction: column;
         align-items: flex-start;
-        gap: 1.2rem
+        gap: 0.75rem;
       }
 
       .page-hero-text h1 {
-        font-size: 1.4rem
+        font-size: 1.25rem;
+      }
+
+      .page-hero-text p {
+        font-size: 0.78rem;
+        margin-top: 0.25rem;
+        line-height: 1.4;
       }
 
       .controls {
         flex-direction: column;
         align-items: stretch;
-        gap: 1rem
+        gap: 0.8rem;
+        padding: 0.8rem;
       }
 
       .search-wrap {
@@ -1855,7 +2045,7 @@
       <div class="ctrl-row-bottom">
         <button class="sort-btn" id="sortBtn">
           <i class="fa-solid fa-arrow-down-wide-short sort-icon" id="sortIcon"></i>
-          Newest First
+          <span id="sortText">Newest First</span>
         </button>
         <span class="count-badge" id="countBadge">Loading…</span>
       </div>
@@ -1873,6 +2063,9 @@
         <p>No notifications match your search or filter.</p>
       </div>
     </div>
+    
+    <!-- Detailed Notice View Panel -->
+    <div id="notifDetailView" style="display:none; margin-top:1.5rem;"></div>
 
   </main>
 
@@ -1997,7 +2190,9 @@
     }
 
     // Share notification
-    async function shareNotif(id, title) {
+    async function shareNotif(id) {
+      const n = allData.find(x => String(x.id) === String(id));
+      const title = n ? n.title : 'CS Dept Notification';
       const baseUrl = window.location.origin;
       const shareUrl = `${baseUrl}/api/notifications/share?id=${id}`;
       
@@ -2016,7 +2211,9 @@
     }
 
     // Share WhatsApp
-    function shareWhatsApp(id, title) {
+    function shareWhatsApp(id) {
+      const n = allData.find(x => String(x.id) === String(id));
+      const title = n ? n.title : '';
       const baseUrl = window.location.origin;
       const shareUrl = `${baseUrl}/api/notifications/share?id=${id}`;
       const text = encodeURIComponent(`*CS Dept Notification:* ${title}\n\nRead more here: ${shareUrl}`);
@@ -2079,6 +2276,186 @@
       return 'general';
     }
 
+    function goBackToList() {
+      window.history.pushState(null, '', window.location.pathname);
+      checkUrlParams();
+    }
+
+    function checkUrlParams() {
+      const params = new URLSearchParams(window.location.search);
+      let id = params.get('id');
+      if (!id && window.location.hash && window.location.hash.startsWith('#notif-')) {
+        id = window.location.hash.replace('#notif-', '');
+      }
+
+      if (id) {
+        const n = allData.find(x => String(x.id) === String(id));
+        if (n) {
+          renderDetailView(n);
+          // Hide list components
+          const hero = document.querySelector('.page-hero');
+          if (hero) hero.style.display = 'none';
+          const ctrl = document.querySelector('.controls');
+          if (ctrl) ctrl.style.display = 'none';
+          document.getElementById('listWrap').style.display = 'none';
+          document.getElementById('notifDetailView').style.display = 'block';
+          
+          document.title = `${n.title} · Dept. of Computer Science · PDUAM Amjonga`;
+          window.scrollTo({ top: 0, behavior: 'smooth' });
+          return;
+        }
+      }
+
+      // Default: show list
+      const hero = document.querySelector('.page-hero');
+      if (hero) hero.style.display = 'block';
+      const ctrl = document.querySelector('.controls');
+      if (ctrl) ctrl.style.display = 'block';
+      document.getElementById('listWrap').style.display = 'block';
+      document.getElementById('notifDetailView').style.display = 'none';
+      document.title = "Notifications · Dept. of Computer Science · PDUAM Amjonga";
+    }
+
+    function renderDetailView(n) {
+      const container = document.getElementById('notifDetailView');
+      const cat = CAT[n.category] || CAT.general;
+      const isImg = s => s && (s.endsWith('.jpg') || s.endsWith('.png') || s.endsWith('.jpeg') || s.endsWith('.webp') || s.includes('drive.google.com'));
+      const poster = n.image || (isImg(n.url) ? n.url : (n.metaLink && isImg(n.metaLink.url) ? n.metaLink.url : null));
+      const isPdf = n.url && n.url.toLowerCase().includes('.pdf');
+      const shortId = n.id ? n.id.substring(0, 8).toUpperCase() : 'GENERAL';
+
+      container.innerHTML = `
+        <!-- Top breadcrumb and sharing -->
+        <div class="detail-header-row">
+          <button onclick="goBackToList()" style="display:inline-flex; align-items:center; gap:0.5rem; padding:0.6rem 1.2rem; font-size:0.85rem; background:transparent; border:1px solid var(--border2); color:var(--text); border-radius:8px; cursor:pointer; font-weight:500; transition:var(--tr); font-family:inherit;">
+            <i class="fa-solid fa-arrow-left"></i> Back to All Notifications
+          </button>
+          <div class="detail-share-group">
+            <button class="detail-share-btn wa" onclick="shareWhatsApp('${n.id}')" title="Share via WhatsApp">
+              <i class="fa-brands fa-whatsapp"></i> <span>WhatsApp Share</span>
+            </button>
+            <button class="detail-share-btn copy" onclick="shareNotif('${n.id}')" title="Copy Link">
+              <i class="fa-solid fa-share-nodes"></i> <span>Copy Link</span>
+            </button>
+          </div>
+        </div>
+
+        <!-- Official Notice Paper Card -->
+        <article class="detail-card">
+          
+          <!-- Official Society Letterhead Header -->
+          <div class="detail-letterhead">
+            <div class="detail-letterhead-inner">
+              <div class="detail-logo-section">
+                <img src="assets/logo/pduam-logo.jpg" alt="PDUAM CS Logo">
+                <div>
+                  <div style="font-family:'Space Mono', monospace; font-size:0.75rem; color:var(--gold-lt); text-transform:uppercase; letter-spacing:0.1em; font-weight:bold;">
+                    Department of Computer Science
+                  </div>
+                  <h2 class="detail-college-title">Pandit Deendayal Upadhyaya Adarsha Mahavidyalaya</h2>
+                  <p style="font-size:0.75rem; opacity:0.75; margin-top:2px;">Amjonga, Goalpara, Assam — 783124 | Gauhati University Affiliate</p>
+                </div>
+              </div>
+              <div class="detail-ref-box">
+                <div style="font-weight:bold; font-size:0.8rem; color:#fff;">Date: ${fmtDate(n.date)}</div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Main Body -->
+          <div class="detail-body">
+            
+            <!-- Meta Badges -->
+            <div style="display:flex; justify-content:space-between; align-items:center; gap:1rem; border-bottom:1px solid var(--border); padding-bottom:1rem; flex-wrap:wrap;">
+              <div style="font-size:0.8rem; color:var(--muted);">
+                Published: <strong>${fmtDate(n.date)}</strong>
+              </div>
+            </div>
+
+            <!-- Notice Title -->
+            <h3 class="detail-title">${n.title}</h3>
+
+            <!-- Notice Text Content -->
+            <div class="detail-content">
+              ${n.text}
+            </div>
+
+            <!-- Meta Details if any -->
+            ${n.meta ? `
+              <div style="background:var(--s2); border-left:4px solid var(--gold); padding:1rem; border-radius:8px; font-size:0.9rem; color:var(--muted); margin:0.5rem 0; border:1px solid var(--border);">
+                ${n.meta}
+                ${n.metaLink ? ` · <a href="${n.metaLink.url}" target="_blank" rel="noopener" style="color:var(--gold); text-decoration:none; font-weight:600;">${n.metaLink.label}</a>` : ''}
+              </div>
+            ` : ''}
+
+            <!-- Registration & Group Links -->
+            ${(n.registrationLink || n.whatsappLink) ? `
+              <div style="display:flex; gap:1rem; flex-wrap:wrap; margin-top:0.5rem;">
+                ${n.registrationLink ? `
+                  <a href="${n.registrationLink}" target="_blank" rel="noopener" class="ncard-link" style="padding:0.75rem 1.5rem; font-size:0.9rem; background:linear-gradient(135deg,rgba(212,168,67,.18),rgba(212,168,67,.08)); color:var(--gold); border-color:rgba(212,168,67,.3); text-decoration:none; display:inline-flex; align-items:center; gap:0.5rem; font-weight:600; border-radius:8px;">
+                    <i class="fa-solid fa-pen-to-square"></i> Click Here to Register
+                  </a>
+                ` : ''}
+                ${n.whatsappLink ? `
+                  <a href="${n.whatsappLink}" target="_blank" rel="noopener" class="ncard-link" style="padding:0.75rem 1.5rem; font-size:0.9rem; background:#25d366; color:#fff; border-color:#25d366; text-decoration:none; display:inline-flex; align-items:center; gap:0.5rem; font-weight:600; border-radius:8px;">
+                    <i class="fa-brands fa-whatsapp"></i> Join Official WhatsApp Group
+                  </a>
+                ` : ''}
+              </div>
+            ` : ''}
+
+            <!-- Attachment Section -->
+            ${n.url ? `
+              <div style="margin-top:1.5rem; border-top:1px solid var(--border); padding-top:1.5rem;">
+                <div style="display:flex; justify-content:space-between; align-items:center; gap:1rem; background:var(--s2); border:1px solid var(--border); padding:1rem; border-radius:12px; flex-wrap:wrap; margin-bottom:1.5rem;">
+                  <div style="display:flex; align-items:center; gap:0.8rem;">
+                    <div style="width:40px; height:40px; border-radius:8px; background:var(--gold-dim); color:var(--gold); display:flex; align-items:center; justify-content:center; font-size:1.2rem;">
+                      <i class="fa-regular fa-file-pdf"></i>
+                    </div>
+                    <div>
+                      <h5 style="font-size:0.9rem; color:var(--heading); font-weight:bold; margin-bottom:1px;">Official Attachment Document</h5>
+                      <p style="font-size:0.75rem; color:var(--muted);">Click to open or download the official verification attachment</p>
+                    </div>
+                  </div>
+                  <div style="display:flex; gap:0.6rem;">
+                    <a href="${n.url}" target="_blank" rel="noopener" class="ncard-link" style="padding:0.5rem 1rem; font-size:0.8rem; background:var(--gold); color:#000; font-weight:bold; text-decoration:none; border-radius:6px; display:inline-flex; align-items:center; gap:0.4rem;">
+                      <i class="fa-solid fa-arrow-up-right-from-square"></i> Open Document
+                    </a>
+                    <a href="${n.url}" download class="ncard-link" style="padding:0.5rem 1rem; font-size:0.8rem; background:transparent; border:1px solid var(--border2); color:var(--text); text-decoration:none; border-radius:6px; display:inline-flex; align-items:center; gap:0.4rem;">
+                      <i class="fa-solid fa-download"></i> Download
+                    </a>
+                  </div>
+                </div>
+
+                <!-- In-page Document / Image Preview -->
+                ${isPdf ? `
+                  <div class="pdf-preview-container">
+                    <div style="background:var(--s3); padding:0.5rem 1rem; font-size:0.75rem; color:var(--muted); display:flex; justify-content:space-between; align-items:center; border-bottom:1px solid var(--border);">
+                      <span>PDF Circular Document Preview</span>
+                      <a href="${n.url}" target="_blank" rel="noopener" style="color:var(--gold); text-decoration:none;">Open in New Tab <i class="fa-solid fa-arrow-up-right-from-square fa-xs"></i></a>
+                    </div>
+                    <iframe src="${n.url}#toolbar=0" title="Official Notice PDF" style="width:100%; height:650px; border:none;"></iframe>
+                  </div>
+                ` : `
+                  <div style="border:1px solid var(--border2); border-radius:12px; overflow:hidden; background:var(--s2); padding:0.5rem; text-align:center;">
+                    <a href="${n.url}" target="_blank" rel="noopener" style="display:block;">
+                      <img src="${n.url}" alt="Official Circular Attachment" style="max-width:100%; max-height:700px; object-fit:contain; border-radius:8px;" />
+                      <div style="font-size:0.75rem; color:var(--gold); margin-top:8px; display:inline-flex; align-items:center; gap:0.3rem;">
+                        <i class="fa-solid fa-magnifying-glass-plus"></i> Click image to enlarge high-resolution original
+                      </div>
+                    </a>
+                  </div>
+                `}
+              </div>
+            ` : ''}
+
+
+
+          </div>
+        </article>
+      `;
+    }
+
     function buildCard(n) {
       const cat = CAT[n.category] || CAT.general;
       const card = document.createElement('div');
@@ -2104,47 +2481,59 @@
         extraLinks.push(`<a class="ncard-link-sm meta" href="${n.metaLink.url}" target="_blank" rel="noopener" onclick="event.stopPropagation()"><i class="fa-solid fa-link"></i> ${label}</a>`);
       }
 
+      const truncatedText = n.text.length > 180 ? 
+        `${n.text.substring(0, 177)}... <a href="?id=${n.id}" onclick="event.preventDefault(); window.history.pushState(null, '', '?id=${n.id}'); checkUrlParams();" style="color:var(--gold); font-weight:600; text-decoration:none;">Read More</a>` : 
+        n.text;
+
       card.innerHTML = `
-    <div class="ncard-side">
-      ${poster ? `<img src="${poster}" alt="Notif" loading="lazy">` : `<i class="fa-solid ${cat.icon}"></i>`}
-    </div>
-    <div class="ncard-body">
-      <div class="ncard-date-gold">
-        <i class="fa-solid fa-calendar-day"></i> ${fmtDate(n.date).toUpperCase()}
+    <!-- Top Row (Badge + Metadata + New Tag) -->
+    <div class="ncard-top-row">
+      <div class="ncard-icon-badge ${cat.pillClass}">
+        <i class="fa-solid ${cat.icon}"></i>
       </div>
-      
-      <h3 class="ncard-title">
-        ${n.url ? `<a href="${n.url}" target="_blank" rel="noopener">${n.title}</a>` : n.title}
-        ${n.isNew ? '<span class="badge-new">New</span>' : ''}
-      </h3>
+      <div style="display:flex; flex-direction:column; gap:1px;">
+        <span class="ncard-date-gold" style="font-size:0.7rem; margin-bottom:0;"><i class="fa-solid fa-calendar-day"></i> ${fmtDate(n.date).toUpperCase()}</span>
+        <span style="font-size:0.68rem; color:var(--muted); text-transform:uppercase; font-weight:700; letter-spacing:0.04em;">${cat.label}</span>
+      </div>
+      ${n.isNew ? '<span class="badge-new" style="margin-left:auto; margin-right:0;">New</span>' : ''}
+    </div>
 
-      <div class="ncard-desc">${n.text}</div>
-      
-      <div class="ncard-footer">
-        <span class="cat-pill ${cat.pillClass}">
-          <i class="fa-solid ${cat.icon} fa-xs"></i>${cat.label}
-        </span>
-        
-        <div class="ncard-quick-links" style="display:flex; gap:0.5rem; flex-wrap:wrap;">
-          ${extraLinks.join('')}
+    <!-- Middle Row (Title + Description + Thumbnail on right if exists) -->
+    <div style="display:flex; gap:1.2rem; align-items:flex-start; margin-top:0.1rem; width:100%;">
+      <div style="flex:1; min-width:0; display:flex; flex-direction:column; gap:0.3rem;">
+        <h3 class="ncard-title">
+          <a href="?id=${n.id}" onclick="event.preventDefault(); window.history.pushState(null, '', '?id=${n.id}'); checkUrlParams();">${n.title}</a>
+        </h3>
+        <div class="ncard-desc">${truncatedText}</div>
+      </div>
+      ${poster ? `
+        <div style="width:68px; height:68px; border-radius:8px; overflow:hidden; flex-shrink:0; border:1px solid var(--border);">
+          <img src="${poster}" alt="Notif Thumbnail" style="width:100%; height:100%; object-fit:cover;">
         </div>
+      ` : ''}
+    </div>
 
-        <div style="display:flex; gap:0.6rem; align-items:center; margin-left:auto">
-          ${n.url ? `<a class="ncard-link" href="${n.url}" target="_blank" rel="noopener" onclick="event.stopPropagation()"><i class="fa-solid fa-arrow-up-right-from-square"></i> Open</a>` : ''}
-          <button class="share-btn wa" onclick="event.stopPropagation(); shareWhatsApp('${n.id}', '${n.title.replace(/'/g, "\\'")}')" title="Share on WhatsApp">
-            <i class="fa-brands fa-whatsapp"></i>
-          </button>
-          <button class="share-btn" onclick="event.stopPropagation(); shareNotif('${n.id}', '${n.title.replace(/'/g, "\\'")}')" title="Copy Link">
-            <i class="fa-solid fa-share-nodes"></i>
-          </button>
-        </div>
+    <!-- Footer Row (Quick links + Share) -->
+    <div class="ncard-footer">
+      <div class="ncard-quick-links" style="display:flex; gap:0.5rem; flex-wrap:wrap;">
+        ${extraLinks.join('')}
+      </div>
+      <div style="display:flex; gap:0.6rem; align-items:center; margin-left:auto;">
+        ${n.url ? `<a class="ncard-link" href="${n.url}" target="_blank" rel="noopener" onclick="event.stopPropagation()"><i class="fa-solid fa-arrow-up-right-from-square"></i> Open Attachment</a>` : ''}
+        <button class="share-btn wa" onclick="event.stopPropagation(); shareWhatsApp('${n.id}')" title="Share on WhatsApp">
+          <i class="fa-brands fa-whatsapp"></i>
+        </button>
+        <button class="share-btn" onclick="event.stopPropagation(); shareNotif('${n.id}')" title="Copy Link">
+          <i class="fa-solid fa-share-nodes"></i>
+        </button>
       </div>
     </div>
   `;
 
       card.addEventListener('click', (e) => {
         if (e.target.closest('a') || e.target.closest('button')) return;
-        openNotifModal(n);
+        window.history.pushState(null, '', `?id=${n.id}`);
+        checkUrlParams();
       });
 
       return card;
@@ -2183,6 +2572,9 @@
       filtered.forEach(n => list.appendChild(buildCard(n)));
     }
 
+    window.addEventListener('popstate', checkUrlParams);
+    window.addEventListener('hashchange', checkUrlParams);
+
     async function init() {
       try {
         const res = await fetch('data/notifications.json');
@@ -2210,23 +2602,8 @@
         document.getElementById('pageLoading').style.display = 'none';
         render();
 
-        // Handle deep linking via hash (#notif-ID)
-        setTimeout(() => {
-          const hash = window.location.hash;
-          if (hash) {
-            const id = hash.replace('#notif-', '');
-            const target = document.getElementById(`notif-${id}`);
-            if (target) {
-              target.scrollIntoView({ behavior: 'smooth', block: 'center' });
-              target.style.borderColor = 'var(--gold)';
-              target.style.boxShadow = '0 0 20px var(--gold-dim)';
-
-              // Auto-open modal if linked directly
-              const n = allData.find(x => x.id === id);
-              if (n) openNotifModal(n);
-            }
-          }
-        }, 500);
+        // Process URL queries or hashes for detail view
+        checkUrlParams();
       } catch {
         document.getElementById('pageLoading').innerHTML =
           '<i class="fa-solid fa-triangle-exclamation" style="color:var(--red);font-size:1.4rem"></i><span>Could not load notifications. Please try again later.</span>';
@@ -2264,11 +2641,10 @@
     /* ── Sort ── */
     document.getElementById('sortBtn').addEventListener('click', () => {
       sortAsc = !sortAsc;
-      const btn = document.getElementById('sortBtn');
       const icon = document.getElementById('sortIcon');
-      btn.classList.toggle('asc', sortAsc);
+      document.getElementById('sortBtn').classList.toggle('asc', sortAsc);
       icon.className = `fa-solid ${sortAsc ? 'fa-arrow-up-wide-short' : 'fa-arrow-down-wide-short'} sort-icon`;
-      btn.childNodes[btn.childNodes.length - 1].textContent = sortAsc ? ' Oldest First' : ' Newest First';
+      document.getElementById('sortText').textContent = sortAsc ? 'Oldest First' : 'Newest First';
       render();
     });
 
