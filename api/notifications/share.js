@@ -42,14 +42,14 @@ module.exports = async (req, res) => {
 
     // Bot detection for crawlers (WhatsApp, Facebook, Twitter, Discord, etc.)
     const userAgent = req.headers['user-agent'] || '';
-    const isBot = /facebookexternalhit|twitterbot|whatsapp|telegrambot|discordbot|googlebot|bingbot|slackbot|vkShare|W3C_Validator/i.test(userAgent);
+    const isBot = /bot|facebookexternalhit|twitterbot|whatsapp|telegrambot|discordbot|googlebot|bingbot|slackbot|vkShare|W3C_Validator/i.test(userAgent);
 
-    const redirectMeta = isBot ? '' : `<meta http-equiv="refresh" content="0;url=/notifications#notif-${n.id}">`;
-    const redirectScript = isBot ? '' : `
-  <script>
-    window.location.href = "/notifications#notif-${n.id}";
-  </script>
-    `;
+    if (!isBot) {
+      return res.redirect(`/notifications#notif-${n.id}`);
+    }
+
+    const redirectMeta = '';
+    const redirectScript = '';
 
     const html = `
 <!DOCTYPE html>

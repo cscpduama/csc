@@ -33,14 +33,14 @@ module.exports = async (req, res) => {
 
     // Bot detection for crawlers (WhatsApp, Facebook, Twitter, Discord, etc.)
     const userAgent = req.headers['user-agent'] || '';
-    const isBot = /facebookexternalhit|twitterbot|whatsapp|telegrambot|discordbot|googlebot|bingbot|slackbot|vkShare|W3C_Validator/i.test(userAgent);
+    const isBot = /bot|facebookexternalhit|twitterbot|whatsapp|telegrambot|discordbot|googlebot|bingbot|slackbot|vkShare|W3C_Validator/i.test(userAgent);
 
-    const redirectMeta = isBot ? '' : `<meta http-equiv="refresh" content="0;url=/events#event-${e.id}">`;
-    const redirectScript = isBot ? '' : `
-  <script>
-    window.location.href = "/events#event-${e.id}";
-  </script>
-    `;
+    if (!isBot) {
+      return res.redirect(`/events#event-${e.id}`);
+    }
+
+    const redirectMeta = '';
+    const redirectScript = '';
 
     const html = `
 <!DOCTYPE html>
