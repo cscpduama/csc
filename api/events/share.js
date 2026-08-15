@@ -14,6 +14,7 @@ module.exports = async (req, res) => {
     }
 
     const baseUrl = `https://${req.headers.host}`;
+    const targetUrl = `${baseUrl}/events?id=${e.id}`;
     
     // Logic for determining the share image
     let image = e.image;
@@ -35,15 +36,14 @@ module.exports = async (req, res) => {
     const userAgent = req.headers['user-agent'] || '';
     const isBot = /bot|facebookexternalhit|twitterbot|whatsapp|telegrambot|discordbot|googlebot|bingbot|slackbot|vkShare|W3C_Validator/i.test(userAgent);
 
+    // If human user in a standard browser, redirect immediately server-side
     if (!isBot) {
-      return res.redirect(`/events#event-${e.id}`);
+      return res.redirect(targetUrl);
     }
 
-    const redirectMeta = '';
-    const redirectScript = '';
-
-    const html = `
-<!DOCTYPE html>
+    // For in-app webviews (which match user agent checks like WhatsApp/Telegram)
+    // we return HTML that includes both Open Graph tags for previews AND client-side redirects.
+    const html = `<!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8">
@@ -58,7 +58,7 @@ module.exports = async (req, res) => {
   <meta property="og:image:width" content="1200">
   <meta property="og:image:height" content="630">
   <meta property="og:image:type" content="${imageType}">
-  <meta property="og:url" content="${baseUrl}/events#event-${e.id}">
+  <meta property="og:url" content="${targetUrl}">
   <meta property="og:site_name" content="CS Department, PDUAM Amjonga">
 
   <!-- Twitter -->
@@ -66,17 +66,18 @@ module.exports = async (req, res) => {
   <meta name="twitter:title" content="${e.title}">
   <meta name="twitter:description" content="${e.description || 'Check out this event at the Department of Computer Science, PDUAM Amjonga.'}">
   <meta name="twitter:image" content="${image}">
-  <meta name="twitter:url" content="${baseUrl}/events#event-${e.id}">
+  <meta name="twitter:url" content="${targetUrl}">
 
-  <!-- Redirect for human users -->
-  ${redirectMeta}
+  <!-- Redirect fallback for webviews -->
+  <meta http-equiv="refresh" content="0;url=${targetUrl}">
 </head>
 <body>
   <p>Redirecting to event: <strong>${e.title}</strong>...</p>
-  ${redirectScript}
+  <script>
+    window.location.replace("${targetUrl}");
+  </script>
 </body>
-</html>
-    `;
+</html>`;
 
     res.setHeader('Content-Type', 'text/html');
     res.setHeader('Cache-Control', 's-maxage=60, stale-while-revalidate');

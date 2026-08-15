@@ -14,6 +14,7 @@ module.exports = async (req, res) => {
     }
 
     const baseUrl = `https://${req.headers.host}`;
+    const targetUrl = `${baseUrl}/notifications?id=${n.id}`;
     
     // Logic for determining the share image
     let image = n.url;
@@ -44,15 +45,14 @@ module.exports = async (req, res) => {
     const userAgent = req.headers['user-agent'] || '';
     const isBot = /bot|facebookexternalhit|twitterbot|whatsapp|telegrambot|discordbot|googlebot|bingbot|slackbot|vkShare|W3C_Validator/i.test(userAgent);
 
+    // If human user in a standard browser, redirect immediately server-side
     if (!isBot) {
-      return res.redirect(`/notifications#notif-${n.id}`);
+      return res.redirect(targetUrl);
     }
 
-    const redirectMeta = '';
-    const redirectScript = '';
-
-    const html = `
-<!DOCTYPE html>
+    // For in-app webviews (which match user agent checks like WhatsApp/Telegram)
+    // we return HTML that includes both Open Graph tags for previews AND client-side redirects.
+    const html = `<!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8">
@@ -67,7 +67,7 @@ module.exports = async (req, res) => {
   <meta property="og:image:width" content="1200">
   <meta property="og:image:height" content="630">
   <meta property="og:image:type" content="${imageType}">
-  <meta property="og:url" content="${baseUrl}/notifications#notif-${n.id}">
+  <meta property="og:url" content="${targetUrl}">
   <meta property="og:site_name" content="CS Department, PDUAM Amjonga">
 
   <!-- Twitter -->
@@ -75,17 +75,18 @@ module.exports = async (req, res) => {
   <meta name="twitter:title" content="${n.title}">
   <meta name="twitter:description" content="${n.text}">
   <meta name="twitter:image" content="${image}">
-  <meta name="twitter:url" content="${baseUrl}/notifications#notif-${n.id}">
+  <meta name="twitter:url" content="${targetUrl}">
 
-  <!-- Redirect for human users -->
-  ${redirectMeta}
+  <!-- Redirect fallback for webviews -->
+  <meta http-equiv="refresh" content="0;url=${targetUrl}">
 </head>
 <body>
   <p>Redirecting to notification: <strong>${n.title}</strong>...</p>
-  ${redirectScript}
+  <script>
+    window.location.replace("${targetUrl}");
+  </script>
 </body>
-</html>
-    `;
+</html>`;
 
     res.setHeader('Content-Type', 'text/html');
     res.setHeader('Cache-Control', 's-maxage=60, stale-while-revalidate');
