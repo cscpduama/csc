@@ -1,5 +1,15 @@
 [
   {
+  "id": "book-2nd-edition-published",
+  "title": "📖 2nd Edition of \"Advances in Multidisciplinary Research and Innovation\" Published",
+  "date": "2026-08-16",
+  "isNew": true,
+  "meta": "Deep Science Publishing",
+  "metaLink": {
+    "url": "https://csc.pduamamjonga.in/multidisciplinary-book-publish/edition-2/",
+    "label": "View Book"
+  },
+  {
     "id": "bsc-cs-merit-list-r1-non-cuet-2026",
     "isNew": false,
     "date": "2026-06-02",
