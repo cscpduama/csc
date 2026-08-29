@@ -16,19 +16,19 @@
     },
     {
       "source": "/cssa",
-      "destination": "https://cscpduama.github.io/CSSA/index.html"
+      "destination": "https://cscpduama.github.io/cssa/index.html"
     },
     {
       "source": "/cssa/",
-      "destination": "https://cscpduama.github.io/CSSA/index.html"
+      "destination": "https://cscpduama.github.io/cssa/index.html"
     },
     {
       "source": "/cssa/:path",
-      "destination": "https://cscpduama.github.io/CSSA/:path.html"
+      "destination": "https://cscpduama.github.io/cssa/:path.html"
     },
     {
       "source": "/cssa/:path*",
-      "destination": "https://cscpduama.github.io/CSSA/:path*"
+      "destination": "https://cscpduama.github.io/cssa/:path*"
     }
   ]
 }
