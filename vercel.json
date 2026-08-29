@@ -13,6 +13,18 @@
     {
       "source": "/multidisciplinary-book-publish/:path*",
       "destination": "https://multidisciplinary-book-publish.vercel.app/:path*"
+    },
+    {
+      "source": "/cssa",
+      "destination": "https://cscpduama.github.io/CSSA"
+    },
+    {
+      "source": "/cssa/",
+      "destination": "https://cscpduama.github.io/CSSA"
+    },
+    {
+      "source": "/cssa/:path*",
+      "destination": "https://cscpduama.github.io/CSSA/:path*"
     }
   ]
 }
