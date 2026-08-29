@@ -23,6 +23,10 @@
       "destination": "https://cscpduama.github.io/cssa/index.html"
     },
     {
+      "source": "/cssa/:path.html",
+      "destination": "https://cscpduama.github.io/cssa/:path.html"
+    },
+    {
       "source": "/cssa/:path",
       "destination": "https://cscpduama.github.io/cssa/:path.html"
     },
