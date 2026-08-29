@@ -1,6 +1,18 @@
 {
   "cleanUrls": true,
   "trailingSlash": false,
+  "redirects": [
+    {
+      "source": "/:subpath/sitemap.xml",
+      "destination": "/sitemap.xml",
+      "permanent": true
+    },
+    {
+      "source": "/:subpath/robots.txt",
+      "destination": "/robots.txt",
+      "permanent": true
+    }
+  ],
   "rewrites": [
     {
       "source": "/multidisciplinary-book-publish",
