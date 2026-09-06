@@ -73,6 +73,18 @@
     <priority>0.8</priority>
   </url>
   <url>
+    <loc>https://csc.pduamamjonga.in/publications.html</loc>
+    <lastmod>2026-09-06</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://csc.pduamamjonga.in/publications</loc>
+    <lastmod>2026-09-06</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
     <loc>https://csc.pduamamjonga.in/multidisciplinary-book-publish</loc>
     <lastmod>2026-08-14</lastmod>
     <changefreq>monthly</changefreq>
