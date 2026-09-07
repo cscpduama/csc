@@ -354,6 +354,107 @@
     display: flex; align-items: center; justify-content: center; z-index: 10001;
   }
   .modal-close:hover { background: var(--red); border-color: var(--red); transform: rotate(90deg); }
+  .modal-caption {
+    color: #fff; font-size: 1.05rem; font-weight: 500;
+    text-align: center; letter-spacing: 0.02em; text-shadow: 0 2px 4px rgba(0,0,0,0.5);
+    margin-top: 0.85rem;
+    width: 100%;
+    max-width: 800px;
+  }
+  .modal-controls {
+    display: none;
+    align-items: center;
+    justify-content: center;
+    gap: 1.25rem;
+    width: 100%;
+    margin-top: 1rem;
+    z-index: 10001;
+  }
+  .modal-nav-btn {
+    position: absolute; top: 50%; transform: translateY(-50%);
+    background: rgba(255,255,255,0.12); border: 1px solid rgba(255,255,255,0.25);
+    color: #fff; width: 50px; height: 50px; border-radius: 50%;
+    font-size: 1.2rem; cursor: pointer; transition: all var(--tr);
+    display: flex; align-items: center; justify-content: center; z-index: 10001;
+    backdrop-filter: blur(4px); -webkit-backdrop-filter: blur(4px);
+  }
+  .modal-nav-btn:hover {
+    background: var(--gold); border-color: var(--gold); color: #000;
+    transform: translateY(-50%) scale(1.1);
+    box-shadow: 0 0 20px rgba(212, 168, 67, 0.4);
+  }
+  .modal-prev { left: 1.5rem; }
+  .modal-next { right: 1.5rem; }
+
+  @media (max-width: 768px) {
+    .photo-modal {
+      padding: 4rem 1rem 6rem;
+      justify-content: center;
+      overflow: hidden;
+    }
+    .modal-img-wrap {
+      max-height: 58vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+    .modal-img {
+      max-height: 58vh;
+    }
+    .modal-caption { 
+      font-size: 0.85rem; 
+      line-height: 1.35; 
+      margin-top: 0.75rem; 
+      max-height: 2.8em;
+      overflow: hidden;
+    }
+    .modal-controls {
+      display: flex;
+      position: absolute;
+      bottom: 2.25rem;
+      left: 0;
+      right: 0;
+      margin-top: 0;
+      padding: 0 1rem;
+      z-index: 10002;
+    }
+    .modal-nav-btn {
+      position: static;
+      transform: none;
+      width: auto;
+      height: 42px;
+      padding: 0 1.4rem;
+      border-radius: 99px;
+      font-size: 0.85rem;
+      font-weight: 600;
+      gap: 0.45rem;
+      color: #ffffff;
+      background: rgba(255, 255, 255, 0.18);
+      border-color: rgba(255, 255, 255, 0.35);
+      backdrop-filter: blur(10px);
+      -webkit-backdrop-filter: blur(10px);
+      box-shadow: 0 4px 20px rgba(0, 0, 0, 0.4);
+      outline: none;
+      -webkit-tap-highlight-color: transparent;
+    }
+    .modal-nav-btn:hover,
+    .modal-nav-btn:focus,
+    .modal-nav-btn:focus-visible {
+      background: rgba(255, 255, 255, 0.18);
+      border-color: rgba(255, 255, 255, 0.35);
+      color: #ffffff;
+      transform: none;
+      box-shadow: 0 4px 20px rgba(0, 0, 0, 0.4);
+    }
+    .modal-nav-btn:active {
+      background: var(--gold);
+      border-color: var(--gold);
+      color: #000000;
+      transform: scale(0.96);
+    }
+    .modal-prev { left: auto; }
+    .modal-next { right: auto; }
+  }
   .modal-img-wrap {
     position: relative; max-width: 100%; max-height: 80vh;
     border-radius: var(--r); overflow: hidden;
@@ -363,10 +464,7 @@
     display: block; max-width: 100%; max-height: 80vh; object-fit: contain;
     user-select: none; pointer-events: none; /* Prevents dragging/right-clicking image */
   }
-  .modal-caption {
-    margin-top: 1.5rem; color: #fff; font-size: 1.1rem; font-weight: 500;
-    text-align: center; letter-spacing: 0.02em; text-shadow: 0 2px 4px rgba(0,0,0,0.5);
-  }
+
 
   /* ════════ MAIN CONTENT (GALLERY SPECIFIC) ════════ */
   .wrap { max-width: 1280px; margin: 0 auto; padding: 3.5rem 2rem 5rem; flex: 1; }
@@ -601,6 +699,7 @@
   </script>
   <script defer src="/_vercel/insights/script.js"></script>
   <script defer src="/_vercel/speed-insights/script.js"></script>
+  <link rel="stylesheet" href="shared/shared.css"/>
 </head>
 <body>
 
@@ -709,6 +808,14 @@
   <div class="modal-img-wrap" oncontextmenu="return false;">
     <img src="" alt="Gallery Photo" id="modalImg" class="modal-img" />
   </div>
+  <div class="modal-controls">
+    <button class="modal-nav-btn modal-prev" id="modalPrev" aria-label="Previous photo">
+      <i class="fa-solid fa-chevron-left"></i> Previous
+    </button>
+    <button class="modal-nav-btn modal-next" id="modalNext" aria-label="Next photo">
+      Next <i class="fa-solid fa-chevron-right"></i>
+    </button>
+  </div>
   <div class="modal-caption" id="modalCaption"></div>
 </div>
 
@@ -809,7 +916,16 @@ document.addEventListener('DOMContentLoaded', () => {
         return parseInt(b) - parseInt(a);
       });
 
+      // Populate global galleryItems list in render order
+      galleryItems = [];
+      sortedYears.forEach(year => {
+        groupedData[year].forEach(item => {
+          galleryItems.push(item);
+        });
+      });
+
       // Render categories and cards
+      let globalIdx = 0;
       sortedYears.forEach(year => {
         // Create the elegant Year Divider
         const yearHeader = document.createElement('div');
@@ -822,6 +938,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
         // Append cards for that year
         groupedData[year].forEach(item => {
+          const itemIdx = globalIdx++;
           const card = document.createElement('div');
           card.className = 'gallery-card';
           
@@ -834,9 +951,9 @@ document.addEventListener('DOMContentLoaded', () => {
             </div>
           `;
           
-          // Open Lightbox Instead of Redirecting
+          // Open Lightbox with Index
           card.addEventListener('click', () => {
-             openLightbox(imageSource, item.alt, item.occasion);
+             openLightboxIndex(itemIdx);
           });
 
           container.appendChild(card);
@@ -854,35 +971,62 @@ document.addEventListener('DOMContentLoaded', () => {
 });
 
 /* ═══════════════════════════════════════
-   LIGHTBOX LOGIC
+   LIGHTBOX LOGIC WITH PREV / NEXT NAV
 ═══════════════════════════════════════ */
 const photoModal = document.getElementById('photoModal');
 const modalImg = document.getElementById('modalImg');
 const modalCaption = document.getElementById('modalCaption');
 const modalCloseBtn = document.getElementById('modalClose');
+const modalPrevBtn = document.getElementById('modalPrev');
+const modalNextBtn = document.getElementById('modalNext');
 
-function openLightbox(src, alt, caption) {
-  modalImg.src = src;
-  modalImg.onerror = function() { this.src = 'assets/images/gallery/pic.jpg'; };
-  modalImg.alt = alt;
-  modalCaption.textContent = caption;
+let galleryItems = [];
+let currentIndex = 0;
+
+function updateLightboxItem(index) {
+  if (!galleryItems.length) return;
+  currentIndex = (index + galleryItems.length) % galleryItems.length;
+  const item = galleryItems[currentIndex];
   
+  modalImg.src = item.src;
+  modalImg.onerror = function() { this.src = 'assets/images/gallery/pic.jpg'; };
+  modalImg.alt = item.alt || 'Gallery Photo';
+  modalCaption.textContent = item.occasion || '';
+}
+
+function openLightboxIndex(index) {
+  updateLightboxItem(index);
   photoModal.classList.add('open');
-  document.body.style.overflow = 'hidden'; // prevent scrolling behind modal
+  document.body.style.overflow = 'hidden';
 }
 
 function closeLightbox() {
   photoModal.classList.remove('open');
   document.body.style.overflow = '';
-  setTimeout(() => { modalImg.src = ''; }, 300); // clear src after fade out
+  setTimeout(() => { modalImg.src = ''; }, 300);
 }
 
 modalCloseBtn.addEventListener('click', closeLightbox);
+modalPrevBtn.addEventListener('click', (e) => {
+  e.stopPropagation();
+  updateLightboxItem(currentIndex - 1);
+  modalPrevBtn.blur();
+});
+modalNextBtn.addEventListener('click', (e) => {
+  e.stopPropagation();
+  updateLightboxItem(currentIndex + 1);
+  modalNextBtn.blur();
+});
+
 photoModal.addEventListener('click', (e) => {
   if (e.target === photoModal || e.target === modalCaption) closeLightbox();
 });
+
 document.addEventListener('keydown', (e) => {
-  if (e.key === 'Escape' && photoModal.classList.contains('open')) closeLightbox();
+  if (!photoModal.classList.contains('open')) return;
+  if (e.key === 'Escape') closeLightbox();
+  if (e.key === 'ArrowLeft') updateLightboxItem(currentIndex - 1);
+  if (e.key === 'ArrowRight') updateLightboxItem(currentIndex + 1);
 });
 
 /* ═══════════════════════════════════════
@@ -981,5 +1125,6 @@ document.addEventListener("DOMContentLoaded", () => {
   });
 });
 </script>
+  <script src="shared/components.js"></script>
 </body>
 </html>
