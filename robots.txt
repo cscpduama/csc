@@ -1,4 +1,9 @@
 User-agent: *
+Disallow: /assets/logo/
+Disallow: /assets/favicon/
+Disallow: /assets/files/
+Allow: /assets/images/gallery/
+Allow: /assets/images/events/
 Disallow: /assets/
 Allow: /
 
