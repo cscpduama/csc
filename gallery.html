@@ -362,7 +362,7 @@
     max-width: 800px;
   }
   .modal-controls {
-    display: none;
+    display: flex;
     align-items: center;
     justify-content: center;
     gap: 1.25rem;
@@ -385,6 +385,7 @@
   }
   .modal-prev { left: 1.5rem; }
   .modal-next { right: 1.5rem; }
+  .modal-nav-btn span { display: none; }
 
   @media (max-width: 768px) {
     .photo-modal {
@@ -436,6 +437,9 @@
       box-shadow: 0 4px 20px rgba(0, 0, 0, 0.4);
       outline: none;
       -webkit-tap-highlight-color: transparent;
+    }
+    .modal-nav-btn span {
+      display: inline;
     }
     .modal-nav-btn:hover,
     .modal-nav-btn:focus,
@@ -810,10 +814,10 @@
   </div>
   <div class="modal-controls">
     <button class="modal-nav-btn modal-prev" id="modalPrev" aria-label="Previous photo">
-      <i class="fa-solid fa-chevron-left"></i> Previous
+      <i class="fa-solid fa-chevron-left"></i> <span>Previous</span>
     </button>
     <button class="modal-nav-btn modal-next" id="modalNext" aria-label="Next photo">
-      Next <i class="fa-solid fa-chevron-right"></i>
+      <span>Next</span> <i class="fa-solid fa-chevron-right"></i>
     </button>
   </div>
   <div class="modal-caption" id="modalCaption"></div>
