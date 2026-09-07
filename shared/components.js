@@ -41,7 +41,7 @@
     <div class="hdr-center">
       <div class="hdr-uni">Pandit Deendayal Upadhyaya Adarsha Mahavidyalaya, Amjonga</div>
       <div class="hdr-assamese">কম্পিউটাৰ বিজ্ঞান <span>বিভাগলৈ স্বাগতম</span></div>
-      <div class="hdr-sub">e-Portal · Department of Computer Science · PDUAM, Amjonga, Assam</div>
+      <div class="hdr-sub">e-Portal · Department of Computer Science · PDUAM, Amjonga</div>
       <div>
         <span class="hdr-tagline">
           <span class="live-dot"></span>প্রযুক্তিৰ পোহৰেৰে উদ্ভাসিত পৃথিৱী
