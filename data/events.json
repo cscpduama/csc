@@ -1,5 +1,17 @@
 [
   {
+  "id": "digilife-wall-magazine-2nd-edition-2026",
+  "title": "DigiLife² – The Art of Future: 2nd Edition",
+  "category": "other",
+  "date": "2026-09-09",
+  "displayDate": "9th September, 2026",
+  "time": "12:00 PM",
+  "location": "Department of Computer Science, PDUAM Amjonga",
+  "description": "The Department of Computer Science, PDUAM Amjonga inaugurated the 2nd edition of its departmental wall magazine, DigiLife² – The Art of Future. The wall magazine showcases the creativity, ideas, knowledge, and technical interests of the students of the department.",
+  "image": "YOUR_MAIN_IMAGE_URL",
+  "isNew": true
+  },
+  {
   "id": "expert-talk-advances-csit-2026",
   "title": "Expert Talk Session – Advances in Computer Science & Information Technology",
   "category": "other",
