@@ -1,5 +1,17 @@
 [
   {
+  "id": "expert-talk-advances-csit-2025",
+  "title": "Expert Talk Session – Advances in Computer Science & Information Technology",
+  "category": "other",
+  "date": "2025-09-09",
+  "displayDate": "9th September, 2025",
+  "time": "11:00 AM",
+  "location": "Smart Classroom-2, PDUAM Amjonga",
+  "description": "The Department of Computer Science, PDUAM Amjonga organized an Expert Talk Session on “Advances in Computer Science & Information Technology”. The session featured invited speakers and provided students with insights into emerging developments and advancements in Computer Science and Information Technology.",
+  "image": "YOUR_UPLOADED_IMAGE_URL",
+  "isNew": false
+  },
+  {
     "id": "hands-on-workshop-ai-ml-2026",
     "title": "HANDS ON WORKSHOP ON AI/ML",
     "category": "workshop",
