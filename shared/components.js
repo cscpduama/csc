@@ -202,6 +202,14 @@
               </a>
             </div>
           </div>
+          <div class="ftr-social-icons">
+            <a href="https://www.facebook.com/profile.php?id=100083022567984" target="_blank" rel="noopener noreferrer" class="ftr-social-icon" aria-label="Facebook Page" title="Facebook Page">
+              <i class="fa-brands fa-facebook"></i>
+            </a>
+            <a href="https://github.com/cscpduama/" target="_blank" rel="noopener noreferrer" class="ftr-social-icon" aria-label="GitHub Repository" title="GitHub (cscpduama)">
+              <i class="fa-brands fa-github"></i>
+            </a>
+          </div>
           <div class="ftr-bc-item">
             <i class="fa-solid fa-location-dot"></i>
             <a href="https://maps.app.goo.gl/WDbDdr6dqUqA9LVGA?g_st=aw" target="_blank" rel="noopener">Pandit Deendayal Upadhyaya Adarsha Mahavidyalaya, Amjonga, Goalpara, Assam – 783124</a>
@@ -251,6 +259,14 @@
               </a>
             </div>
           </div>
+          <div class="ftr-social-icons">
+            <a href="https://www.facebook.com/profile.php?id=100083022567984" target="_blank" rel="noopener noreferrer" class="ftr-social-icon" aria-label="Facebook Page" title="Facebook Page">
+              <i class="fa-brands fa-facebook"></i>
+            </a>
+            <a href="https://github.com/cscpduama/" target="_blank" rel="noopener noreferrer" class="ftr-social-icon" aria-label="GitHub Repository" title="GitHub (cscpduama)">
+              <i class="fa-brands fa-github"></i>
+            </a>
+          </div>
           <div class="ftr-bc-item">
             <i class="fa-solid fa-location-dot"></i>
             <a href="https://maps.app.goo.gl/WDbDdr6dqUqA9LVGA?g_st=aw" target="_blank" rel="noopener">Pandit Deendayal Upadhyaya Adarsha Mahavidyalaya, Amjonga, Goalpara, Assam – 783124</a>
@@ -259,6 +275,8 @@
 
         <h4>Useful Links</h4>
         <ul class="ftr-links">
+          <li><a href="https://www.facebook.com/profile.php?id=100083022567984" target="_blank" rel="noopener noreferrer"><i class="fa-brands fa-facebook"></i>Facebook Page</a></li>
+          <li><a href="https://github.com/cscpduama/" target="_blank" rel="noopener noreferrer"><i class="fa-brands fa-github"></i>GitHub (cscpduama)</a></li>
           <li><a href="https://gauhati.ac.in/" target="_blank" rel="noopener"><i class="fa-solid fa-arrow-up-right-from-square"></i>Gauhati University</a></li>
           <li><a href="https://ahsec.assam.gov.in/" target="_blank" rel="noopener"><i class="fa-solid fa-arrow-up-right-from-square"></i>AHSEC Assam</a></li>
           <li><a href="https://darpan.ahseconline.in/" target="_blank" rel="noopener"><i class="fa-solid fa-arrow-up-right-from-square"></i>Darpan Portal</a></li>
