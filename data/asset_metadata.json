@@ -1,0 +1,395 @@
+{
+  "https://cdn.pduamamjonga.in/csc/media/events/hands-on-workshop-ai-ml.webp": {
+    "category": "event",
+    "tags": [
+      "workshop",
+      "ai",
+      "ml"
+    ],
+    "path": "csc/media/events/hands-on-workshop-ai-ml.webp"
+  },
+  "https://cdn.pduamamjonga.in/csc/media/events/website-launch-ceremony.webp": {
+    "category": "event",
+    "tags": [
+      "website",
+      "launch"
+    ],
+    "path": "csc/media/events/website-launch-ceremony.webp"
+  },
+  "https://cdn.pduamamjonga.in/csc/media/events/lecture-series-iot-healthcare.webp": {
+    "category": "event",
+    "tags": [
+      "lecture",
+      "iot",
+      "healthcare"
+    ],
+    "path": "csc/media/events/lecture-series-iot-healthcare.webp"
+  },
+  "https://cdn.pduamamjonga.in/csc/media/events/district-level-coding-contest.webp": {
+    "category": "event",
+    "tags": [
+      "contest",
+      "coding"
+    ],
+    "path": "csc/media/events/district-level-coding-contest.webp"
+  },
+  "https://cdn.pduamamjonga.in/csc/media/events/edited-book-research-articles.webp": {
+    "category": "event",
+    "tags": [
+      "book",
+      "research"
+    ],
+    "path": "csc/media/events/edited-book-research-articles.webp"
+  },
+  "https://cdn.pduamamjonga.in/csc/media/events/industry-talks-corporate-sector.webp": {
+    "category": "event",
+    "tags": [
+      "industry",
+      "talk"
+    ],
+    "path": "csc/media/events/industry-talks-corporate-sector.webp"
+  },
+  "https://cdn.pduamamjonga.in/csc/media/events/lecture-series-career-building.webp": {
+    "category": "event",
+    "tags": [
+      "lecture",
+      "career"
+    ],
+    "path": "csc/media/events/lecture-series-career-building.webp"
+  },
+  "https://cdn.pduamamjonga.in/csc/media/events/national-level-equiz-2020.webp": {
+    "category": "event",
+    "tags": [
+      "quiz",
+      "2020"
+    ],
+    "path": "csc/media/events/national-level-equiz-2020.webp"
+  },
+  "https://cdn.pduamamjonga.in/csc/media/faculty/dr-sisir-kr-rajbongshi.webp": {
+    "category": "faculty",
+    "tags": [
+      "faculty",
+      "professor"
+    ],
+    "path": "csc/media/faculty/dr-sisir-kr-rajbongshi.webp"
+  },
+  "https://cdn.pduamamjonga.in/csc/media/faculty/dr-kshirod-sarmah.webp": {
+    "category": "faculty",
+    "tags": [
+      "faculty",
+      "professor"
+    ],
+    "path": "csc/media/faculty/dr-kshirod-sarmah.webp"
+  },
+  "https://cdn.pduamamjonga.in/csc/media/faculty/mr-dharmeswar-tarang.webp": {
+    "category": "faculty",
+    "tags": [
+      "faculty",
+      "hod"
+    ],
+    "path": "csc/media/faculty/mr-dharmeswar-tarang.webp"
+  },
+  "https://cdn.pduamamjonga.in/csc/media/faculty/dr-rajdeep-ghosh.webp": {
+    "category": "faculty",
+    "tags": [
+      "faculty",
+      "professor"
+    ],
+    "path": "csc/media/faculty/dr-rajdeep-ghosh.webp"
+  },
+  "https://cdn.pduamamjonga.in/csc/media/faculty/niranjan-keleng.webp": {
+    "category": "faculty",
+    "tags": [
+      "staff"
+    ],
+    "path": "csc/media/faculty/niranjan-keleng.webp"
+  },
+  "https://cdn.pduamamjonga.in/csc/docs/documents/bsc-cs-merit-list-2026.pdf": {
+    "category": "admission",
+    "tags": [
+      "merit-list",
+      "bsc",
+      "2026"
+    ],
+    "path": "csc/docs/documents/bsc-cs-merit-list-2026.pdf"
+  },
+  "https://cdn.pduamamjonga.in/csc/docs/notifications/notice-bsc-1st-3rd-sem-2024.webp": {
+    "category": "notification",
+    "tags": [
+      "notice",
+      "2024"
+    ],
+    "path": "csc/docs/notifications/notice-bsc-1st-3rd-sem-2024.webp"
+  },
+  "https://cdn.pduamamjonga.in/csc/docs/notifications/publication-multidisciplinary-2025.webp": {
+    "category": "publication",
+    "tags": [
+      "publication",
+      "book"
+    ],
+    "path": "csc/docs/notifications/publication-multidisciplinary-2025.webp"
+  },
+  "https://cdn.pduamamjonga.in/csc/docs/notifications/call-for-book-chapter-2025.webp": {
+    "category": "publication",
+    "tags": [
+      "call-for-chapter"
+    ],
+    "path": "csc/docs/notifications/call-for-book-chapter-2025.webp"
+  },
+  "https://cdn.pduamamjonga.in/csc/docs/notifications/science-stream-routine-2026.webp": {
+    "category": "academic",
+    "tags": [
+      "routine",
+      "2026"
+    ],
+    "path": "csc/docs/notifications/science-stream-routine-2026.webp"
+  },
+  "https://cdn.pduamamjonga.in/csc/docs/notifications/admission-open-2026-27.webp": {
+    "category": "admission",
+    "tags": [
+      "admission",
+      "2026-27"
+    ],
+    "path": "csc/docs/notifications/admission-open-2026-27.webp"
+  },
+  "https://cdn.pduamamjonga.in/csc/docs/notifications/bsc-4th-sem-registration-2026.webp": {
+    "category": "academic",
+    "tags": [
+      "registration",
+      "4th-sem"
+    ],
+    "path": "csc/docs/notifications/bsc-4th-sem-registration-2026.webp"
+  },
+  "https://cdn.pduamamjonga.in/csc/docs/notifications/call-for-book-chapters-2026.webp": {
+    "category": "publication",
+    "tags": [
+      "call-for-chapter",
+      "2026"
+    ],
+    "path": "csc/docs/notifications/call-for-book-chapters-2026.webp"
+  },
+  "https://cdn.pduamamjonga.in/csc/media/gallery/cs-lab-2017.webp": {
+    "category": "gallery",
+    "tags": [
+      "lab",
+      "2017"
+    ],
+    "path": "csc/media/gallery/cs-lab-2017.webp"
+  },
+  "https://cdn.pduamamjonga.in/csc/media/gallery/awareness-program-2024.webp": {
+    "category": "gallery",
+    "tags": [
+      "awareness",
+      "2024"
+    ],
+    "path": "csc/media/gallery/awareness-program-2024.webp"
+  },
+  "https://cdn.pduamamjonga.in/csc/media/gallery/wall-magazine-2024.webp": {
+    "category": "gallery",
+    "tags": [
+      "magazine",
+      "2024"
+    ],
+    "path": "csc/media/gallery/wall-magazine-2024.webp"
+  },
+  "https://cdn.pduamamjonga.in/csc/media/gallery/lecture-series-2019.webp": {
+    "category": "gallery",
+    "tags": [
+      "lecture",
+      "2019"
+    ],
+    "path": "csc/media/gallery/lecture-series-2019.webp"
+  },
+  "https://cdn.pduamamjonga.in/csc/media/gallery/wall-magazine-prep-2024.webp": {
+    "category": "gallery",
+    "tags": [
+      "magazine",
+      "prep"
+    ],
+    "path": "csc/media/gallery/wall-magazine-prep-2024.webp"
+  },
+  "https://cdn.pduamamjonga.in/csc/media/gallery/department-picnic-2025.webp": {
+    "category": "gallery",
+    "tags": [
+      "picnic",
+      "2025"
+    ],
+    "path": "csc/media/gallery/department-picnic-2025.webp"
+  },
+  "https://cdn.pduamamjonga.in/csc/media/gallery/lab-visit-2022.webp": {
+    "category": "gallery",
+    "tags": [
+      "lab",
+      "2022"
+    ],
+    "path": "csc/media/gallery/lab-visit-2022.webp"
+  },
+  "https://cdn.pduamamjonga.in/csc/media/gallery/farewell-celebration-2020.webp": {
+    "category": "gallery",
+    "tags": [
+      "farewell",
+      "2020"
+    ],
+    "path": "csc/media/gallery/farewell-celebration-2020.webp"
+  },
+  "https://cdn.pduamamjonga.in/csc/media/gallery/department-picnic-2022.webp": {
+    "category": "gallery",
+    "tags": [
+      "picnic",
+      "2022"
+    ],
+    "path": "csc/media/gallery/department-picnic-2022.webp"
+  },
+  "https://cdn.pduamamjonga.in/csc/media/gallery/statistics-talk-2022.webp": {
+    "category": "gallery",
+    "tags": [
+      "statistics",
+      "2022"
+    ],
+    "path": "csc/media/gallery/statistics-talk-2022.webp"
+  },
+  "https://cdn.pduamamjonga.in/csc/media/gallery/cs-dept-event-pic-1.jpg": {
+    "category": "gallery",
+    "tags": [
+      "event",
+      "photo"
+    ],
+    "path": "csc/media/gallery/cs-dept-event-pic-1.jpg"
+  },
+  "https://cdn.pduamamjonga.in/csc/media/gallery/cs-dept-event-pic-2.jpg": {
+    "category": "gallery",
+    "tags": [
+      "event",
+      "photo"
+    ],
+    "path": "csc/media/gallery/cs-dept-event-pic-2.jpg"
+  },
+  "https://cdn.pduamamjonga.in/csc/media/gallery/cs-dept-event-pic-3.jpg": {
+    "category": "gallery",
+    "tags": [
+      "event",
+      "photo"
+    ],
+    "path": "csc/media/gallery/cs-dept-event-pic-3.jpg"
+  },
+  "https://cdn.pduamamjonga.in/csc/media/gallery/cs-dept-event-pic-4.jpg": {
+    "category": "gallery",
+    "tags": [
+      "event",
+      "photo"
+    ],
+    "path": "csc/media/gallery/cs-dept-event-pic-4.jpg"
+  },
+  "https://cdn.pduamamjonga.in/csc/media/gallery/cs-dept-event-pic-5.jpg": {
+    "category": "gallery",
+    "tags": [
+      "event",
+      "photo"
+    ],
+    "path": "csc/media/gallery/cs-dept-event-pic-5.jpg"
+  },
+  "https://cdn.pduamamjonga.in/csc/media/gallery/cs-dept-event-pic-6.jpg": {
+    "category": "gallery",
+    "tags": [
+      "event",
+      "photo"
+    ],
+    "path": "csc/media/gallery/cs-dept-event-pic-6.jpg"
+  },
+  "https://cdn.pduamamjonga.in/csc/media/gallery/cs-dept-event-pic-7.jpg": {
+    "category": "gallery",
+    "tags": [
+      "event",
+      "photo"
+    ],
+    "path": "csc/media/gallery/cs-dept-event-pic-7.jpg"
+  },
+  "https://cdn.pduamamjonga.in/csc/media/index/cs-laboratory-pduam.jpg": {
+    "category": "slideshow",
+    "tags": [
+      "lab",
+      "slideshow"
+    ],
+    "path": "csc/media/index/cs-laboratory-pduam.jpg"
+  },
+  "https://cdn.pduamamjonga.in/csc/media/index/digilife-wall-magazine-2.jpg": {
+    "category": "slideshow",
+    "tags": [
+      "magazine",
+      "slideshow"
+    ],
+    "path": "csc/media/index/digilife-wall-magazine-2.jpg"
+  },
+  "https://cdn.pduamamjonga.in/csc/media/index/lecture-series-event.jpg": {
+    "category": "slideshow",
+    "tags": [
+      "lecture",
+      "slideshow"
+    ],
+    "path": "csc/media/index/lecture-series-event.jpg"
+  },
+  "https://cdn.pduamamjonga.in/csc/media/index/awareness-program-cs.jpg": {
+    "category": "slideshow",
+    "tags": [
+      "awareness",
+      "slideshow"
+    ],
+    "path": "csc/media/index/awareness-program-cs.jpg"
+  },
+  "https://cdn.pduamamjonga.in/csc/media/index/5th-anniversary-celebration.jpg": {
+    "category": "slideshow",
+    "tags": [
+      "celebration",
+      "slideshow"
+    ],
+    "path": "csc/media/index/5th-anniversary-celebration.jpg"
+  },
+  "https://cdn.pduamamjonga.in/csc/media/index/department-picnic-2025.jpg": {
+    "category": "slideshow",
+    "tags": [
+      "picnic",
+      "slideshow"
+    ],
+    "path": "csc/media/index/department-picnic-2025.jpg"
+  },
+  "https://cdn.pduamamjonga.in/csc/media/index/faculty-academic-event-1.jpg": {
+    "category": "slideshow",
+    "tags": [
+      "faculty",
+      "slideshow"
+    ],
+    "path": "csc/media/index/faculty-academic-event-1.jpg"
+  },
+  "https://cdn.pduamamjonga.in/csc/media/index/faculty-academic-event-2.jpg": {
+    "category": "slideshow",
+    "tags": [
+      "faculty",
+      "slideshow"
+    ],
+    "path": "csc/media/index/faculty-academic-event-2.jpg"
+  },
+  "https://cdn.pduamamjonga.in/csc/media/index/department-activity-event.jpg": {
+    "category": "slideshow",
+    "tags": [
+      "activity",
+      "slideshow"
+    ],
+    "path": "csc/media/index/department-activity-event.jpg"
+  },
+  "https://cdn.pduamamjonga.in/csc/media/index/nep-workshop-seminar.jpg": {
+    "category": "slideshow",
+    "tags": [
+      "nep",
+      "slideshow"
+    ],
+    "path": "csc/media/index/nep-workshop-seminar.jpg"
+  },
+  "https://cdn.pduamamjonga.in/csc/media/index/wall-magazine-1.jpg": {
+    "category": "slideshow",
+    "tags": [
+      "magazine",
+      "slideshow"
+    ],
+    "path": "csc/media/index/wall-magazine-1.jpg"
+  }
+}

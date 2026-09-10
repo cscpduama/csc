@@ -32,7 +32,7 @@
     "time": "10:00 AM",
     "location": "CSC Lab, PDUAM Amjonga",
     "description": "The Department of Computer Science, PDUAM Amjonga is organizing a hands-on workshop on AI/ML. Topics covered include Data Handling, Machine Learning Algorithms, Data Visualisation, and Deep Learning.",
-    "image": "https://cdn.pduamamjonga.in/csc/events/hands-on-workshop-ai-ml.webp",
+    "image": "https://cdn.pduamamjonga.in/csc/media/events/hands-on-workshop-ai-ml.webp",
     "isNew": false
   },
   {
@@ -44,7 +44,7 @@
     "time": "9:00 AM",
     "location": "Smart Classroom-2, PDUAM Amjonga",
     "description": "Join us for the official unveiling of our Department's website.",
-    "image": "https://cdn.pduamamjonga.in/csc/events/website-launch-ceremony.webp",
+    "image": "https://cdn.pduamamjonga.in/csc/media/events/website-launch-ceremony.webp",
     "isNew": false
   },
   {
@@ -56,7 +56,7 @@
     "time": "10:00 AM",
     "location": "Department of Computer Science, PDUAM Amjonga",
     "description": "Join us for an interactive lecture series on the latest trends in IoT in Healthcare. The event will feature a lecture and a hands-on coding session.",
-    "image": "https://cdn.pduamamjonga.in/csc/events/lecture-series-iot-healthcare.webp",
+    "image": "https://cdn.pduamamjonga.in/csc/media/events/lecture-series-iot-healthcare.webp",
     "isNew": false
   },
   {
@@ -68,7 +68,7 @@
     "time": "12:15 PM",
     "location": "Computer Lab, PDUAM Amjonga",
     "description": "District Level Online Coding Competition – 2025. The competition will provide a platform to test logical thinking, programming ability, and problem-solving skills.",
-    "image": "https://cdn.pduamamjonga.in/csc/events/district-level-coding-contest.webp",
+    "image": "https://cdn.pduamamjonga.in/csc/media/events/district-level-coding-contest.webp",
     "isNew": false
   },
   {
@@ -80,7 +80,7 @@
     "time": "11:00 AM",
     "location": "PDUAM Amjonga",
     "description": "The department is delighted to announce the first edition of our international edited volume: AI and ICT in Multidisciplinary Research. Publisher: International Publisher with ISBN & Crossref DOI.",
-    "image": "https://cdn.pduamamjonga.in/csc/events/edited-book-research-articles.webp",
+    "image": "https://cdn.pduamamjonga.in/csc/media/events/edited-book-research-articles.webp",
     "isNew": false
   },
   {
@@ -116,7 +116,7 @@
     "time": "10:00 AM",
     "location": "Department of Computer Science, PDUAM Amjonga",
     "description": "An industry talk by Mr. Sudeep Dey, Lead Data Engineer at Lowe's Technology (U.S.A.), discussing Computer Science in the Corporate Sector. Organized by the Department of Computer Science, PDUAM Amjonga, under the National Higher Education Mission.",
-    "image": "https://cdn.pduamamjonga.in/csc/events/industry-talks-corporate-sector.webp",
+    "image": "https://cdn.pduamamjonga.in/csc/media/events/industry-talks-corporate-sector.webp",
     "isNew": false
   },
   {
@@ -128,7 +128,7 @@
     "time": "10:00 AM",
     "location": "PDUAM Amjonga",
     "description": "Speaker: Dr Manoj Deka, Assistant Professor, Bodoland University.",
-    "image": "https://cdn.pduamamjonga.in/csc/events/lecture-series-career-building.webp",
+    "image": "https://cdn.pduamamjonga.in/csc/media/events/lecture-series-career-building.webp",
     "isNew": false
   },
   {
@@ -152,7 +152,7 @@
     "time": "10:00 AM",
     "location": "Online",
     "description": "",
-    "image": "https://cdn.pduamamjonga.in/csc/events/national-level-equiz-2020.webp",
+    "image": "https://cdn.pduamamjonga.in/csc/media/events/national-level-equiz-2020.webp",
     "isNew": false
   },
   {

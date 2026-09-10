@@ -20,7 +20,7 @@
     "category": "admission",
     "title": "Merit List for B.Sc. in Computer Science (Round 1 - Non-CUET) PDUAM, Amjonga",
     "text": "The Department of Computer Science, PDUAM, Amjonga has published the Round 1 Merit List for B.Sc. Computer Science admissions under the Non-CUET category for the 2026–27 academic session. Candidates are advised to check their name & score in merit list.",
-    "url": "https://cdn.pduamamjonga.in/csc/files/documents/bsc-cs-merit-list-2026.pdf",
+    "url": "https://cdn.pduamamjonga.in/csc/docs/documents/bsc-cs-merit-list-2026.pdf",
     "meta": "Academic Announcement"
   },
   {
@@ -30,7 +30,7 @@
     "category": "publication",
     "title": "Call for Book Chapters – Second Edition",
     "text": "The Department of Computer Science, PDUAM Amjonga invites original and unpublished research chapters for the 2nd Edition of the international edited volume 'Advances in Multidisciplinary Research and Innovation' published by Deep Science Publishing.\n\n📅 Last Date of Submission: 31 July 2026\n📖 Expected Publication: 30 August 2026\n💰 Publication Fee: ₹400 per accepted chapter\n\nThemes include Arts & Humanities, Science & Innovation, Commerce & Management, AI & Emerging Technologies, Teaching & Education, and Social Sciences.\n\n📧 Submit Chapters: cscpduambookchapter@gmail.com\n📞 Contact: +91 9401800625\n\n🔗 DOI: https://doi.org/10.70593/978-93-7185-110-7",
-    "url": "https://cdn.pduamamjonga.in/csc/files/notifications/call-for-book-chapters-2026.webp",
+    "url": "https://cdn.pduamamjonga.in/csc/docs/notifications/call-for-book-chapters-2026.webp",
     "meta": "Submission Deadline: 31 July 2026 | Submission Email: cscpduambookchapter@gmail.com"
   },
   {
@@ -40,7 +40,7 @@
     "category": "event",
     "title": "Hands-on Workshop on AI/ML",
     "text": "The Department of Computer Science, PDUAM Amjonga is organizing a hands-on workshop on AI/ML on May 16, 2026, at the CSC Lab. Topics include Data Processing, ML Algorithms, and Deep Learning.",
-    "url": "https://cdn.pduamamjonga.in/csc/files/notifications/workshop-ai-ml-2026.webp",
+    "url": "https://cdn.pduamamjonga.in/csc/media/events/hands-on-workshop-ai-ml.webp",
     "meta": "Venue: CSC Lab, PDUAM Amjonga| 10:00 AM"
   },
   {
@@ -50,7 +50,7 @@
     "category": "academic",
     "title": "GU Portal Course Registration for B.Sc. 4th Semester",
     "text": "All 4th Semester students are notified to do course registration in GU portal. Note: AEC is based on 1st sem selection. DBMS is Major for major students and Minor for minor students. Number Theory is Minor for CS major students.",
-    "url": "https://cdn.pduamamjonga.in/csc/files/notifications/bsc-4th-sem-registration-2026.webp",
+    "url": "https://cdn.pduamamjonga.in/csc/docs/notifications/bsc-4th-sem-registration-2026.webp",
     "meta": "Samarth Portal Registration"
   },
   {
@@ -60,7 +60,7 @@
     "category": "academic",
     "title": "B.Sc. in Computer Science Admission 2026-27",
     "text": "Admission is now open for the session 2026-27. Candidates can apply through the Samarth Admission Portal.",
-    "url": "https://cdn.pduamamjonga.in/csc/files/notifications/admission-open-2026-27.webp",
+    "url": "https://cdn.pduamamjonga.in/csc/docs/notifications/admission-open-2026-27.webp",
     "meta": "Admission Registration Link"
   },
   {
@@ -72,7 +72,7 @@
     "text": "View the latest class schedule here",
     "url": "routine",
     "meta": "",
-    "image": "https://cdn.pduamamjonga.in/csc/files/notifications/science-stream-routine-2026.webp"
+    "image": "https://cdn.pduamamjonga.in/csc/docs/notifications/science-stream-routine-2026.webp"
   },
   {
     "id": "bsc-cs-syllabus",
@@ -103,7 +103,7 @@
     "text": "View the details here",
     "url": "https://drive.google.com/file/d/1TYFJniSdb9bkq3TKXDpqYt9Eh3U7VVNO/view?usp=drive_link",
     "meta": "",
-    "image": "https://cdn.pduamamjonga.in/csc/files/notifications/call-for-book-chapter-2025.webp"
+    "image": "https://cdn.pduamamjonga.in/csc/docs/notifications/call-for-book-chapter-2025.webp"
   },
   {
     "id": "district-level-coding-contest-2025",
@@ -112,7 +112,7 @@
     "category": "event",
     "title": "Coding Contest",
     "text": "District Level Coding Contest — Details",
-    "url": "https://cdn.pduamamjonga.in/csc/files/notifications/coding-contest-2025.webp",
+    "url": "https://cdn.pduamamjonga.in/csc/media/events/district-level-coding-contest.webp",
     "meta": ""
   },
   {
@@ -124,7 +124,7 @@
     "text": "\"Multidisciplinary Research: Innovations in Science, Arts and Commerce\" — First Edition",
     "url": "/multidisciplinary-book-publish/edition-1/",
     "meta": "Deep Science Publishing (USA · UK · India · Turkey) · ISBN: 978-93-7185-157-2",
-    "image": "https://cdn.pduamamjonga.in/csc/files/notifications/publication-multidisciplinary-2025.webp"
+    "image": "https://cdn.pduamamjonga.in/csc/docs/notifications/publication-multidisciplinary-2025.webp"
   },
   {
     "id": "notice-1st-3rd-sem-2024",
@@ -133,7 +133,7 @@
     "category": "academic",
     "title": "Notice for B.Sc. 1st Semester & 3rd Semester Students",
     "text": "View Notice",
-    "url": "https://cdn.pduamamjonga.in/csc/files/notifications/notice-bsc-1st-3rd-sem-2024.webp",
+    "url": "https://cdn.pduamamjonga.in/csc/docs/notifications/notice-bsc-1st-3rd-sem-2024.webp",
     "meta": "SEC Notice for B.Sc. 1st & 3rd Sem Students"
   }
 ]
