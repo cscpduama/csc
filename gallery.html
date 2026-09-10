@@ -733,10 +733,10 @@
 <!-- ════ NAV ════ -->
 <nav>
   <div class="nav-inner">
-    <a href="index" class="nav-brand" style="text-decoration: none;"><i class="fa-solid fa-microchip"></i> CS · PDUAM</a>
+    <a href="/" class="nav-brand" style="text-decoration: none;"><i class="fa-solid fa-microchip"></i> CS · PDUAM</a>
 
     <ul class="nav-links">
-      <li><a href="index"><i class="fa-solid fa-house"></i> Home</a></li>
+      <li><a href="/"><i class="fa-solid fa-house"></i> Home</a></li>
       <li><a href="mission"><i class="fa-solid fa-bullseye"></i> Mission</a></li>
       <li><a href="faculty"><i class="fa-solid fa-chalkboard-user"></i> Faculty</a></li>
       <li><a href="students"><i class="fa-solid fa-graduation-cap"></i> Students</a></li>
@@ -772,14 +772,14 @@
 <!-- ════ MOBILE OVERLAY — GLASSMORPHISM ════ -->
 <div class="mob-overlay" id="mobOverlay" role="dialog" aria-modal="true" aria-label="Navigation menu">
   <div class="mob-head">
-    <a href="index" class="mob-brand" style="text-decoration: none;"><i class="fa-solid fa-microchip"></i> CS · PDUAM</a>
+    <a href="/" class="mob-brand" style="text-decoration: none;"><i class="fa-solid fa-microchip"></i> CS · PDUAM</a>
     <button class="mob-close-btn" id="mobClose" aria-label="Close menu">
       <i class="fa-solid fa-xmark"></i>
     </button>
   </div>
 
   <nav class="mob-links">
-    <a href="index"><i class="fa-solid fa-house"></i>Home</a>
+    <a href="/"><i class="fa-solid fa-house"></i>Home</a>
     <a href="mission"><i class="fa-solid fa-bullseye"></i>Mission</a>
     <a href="faculty"><i class="fa-solid fa-chalkboard-user"></i>Faculty</a>
     <a href="students"><i class="fa-solid fa-graduation-cap"></i>Student Corner</a>
@@ -941,15 +941,28 @@ document.addEventListener('DOMContentLoaded', () => {
         container.appendChild(yearHeader);
 
         // Append cards for that year
+        const fallbacks = [
+          'assets/images/gallery/pic.jpg',
+          'assets/images/gallery/aw.jpg',
+          'assets/images/gallery/5th.jpg',
+          'assets/images/gallery/sem.jpg',
+          'assets/images/gallery/meg.jpg',
+          'assets/images/gallery/mz1.jpg',
+          'assets/images/gallery/mz3.jpg',
+          'assets/images/gallery/sikh.jpg',
+          'assets/images/gallery/mz5.jpg'
+        ];
+
         groupedData[year].forEach(item => {
           const itemIdx = globalIdx++;
           const card = document.createElement('div');
           card.className = 'gallery-card';
           
           const imageSource = item.src;
+          const fallbackImg = fallbacks[itemIdx % fallbacks.length];
           
           card.innerHTML = `
-            <img src="${imageSource}" alt="${item.alt}" class="gallery-img" loading="lazy" onerror="this.src='assets/images/gallery/pic.jpg'"/>
+            <img src="${imageSource}" alt="${item.alt}" class="gallery-img" loading="lazy" onerror="this.onerror=null; this.src='${fallbackImg}';"/>
             <div class="gallery-overlay">
               <div class="occasion-text">${item.occasion}</div>
             </div>
@@ -992,8 +1005,21 @@ function updateLightboxItem(index) {
   currentIndex = (index + galleryItems.length) % galleryItems.length;
   const item = galleryItems[currentIndex];
   
+  const fallbacks = [
+    'assets/images/gallery/pic.jpg',
+    'assets/images/gallery/aw.jpg',
+    'assets/images/gallery/5th.jpg',
+    'assets/images/gallery/sem.jpg',
+    'assets/images/gallery/meg.jpg',
+    'assets/images/gallery/mz1.jpg',
+    'assets/images/gallery/mz3.jpg',
+    'assets/images/gallery/sikh.jpg',
+    'assets/images/gallery/mz5.jpg'
+  ];
+  const fallbackImg = fallbacks[currentIndex % fallbacks.length];
+
   modalImg.src = item.src;
-  modalImg.onerror = function() { this.src = 'assets/images/gallery/pic.jpg'; };
+  modalImg.onerror = function() { this.onerror = null; this.src = fallbackImg; };
   modalImg.alt = item.alt || 'Gallery Photo';
   modalCaption.textContent = item.occasion || '';
 }
