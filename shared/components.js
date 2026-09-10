@@ -275,8 +275,6 @@
 
         <h4>Useful Links</h4>
         <ul class="ftr-links">
-          <li><a href="https://www.facebook.com/profile.php?id=100083022567984" target="_blank" rel="noopener noreferrer"><i class="fa-brands fa-facebook"></i>Facebook Page</a></li>
-          <li><a href="https://github.com/cscpduama/" target="_blank" rel="noopener noreferrer"><i class="fa-brands fa-github"></i>GitHub (cscpduama)</a></li>
           <li><a href="https://gauhati.ac.in/" target="_blank" rel="noopener"><i class="fa-solid fa-arrow-up-right-from-square"></i>Gauhati University</a></li>
           <li><a href="https://ahsec.assam.gov.in/" target="_blank" rel="noopener"><i class="fa-solid fa-arrow-up-right-from-square"></i>AHSEC Assam</a></li>
           <li><a href="https://darpan.ahseconline.in/" target="_blank" rel="noopener"><i class="fa-solid fa-arrow-up-right-from-square"></i>Darpan Portal</a></li>
