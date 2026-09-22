@@ -1,5 +1,16 @@
 [
   {
+    "name": "Dr. Rajdeep Ghosh (HoD)",
+    "title": "Assistant Professor",
+    "qualification": "Ph.D, M.Tech, NET, GATE",
+    "specialization": "Machine Learning, AI, Cloud Computing",
+    "email": "grajdeep.2014@gmail.com",
+    "phone": "+91 90855 77988",
+    "image": "https://cdn.pduamamjonga.in/csc/media/faculty/dr-rajdeep-ghosh.webp",
+    "link": "",
+    "category": "teaching"
+  },
+  {
     "name": "Dr. Sisir Kr. Rajbongshi",
     "title": "Assistant Professor",
     "qualification": "M.Sc., Ph.D., GATE",
@@ -29,17 +40,6 @@
     "email": "dharmeswartarang@gmail.com",
     "phone": "+91 78964 82942",
     "image": "https://cdn.pduamamjonga.in/csc/media/faculty/mr-dharmeswar-tarang.webp",
-    "link": "",
-    "category": "teaching"
-  },
-  {
-    "name": "Dr. Rajdeep Ghosh (HoD)",
-    "title": "Assistant Professor",
-    "qualification": "Ph.D, M.Tech, NET, GATE",
-    "specialization": "Machine Learning, AI, Cloud Computing",
-    "email": "grajdeep.2014@gmail.com",
-    "phone": "+91 90855 77988",
-    "image": "https://cdn.pduamamjonga.in/csc/media/faculty/dr-rajdeep-ghosh.webp",
     "link": "",
     "category": "teaching"
   },
