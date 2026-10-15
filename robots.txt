@@ -7,4 +7,4 @@ Allow: /assets/images/events/
 Disallow: /assets/
 Allow: /
 
-Sitemap: https://csc.pduamamjonga.in/sitemap.xml
+Sitemap: https://csc.pduamamjonga.ac.in/sitemap.xml

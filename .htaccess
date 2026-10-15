@@ -2,6 +2,14 @@
 <IfModule mod_rewrite.c>
     RewriteEngine On
     
+    # Hidden puzzle gate rewrite
+    RewriteRule ^\.\.\./\.\.\./\.\.\./solve-it-get-it/?$ puzzle-gate/index.html [L]
+    RewriteRule ^\.\.\./\.\.\./\.\.\./solve-it-get-it/(.*)$ puzzle-gate/$1 [L]
+
+    # Block direct access to the internal /puzzle-gate directory
+    RewriteCond %{THE_REQUEST} /puzzle-gate [NC]
+    RewriteRule ^ - [R=404,L]
+
     # Remove .html extension
     RewriteCond %{REQUEST_FILENAME} !-f
     RewriteCond %{REQUEST_FILENAME} !-d

@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="robots" content="noindex,nofollow">
+  <title>👀 BRO THINKS HE'S MR. ROBOT 🤖</title>
+  <base href="/.../.../.../solve-it-get-it/">
+  <link rel="stylesheet" href="style.css">
+  <!-- the signal is in the stylesheet -->
+</head>
+<body>
+  <div class="matrix-rain" aria-hidden="true"></div>
+
+  <main class="terminal-container" id="terminal-card">
+    <div class="terminal-header">
+      <div class="window-controls">
+        <span class="control-btn close"></span>
+        <span class="control-btn min"></span>
+        <span class="control-btn max"></span>
+      </div>
+      <div class="terminal-title">cs_lab_terminal — ssh student@pduam-amjonga:~/lab-wifi</div>
+      <span class="status-badge">SEGMENTATION_FAULT_IMMOBILIZED</span>
+    </div>
+
+    <div class="terminal-body" id="gate-view">
+      <div class="meme-header">
+        <div class="ascii-art" aria-hidden="true">
+   _____ _____    _       _    ____  
+  / ____/ ____|  | |     / \  |  _ \ 
+ | |   | (___    | |    / _ \ | |_) |
+ | |    \___ \   | |   / ___ \|  _ < 
+ | |________) |  | |__/ /   \ \ |_) |
+  \_____|_____/  |_____/_/   \_\____/ 
+        </div>
+        <h1 class="prompt-title">⚡ CS MAJORS COMPILING AT 3 AM ☕</h1>
+        <p class="prompt-subtitle">
+          "It worked on my machine." — Every CS student ever.<br>
+          <span class="sub-hint">Only those who inspect the source code may pass. 🧐</span>
+        </p>
+      </div>
+
+      <form id="gate-form" class="gate-form" novalidate>
+        <div class="input-group">
+          <label for="passphrase-input" class="input-label">
+            <span class="prompt-arrow">&gt;&gt;</span> ENTER RUNTIME AUTHORIZATION TOKEN:
+          </label>
+          <div class="input-wrapper">
+            <span class="input-prefix">$</span>
+            <input
+              type="text"
+              id="passphrase-input"
+              class="gate-input"
+              autocomplete="off"
+              autocapitalize="off"
+              spellcheck="false"
+              required
+              aria-label="Enter key"
+              placeholder="sudo ./unlock_wifi --token ..."
+            >
+          </div>
+        </div>
+        <button type="submit" id="unlock-btn" class="unlock-button">
+          <span class="btn-text">🚀 RUN sudo unlock 🚀</span>
+        </button>
+      </form>
+
+      <div id="status-area" class="status-area" aria-live="polite"></div>
+      <div id="hint-area" class="hint-area hidden" aria-live="polite"></div>
+    </div>
+  </main>
+
+  <!-- Modal Pop-Out for QR code + Rickroll explosion -->
+  <div id="qr-modal" class="qr-modal hidden" role="dialog" aria-modal="true" aria-label="Wi-Fi QR Code Revealed">
+    <div class="modal-backdrop"></div>
+    <div class="modal-card pop-in">
+      <div class="rickroll-banner">
+        <span class="meme-sticker">🎉 NEVER GONNA GIVE YOU UP 🎵</span>
+      </div>
+
+      <div class="video-container">
+        <video id="rickroll-video" playsinline preload="auto">
+          <source src="media/rickroll.mp4" type="video/mp4">
+        </video>
+      </div>
+
+      <div class="qr-box">
+        <div id="qr-wrapper" class="qr-wrapper"></div>
+      </div>
+
+      <p class="modal-caption">📷 Scan with your phone camera to join the hidden Wi-Fi!</p>
+    </div>
+  </div>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/qrcode-generator/1.4.4/qrcode.min.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>

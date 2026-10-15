@@ -3,7 +3,7 @@
  */
 
 const DEPT_NAME = "Dept. of Computer Science, PDUAM Amjonga";
-const WEBSITE_URL = "https://csc.pduamamjonga.in";
+const WEBSITE_URL = "https://csc.pduamamjonga.ac.in";
 
 function doPost(e) {
   const sheet = SpreadsheetApp.getActiveSpreadsheet().getSheetByName("Subscribers");

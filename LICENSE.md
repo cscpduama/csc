@@ -40,4 +40,4 @@ THIS PROJECT.
 
 For permissions, licensing inquiries, or collaboration:
   Email : pduamcsc2017@gmail.com
-  Web   : https://csc.pduamamjonga.in
+  Web   : https://csc.pduamamjonga.ac.in
