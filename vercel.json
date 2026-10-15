@@ -11,16 +11,6 @@
       "source": "/:subpath/robots.txt",
       "destination": "/robots.txt",
       "permanent": true
-    },
-    {
-      "source": "/puzzle-gate/:path*",
-      "destination": "/404",
-      "permanent": false
-    },
-    {
-      "source": "/puzzle-gate",
-      "destination": "/404",
-      "permanent": false
     }
   ],
   "rewrites": [
@@ -57,12 +47,24 @@
       "destination": "https://cscpduama.github.io/cssa/:path*"
     },
     {
+      "source": "/.../.../.../solve-it-get-it",
+      "destination": "/puzzle-gate"
+    },
+    {
+      "source": "/.../.../.../solve-it-get-it/",
+      "destination": "/puzzle-gate"
+    },
+    {
+      "source": "/.../.../.../solve-it-get-it/:path*",
+      "destination": "/puzzle-gate/:path*"
+    },
+    {
       "source": "/\\.\\.\\./\\.\\.\\./\\.\\.\\./solve-it-get-it",
-      "destination": "/puzzle-gate/index.html"
+      "destination": "/puzzle-gate"
     },
     {
       "source": "/\\.\\.\\./\\.\\.\\./\\.\\.\\./solve-it-get-it/",
-      "destination": "/puzzle-gate/index.html"
+      "destination": "/puzzle-gate"
     },
     {
       "source": "/\\.\\.\\./\\.\\.\\./\\.\\.\\./solve-it-get-it/:path*",
