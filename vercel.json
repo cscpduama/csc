@@ -1,6 +1,29 @@
 {
   "cleanUrls": true,
   "trailingSlash": false,
+  "headers": [
+    {
+      "source": "/(.*)",
+      "headers": [
+        {
+          "key": "Access-Control-Allow-Origin",
+          "value": "*"
+        },
+        {
+          "key": "Access-Control-Allow-Methods",
+          "value": "GET, HEAD, POST, OPTIONS"
+        },
+        {
+          "key": "Access-Control-Allow-Headers",
+          "value": "*"
+        },
+        {
+          "key": "Referrer-Policy",
+          "value": "same-origin"
+        }
+      ]
+    }
+  ],
   "redirects": [
     {
       "source": "/:subpath/sitemap.xml",
@@ -11,6 +34,11 @@
       "source": "/:subpath/robots.txt",
       "destination": "/robots.txt",
       "permanent": true
+    },
+    {
+      "source": "/cssa",
+      "destination": "/cssa/",
+      "permanent": false
     }
   ],
   "rewrites": [
@@ -39,8 +67,20 @@
       "destination": "https://pduama-ctf-2026.onrender.com/:path*"
     },
     {
-      "source": "/cssa",
-      "destination": "https://cscpduama.github.io/cssa/index.html"
+      "source": "/themes/:path*",
+      "destination": "https://pduama-ctf-2026.onrender.com/themes/:path*"
+    },
+    {
+      "source": "/files/:path*",
+      "destination": "https://pduama-ctf-2026.onrender.com/files/:path*"
+    },
+    {
+      "source": "/api/v1/:path*",
+      "destination": "https://pduama-ctf-2026.onrender.com/api/v1/:path*"
+    },
+    {
+      "source": "/events",
+      "destination": "https://pduama-ctf-2026.onrender.com/events"
     },
     {
       "source": "/cssa/",
