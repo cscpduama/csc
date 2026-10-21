@@ -27,6 +27,18 @@
       "destination": "https://multidisciplinary-book-publish.vercel.app/:path*"
     },
     {
+      "source": "/cssa/ctf/pduamactf2026",
+      "destination": "https://pduama-ctf-2026.onrender.com"
+    },
+    {
+      "source": "/cssa/ctf/pduamactf2026/",
+      "destination": "https://pduama-ctf-2026.onrender.com"
+    },
+    {
+      "source": "/cssa/ctf/pduamactf2026/:path*",
+      "destination": "https://pduama-ctf-2026.onrender.com/:path*"
+    },
+    {
       "source": "/cssa",
       "destination": "https://cscpduama.github.io/cssa/index.html"
     },
