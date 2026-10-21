@@ -34,11 +34,6 @@
       "source": "/:subpath/robots.txt",
       "destination": "/robots.txt",
       "permanent": true
-    },
-    {
-      "source": "/cssa",
-      "destination": "/cssa/",
-      "permanent": false
     }
   ],
   "rewrites": [
@@ -81,6 +76,10 @@
     {
       "source": "/events",
       "destination": "https://pduama-ctf-2026.onrender.com/events"
+    },
+    {
+      "source": "/cssa",
+      "destination": "https://cscpduama.github.io/cssa/index.html"
     },
     {
       "source": "/cssa/",
