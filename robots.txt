@@ -1,4 +1,22 @@
 User-agent: *
+# CTFd Private & Protected Endpoints
+Disallow: /cssa/omega/ctf/2026/admin
+Disallow: /cssa/omega/ctf/2026/admin/
+Disallow: /cssa/omega/ctf/2026/api/
+Disallow: /cssa/omega/ctf/2026/settings
+Disallow: /cssa/omega/ctf/2026/confirm
+Disallow: /cssa/omega/ctf/2026/reset_password
+
+# CTFd Public Endpoints
+Allow: /cssa/omega/ctf/2026
+Allow: /cssa/omega/ctf/2026/
+Allow: /cssa/omega/ctf/2026/rules
+Allow: /cssa/omega/ctf/2026/tos
+Allow: /cssa/omega/ctf/2026/privacy
+Allow: /cssa/omega/ctf/2026/scoreboard
+Allow: /cssa/omega/ctf/2026/challenges
+
+# Institutional Assets
 Disallow: /assets/logo/
 Disallow: /assets/favicon/
 Disallow: /assets/files/
