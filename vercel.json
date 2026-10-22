@@ -34,16 +34,6 @@
       "source": "/:subpath/robots.txt",
       "destination": "/robots.txt",
       "permanent": true
-    },
-    {
-      "source": "/cssa/omega/ctf/2026",
-      "destination": "/cssa/omega/ctf2026",
-      "permanent": true
-    },
-    {
-      "source": "/cssa/omega/ctf/2026/:path*",
-      "destination": "/cssa/omega/ctf2026/:path*",
-      "permanent": true
     }
   ],
   "rewrites": [
