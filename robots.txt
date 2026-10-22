@@ -1,22 +1,20 @@
 User-agent: *
 # CTFd Private & Protected Endpoints
-Disallow: /cssa/omega/ctf/2026/admin
-Disallow: /cssa/omega/ctf/2026/admin/
-Disallow: /cssa/omega/ctf/2026/api/
-Disallow: /cssa/omega/ctf/2026/settings
-Disallow: /cssa/omega/ctf/2026/confirm
-Disallow: /cssa/omega/ctf/2026/reset_password
+Disallow: /cssa/omega/ctf2026/admin
+Disallow: /cssa/omega/ctf2026/admin/
+Disallow: /cssa/omega/ctf2026/api/
+Disallow: /cssa/omega/ctf2026/settings
+Disallow: /cssa/omega/ctf2026/confirm
+Disallow: /cssa/omega/ctf2026/reset_password
 
 # CTFd Public Endpoints
-Allow: /cssa/omega/ctf/2026
-Allow: /cssa/omega/ctf/2026/
-Allow: /cssa/omega/ctf/2026/rules
-Allow: /cssa/omega/ctf/2026/terms-of-service
-Allow: /cssa/omega/ctf/2026/privacy-policy
-Allow: /cssa/omega/ctf/2026/tos
-Allow: /cssa/omega/ctf/2026/privacy
-Allow: /cssa/omega/ctf/2026/scoreboard
-Allow: /cssa/omega/ctf/2026/challenges
+Allow: /cssa/omega/ctf2026
+Allow: /cssa/omega/ctf2026/
+Allow: /cssa/omega/ctf2026/rules
+Allow: /cssa/omega/ctf2026/terms-of-service
+Allow: /cssa/omega/ctf2026/privacy-policy
+Allow: /cssa/omega/ctf2026/scoreboard
+Allow: /cssa/omega/ctf2026/challenges
 
 # Institutional Assets
 Disallow: /assets/logo/

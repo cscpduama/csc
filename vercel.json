@@ -36,23 +36,13 @@
       "permanent": true
     },
     {
-      "source": "/cssa/cssa/omega/ctf/2026",
-      "destination": "/cssa/omega/ctf/2026",
+      "source": "/cssa/omega/ctf/2026",
+      "destination": "/cssa/omega/ctf2026",
       "permanent": true
     },
     {
-      "source": "/cssa/cssa/omega/ctf/2026/:path*",
-      "destination": "/cssa/omega/ctf/2026/:path*",
-      "permanent": true
-    },
-    {
-      "source": "/cssa/omega/ctf/2026/tos",
-      "destination": "/cssa/omega/ctf/2026/terms-of-service",
-      "permanent": true
-    },
-    {
-      "source": "/cssa/omega/ctf/2026/privacy",
-      "destination": "/cssa/omega/ctf/2026/privacy-policy",
+      "source": "/cssa/omega/ctf/2026/:path*",
+      "destination": "/cssa/omega/ctf2026/:path*",
       "permanent": true
     }
   ],
@@ -70,15 +60,15 @@
       "destination": "https://multidisciplinary-book-publish.vercel.app/:path*"
     },
     {
-      "source": "/cssa/omega/ctf/2026",
+      "source": "/cssa/omega/ctf2026",
       "destination": "https://pduama-ctf-2026.onrender.com"
     },
     {
-      "source": "/cssa/omega/ctf/2026/",
+      "source": "/cssa/omega/ctf2026/",
       "destination": "https://pduama-ctf-2026.onrender.com"
     },
     {
-      "source": "/cssa/omega/ctf/2026/:path*",
+      "source": "/cssa/omega/ctf2026/:path*",
       "destination": "https://pduama-ctf-2026.onrender.com/:path*"
     },
     {
