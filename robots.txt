@@ -11,6 +11,8 @@ Disallow: /cssa/omega/ctf/2026/reset_password
 Allow: /cssa/omega/ctf/2026
 Allow: /cssa/omega/ctf/2026/
 Allow: /cssa/omega/ctf/2026/rules
+Allow: /cssa/omega/ctf/2026/terms-of-service
+Allow: /cssa/omega/ctf/2026/privacy-policy
 Allow: /cssa/omega/ctf/2026/tos
 Allow: /cssa/omega/ctf/2026/privacy
 Allow: /cssa/omega/ctf/2026/scoreboard
