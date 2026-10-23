@@ -6,20 +6,33 @@
       "source": "/(.*)",
       "headers": [
         {
+          "key": "Referrer-Policy",
+          "value": "strict-origin-when-cross-origin"
+        },
+        {
+          "key": "X-Content-Type-Options",
+          "value": "nosniff"
+        },
+        {
+          "key": "X-Frame-Options",
+          "value": "SAMEORIGIN"
+        },
+        {
+          "key": "Strict-Transport-Security",
+          "value": "max-age=63072000; includeSubDomains; preload"
+        }
+      ]
+    },
+    {
+      "source": "/assets/(.*)",
+      "headers": [
+        {
           "key": "Access-Control-Allow-Origin",
           "value": "*"
         },
         {
           "key": "Access-Control-Allow-Methods",
-          "value": "GET, HEAD, POST, OPTIONS"
-        },
-        {
-          "key": "Access-Control-Allow-Headers",
-          "value": "*"
-        },
-        {
-          "key": "Referrer-Policy",
-          "value": "same-origin"
+          "value": "GET, HEAD, OPTIONS"
         }
       ]
     }
@@ -60,22 +73,6 @@
     {
       "source": "/cssa/omega/ctf2026/:path*",
       "destination": "https://pduama-ctf-2026.onrender.com/:path*"
-    },
-    {
-      "source": "/themes/:path*",
-      "destination": "https://pduama-ctf-2026.onrender.com/themes/:path*"
-    },
-    {
-      "source": "/files/:path*",
-      "destination": "https://pduama-ctf-2026.onrender.com/files/:path*"
-    },
-    {
-      "source": "/api/v1/:path*",
-      "destination": "https://pduama-ctf-2026.onrender.com/api/v1/:path*"
-    },
-    {
-      "source": "/events",
-      "destination": "https://pduama-ctf-2026.onrender.com/events"
     },
     {
       "source": "/cssa",
